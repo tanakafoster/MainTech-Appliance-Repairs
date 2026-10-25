@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/electrical-services/page.tsx
-// Clean URL: https://www.coldfix.co.za/electrical-services
+// Clean URL: https://www.maintechappliancerepairs.co.za/electrical-services
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { Zap, Shield, Award, Lightbulb, Battery, CheckCircle, Wind, Refrigerator, WashingMachine, Wrench } from "lucide-react"

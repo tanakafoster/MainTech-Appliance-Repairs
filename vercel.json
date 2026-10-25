@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "coldfix.co.za" }],
+      "destination": "https://www.maintechappliancerepairs.co.za/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.coldfix.co.za" }],
+      "destination": "https://www.maintechappliancerepairs.co.za/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "maintechappliancerepairs.co.za" }],
+      "destination": "https://www.maintechappliancerepairs.co.za/:path*",
+      "permanent": true
+    }
+  ]
+}

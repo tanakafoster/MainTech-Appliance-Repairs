@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/emergency-callout-service/page.tsx
-// Clean URL: https://www.coldfix.co.za/emergency-callout-service
+// Clean URL: https://www.maintechappliancerepairs.co.za/emergency-callout-service
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { Clock, Phone, Wrench, Award, ShieldCheck, Snowflake, Refrigerator, Zap } from "lucide-react"

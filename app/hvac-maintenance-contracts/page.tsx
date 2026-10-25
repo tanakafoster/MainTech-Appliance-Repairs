@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/hvac-maintenance-contracts/page.tsx
-// Clean URL: https://www.coldfix.co.za/hvac-maintenance-contracts
+// Clean URL: https://www.maintechappliancerepairs.co.za/hvac-maintenance-contracts
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { ShieldCheck, Snowflake, Wrench, Clock, Award, Wind, Store, Warehouse } from "lucide-react"

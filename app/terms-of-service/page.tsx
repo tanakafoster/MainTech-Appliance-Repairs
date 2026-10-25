@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 // File path: app/terms-of-service/page.tsx
-// Clean URL: https://www.coldfix.co.za/terms-of-service
+// Clean URL: https://www.maintechappliancerepairs.co.za/terms-of-service
 
 import { Scale, FileText, CheckCircle, AlertTriangle, Mail, Phone, MapPin, Shield } from "lucide-react"
 

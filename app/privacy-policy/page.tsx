@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 // File path: app/privacy-policy/page.tsx
-// Clean URL: https://www.coldfix.co.za/privacy-policy
+// Clean URL: https://www.maintechappliancerepairs.co.za/privacy-policy
 
 import { Shield, Lock, Eye, FileText, Mail, Phone, MapPin } from "lucide-react"
 

@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/commercial-refrigeration/page.tsx
-// Clean URL: https://www.coldfix.co.za/commercial-refrigeration
+// Clean URL: https://www.maintechappliancerepairs.co.za/commercial-refrigeration
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { Store, Snowflake, Wrench, Clock, Award, ShieldCheck, Warehouse, Refrigerator } from "lucide-react"

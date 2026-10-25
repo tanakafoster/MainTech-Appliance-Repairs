@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/services/page.tsx
-// URL: https://www.coldfix.co.za/services
+// URL: https://www.maintechappliancerepairs.co.za/services
 
 import Link from "next/link"
 import Image from "next/image"

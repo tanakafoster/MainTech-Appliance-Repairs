@@ -2,7 +2,7 @@
 
 Marketing website for **MainTech Appliance Repairs**, an appliance, air conditioning, and refrigeration repair company serving Gauteng, South Africa (Pretoria, Johannesburg, Midrand, and surrounds).
 
-- **Live URL:** https://www.coldfix.co.za
+- **Live URL:** https://www.maintechappliancerepairs.co.za
 - **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
 - **Package manager:** pnpm
 - **Deployment:** Vercel
@@ -137,7 +137,7 @@ Every area page uses a distinct `introImage` so the pages stay visually unique. 
 ## SEO Files
 
 - **`app/sitemap.ts`** — generates `/sitemap.xml`. Includes the homepage, core pages, all 10 service pages, and all 11 service areas. Update it whenever a page is added or removed.
-- **`public/robots.txt`** — points crawlers to the sitemap at `https://www.coldfix.co.za/sitemap.xml`.
+- **`public/robots.txt`** — points crawlers to the sitemap at `https://www.maintechappliancerepairs.co.za/sitemap.xml`.
 - **`public/llms.txt`** — plain language summary of the business, services, and service areas for LLM consumption. Keep it in sync with the live service and area lists.
 - **`app/layout.tsx`** — global metadata, Open Graph/Twitter tags, and Organization + LocalBusiness JSON-LD.
 

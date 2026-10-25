@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/plumbing-services/page.tsx
-// Clean URL: https://www.coldfix.co.za/plumbing-services
+// Clean URL: https://www.maintechappliancerepairs.co.za/plumbing-services
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { Droplets, Wrench, Clock, ShieldCheck, CheckCircle, Refrigerator, WashingMachine, Zap } from "lucide-react"

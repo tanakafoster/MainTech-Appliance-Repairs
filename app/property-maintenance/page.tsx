@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/property-maintenance/page.tsx
-// Clean URL: https://www.coldfix.co.za/property-maintenance
+// Clean URL: https://www.maintechappliancerepairs.co.za/property-maintenance
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import { CalendarClock, Clock, ShieldCheck, TrendingUp, CheckCircle, Settings, Wind, Refrigerator, Store } from "lucide-react"

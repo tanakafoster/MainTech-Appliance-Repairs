@@ -1,5 +1,5 @@
 # robots.txt for MainTech Appliance Repairs
-# https://www.coldfix.co.za/robots.txt
+# https://www.maintechappliancerepairs.co.za/robots.txt
 
 # Allow all bots to crawl everything
 User-agent: *
@@ -9,10 +9,10 @@ Allow: /
 Crawl-delay: 0
 
 # Sitemap locations
-Sitemap: https://www.coldfix.co.za/sitemap.xml
+Sitemap: https://www.maintechappliancerepairs.co.za/sitemap.xml
 
 # Host preference (helps with canonicalization)
-Host: https://www.coldfix.co.za
+Host: https://www.maintechappliancerepairs.co.za
 
 # ===== Bot-Specific Rules =====
 

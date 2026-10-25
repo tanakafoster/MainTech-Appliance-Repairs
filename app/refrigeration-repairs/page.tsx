@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 // File path: app/refrigeration-repairs/page.tsx
-// Clean URL: https://www.coldfix.co.za/refrigeration-repairs
+// Clean URL: https://www.maintechappliancerepairs.co.za/refrigeration-repairs
 
 import { ServicePageTemplate } from "@/components/service-page-template"
 import {

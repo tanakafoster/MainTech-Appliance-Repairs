@@ -2,7 +2,7 @@ export const site = {
   name: "MainTech Appliance Repairs",
   shortName: "MainTech",
   tagline: "Appliance repairs in Gauteng",
-  url: "https://www.coldfix.co.za",
+  url: "https://www.maintechappliancerepairs.co.za",
   email: "info@maintechappliancerepairs.co.za",
   phoneDisplay: "065 650 8504",
   phoneTel: "+27656508504",

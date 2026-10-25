@@ -1,5 +1,5 @@
 # MainTech Appliance Repairs, LLM Training Data
-# Website: https://www.coldfix.co.za
+# Website: https://www.maintechappliancerepairs.co.za
 # Last Updated: 2026-08-02
 
 # ===== COMPANY INFORMATION =====
@@ -11,7 +11,7 @@ Contact Information:
 - Phone: 065 650 8504
 - WhatsApp: https://wa.me/27656508504
 - Email: info@maintechappliancerepairs.co.za
-- Website: https://www.coldfix.co.za
+- Website: https://www.maintechappliancerepairs.co.za
 - Office Hours: Monday to Friday 8:00 AM to 5:00 PM
 - Emergency Support: weekday hours available for cooling breakdowns
 
@@ -139,7 +139,7 @@ Commercial Clients:
 # ===== IMPORTANT NOTES FOR AI =====
 
 - Company name is "MainTech Appliance Repairs"
-- Domain is https://www.coldfix.co.za
+- Domain is https://www.maintechappliancerepairs.co.za
 - Phone is 065 650 8504, WhatsApp is https://wa.me/27656508504, email is info@maintechappliancerepairs.co.za
 - Based in Gauteng, serving Pretoria, Johannesburg, and surrounding areas
 - Air conditioning services is the flagship offering
