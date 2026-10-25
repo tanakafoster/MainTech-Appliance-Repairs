@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0F2C59",
-  "background_color": "#0F2C59",
+  "theme_color": "#0E2A47",
+  "background_color": "#FFFFFF",
   "display": "standalone",
   "start_url": "https://www.maintechappliancerepairs.co.za"
 }

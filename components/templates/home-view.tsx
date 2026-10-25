@@ -48,83 +48,91 @@ export function HomeView() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <section className="bg-primary text-primary-foreground">
+      <section className="bg-navy text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-section md:grid-cols-2">
           <div className="max-w-[var(--measure)]">
-            <h1 className="text-3xl font-bold tracking-tight md:text-5xl">Appliance repairs in Gauteng</h1>
-            <p className="mt-4 text-lg leading-7">MainTech fixes fridges, laundry machines, ovens, cold rooms and aircons, and tells you the fault before any work starts.</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-ice">Gauteng</p>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-5xl">Appliance repairs in Gauteng</h1>
+            <p className="mt-4 text-lg leading-7 text-on-navy">MainTech fixes fridges, laundry machines, ovens, cold rooms and aircons, and tells you the fault before any work starts.</p>
             <CallActions className="mt-6" onDark />
           </div>
           <Image src="/technicians-servicing-air-conditioner.png" alt="Two technicians working on an outdoor air conditioning unit" width={1024} height={768} priority className="h-auto w-full rounded-lg object-cover" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-section">
-        <h2 className="text-2xl font-bold text-primary">Services</h2>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Services</h2>
         <p className="mt-3 max-w-[var(--measure)] leading-7">Every repair we publish has its own page. Start with the machine that has failed. If you are not sure, call and name it. A household fridge is not a shop display fridge, and a cold room is not a freezer in a kitchen. Laundry machines, ovens and aircons are separate jobs as well. Pick the page that matches what has stopped working, then tell us the symptom in your own words.</p>
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <li key={service.slug} className="rounded-lg border border-border bg-card p-4 shadow-[var(--shadow-card)]">
-              <h3 className="text-lg font-semibold">
-                <Link className="underline" href={`/${service.slug}`}>{service.nav}</Link>
+            <li key={service.slug} className="rounded-lg border border-border bg-ice-tint p-4 shadow-[var(--shadow-card)]">
+              <h3 className="text-lg font-semibold text-navy">
+                <Link className="text-blue hover:underline" href={`/${service.slug}`}>{service.nav}</Link>
               </h3>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">{service.intro.split(". ")[0]}.</p>
+              <p className="mt-2 text-sm leading-6 text-slate">{service.intro.split(". ")[0]}.</p>
             </li>
           ))}
         </ul>
+        </div>
       </section>
 
-      <section className="bg-muted">
+      <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
-          <h2 className="text-2xl font-bold text-primary">How it works</h2>
+          <h2 className="text-2xl font-bold text-navy">How it works</h2>
           <ol className="mt-4 grid gap-4 md:grid-cols-3">
-            <li className="rounded-lg border border-border bg-card p-4"><h3 className="font-semibold">1. Contact us</h3><p className="mt-2 leading-7">Call, WhatsApp, or send the form. Say what is wrong and where you are in Gauteng.</p></li>
-            <li className="rounded-lg border border-border bg-card p-4"><h3 className="font-semibold">2. We diagnose</h3><p className="mt-2 leading-7">The technician checks the parts that match the symptom and explains the fault before any repair starts.</p></li>
-            <li className="rounded-lg border border-border bg-card p-4"><h3 className="font-semibold">3. We repair and test</h3><p className="mt-2 leading-7">If you go ahead, we do the repair and test it. If a repair does not make sense, we say so.</p></li>
+            <li className="rounded-lg border border-border bg-surface p-4"><h3 className="font-semibold text-navy">1. Contact us</h3><p className="mt-2 leading-7 text-ink">Call, WhatsApp, or send the form. Say what is wrong and where you are in Gauteng.</p></li>
+            <li className="rounded-lg border border-border bg-surface p-4"><h3 className="font-semibold text-navy">2. We diagnose</h3><p className="mt-2 leading-7 text-ink">The technician checks the parts that match the symptom and explains the fault before any repair starts.</p></li>
+            <li className="rounded-lg border border-border bg-surface p-4"><h3 className="font-semibold text-navy">3. We repair and test</h3><p className="mt-2 leading-7 text-ink">If you go ahead, we do the repair and test it. If a repair does not make sense, we say so.</p></li>
           </ol>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-section">
-        <h2 className="text-2xl font-bold text-primary">Common problems we fix</h2>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Common problems we fix</h2>
         <ul className="mt-4 max-w-[var(--measure)] list-disc space-y-2 pl-5 leading-7">
           {problems.map((problem) => (
             <li key={problem}>{problem}</li>
           ))}
         </ul>
-        <p className="mt-4 max-w-[var(--measure)] leading-7">A warm fridge is not the same job as a washer that will not drain, and a household fridge is not a walk-in cold room. Use the page that matches the machine. Commercial refrigeration stays separate from domestic fridge repairs. Aircon repairs, servicing and installation stay on the aircon page. Maintenance plans are separate again: one for air conditioners and one for a wider appliance list.</p>
+        <p className="mt-4 max-w-[var(--measure)] leading-7 text-ink">A warm fridge is not the same job as a washer that will not drain, and a household fridge is not a walk-in cold room. Use the page that matches the machine. Commercial refrigeration stays separate from domestic fridge repairs. Aircon repairs, servicing and installation stay on the aircon page. Maintenance plans are separate again: one for air conditioners and one for a wider appliance list.</p>
+        </div>
       </section>
 
-      <section className="bg-muted">
+      <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
-          <h2 className="text-2xl font-bold text-primary">Areas we cover</h2>
+          <h2 className="text-2xl font-bold text-navy">Areas we cover</h2>
           <p className="mt-3 max-w-[var(--measure)] leading-7">We cover Gauteng. These are the area pages already on the site. If your suburb is not named, call and ask.</p>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
             {areas.map((area) => (
               <li key={area.slug}>
-                <Link className="inline-flex min-h-11 items-center text-primary underline" href={`/service-areas/${area.slug}`}>Appliance repairs in {area.name}</Link>
+                <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href={`/service-areas/${area.slug}`}>Appliance repairs in {area.name}</Link>
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-section">
-        <h2 className="text-2xl font-bold text-primary">Questions before you book</h2>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Questions before you book</h2>
         <div className="mt-4 max-w-[var(--measure)] space-y-4">
           {faqs.map((faq) => (
             <div key={faq.question}>
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <p className="mt-1 leading-7 text-muted-foreground">{faq.answer}</p>
+              <h3 className="text-lg font-semibold text-navy">{faq.question}</h3>
+              <p className="mt-1 leading-7 text-slate">{faq.answer}</p>
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="bg-primary text-primary-foreground">
+      <section className="bg-navy text-white">
         <div className="mx-auto max-w-6xl px-4 py-section">
-          <h2 className="text-2xl font-bold">Talk to MainTech</h2>
-          <p className="mt-3 max-w-[var(--measure)] leading-7">Call {site.phoneDisplay} or WhatsApp the same number. If you prefer to write, use the contact form. Include the appliance, the fault, and your area.</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-ice">Book a visit</p>
+          <h2 className="mt-2 text-2xl font-bold text-white">Talk to MainTech</h2>
+          <p className="mt-3 max-w-[var(--measure)] leading-7 text-on-navy">Call {site.phoneDisplay} or WhatsApp the same number. If you prefer to write, use the contact form. Include the appliance, the fault, and your area.</p>
           <CallActions className="mt-6" onDark />
         </div>
       </section>

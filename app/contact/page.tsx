@@ -10,18 +10,30 @@ export const metadata = pageMetadata({
 
 export default function ContactPage() {
   return (
-    <article className="mx-auto grid max-w-6xl gap-10 px-4 py-section lg:grid-cols-2">
-      <div className="max-w-[var(--measure)]">
-        <h1 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Contact MainTech</h1>
-        <p className="mt-4 leading-7">MainTech Appliance Repairs takes repair enquiries across Gauteng. Call, WhatsApp, email, or send the form. Say which appliance has failed and what it is doing.</p>
-        <ul className="mt-6 space-y-3 leading-7">
-          <li><a className="font-semibold text-primary underline" href={`tel:${site.phoneTel}`}>Call {site.phoneDisplay}</a></li>
-          <li><a className="font-semibold text-primary underline" href={site.whatsappHref}>WhatsApp {site.whatsappDisplay}</a></li>
-          <li><a className="font-semibold text-primary underline" href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li>Service area: {site.areaServed}</li>
-        </ul>
-      </div>
-      <ContactForm />
+    <article>
+      <header className="bg-navy text-white">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+          <p className="text-sm font-semibold uppercase tracking-wide text-ice">Contact</p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">Contact MainTech</h1>
+          <p className="mt-4 max-w-[var(--measure)] leading-7 text-on-navy">MainTech Appliance Repairs takes repair enquiries across Gauteng. Call, WhatsApp, email, or send the form. Say which appliance has failed and what it is doing.</p>
+        </div>
+      </header>
+      <section className="bg-surface">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-section lg:grid-cols-2">
+          <div className="max-w-[var(--measure)]">
+            <h2 className="text-2xl font-bold text-navy">Phone, WhatsApp and email</h2>
+            <ul className="mt-6 space-y-3 leading-7 text-ink">
+              <li><a className="font-semibold text-blue hover:underline" href={`tel:${site.phoneTel}`}>Call {site.phoneDisplay}</a></li>
+              <li><a className="font-semibold text-blue hover:underline" href={site.whatsappHref}>WhatsApp {site.whatsappDisplay}</a></li>
+              <li><a className="font-semibold text-blue hover:underline" href={`mailto:${site.email}`}>{site.email}</a></li>
+              <li className="text-slate">Service area: {site.areaServed}</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-border bg-ice-tint p-6">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
     </article>
   )
 }

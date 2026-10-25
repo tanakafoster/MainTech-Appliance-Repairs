@@ -22,9 +22,9 @@ function trackWhatsApp() {
 }
 
 const callClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-amber px-5 text-sm font-semibold text-navy hover:bg-amber-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
 const whatsappClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-primary bg-background px-5 text-sm font-semibold text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-navy bg-transparent px-5 text-sm font-semibold text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
 
 export function CallActions({ className, onDark = false }: { className?: string; onDark?: boolean }) {
   return (

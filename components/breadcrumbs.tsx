@@ -18,11 +18,11 @@ export function Breadcrumbs({ items, variant = "default", currentPath }: Breadcr
   const onDark = variant === "onDark"
 
   const linkClass = cn(
-    "flex items-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm",
-    onDark ? "text-white/70 hover:text-accent" : "text-muted-foreground hover:text-secondary",
+    "flex items-center rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue",
+    onDark ? "text-on-navy hover:text-white hover:underline" : "text-slate hover:text-blue hover:underline",
   )
-  const chevronClass = cn("h-4 w-4", onDark ? "text-white/40" : "text-muted-foreground")
-  const currentClass = cn("font-medium", onDark ? "text-white" : "text-foreground")
+  const chevronClass = cn("h-4 w-4", onDark ? "text-on-navy" : "text-slate")
+  const currentClass = cn("font-medium", onDark ? "text-white" : "text-ink")
 
   const crumbList = [
     { name: "Home", path: "/" },

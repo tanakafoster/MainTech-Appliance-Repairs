@@ -113,11 +113,11 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl bg-accent/10 p-8 text-center" role="status">
-        <h3 className="mb-2 text-xl font-bold">Thanks, we&apos;ll be in touch shortly</h3>
-        <p className="text-muted-foreground">
+      <div className="rounded-xl border border-border bg-ice-tint p-8 text-center" role="status">
+        <h3 className="mb-2 text-xl font-bold text-success">Thanks, we&apos;ll be in touch shortly</h3>
+        <p className="text-slate">
           Your quote request was sent to {site.name}. You can also reach us on{" "}
-          <a className="font-semibold text-foreground underline" href={`tel:${site.phoneTel}`}>
+          <a className="font-semibold text-blue hover:underline" href={`tel:${site.phoneTel}`}>
             {site.phoneDisplay}
           </a>
           .
@@ -176,11 +176,11 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <div className="rounded-lg bg-destructive/10 p-4 text-sm" role="alert">
+        <div className="rounded-lg border border-border bg-surface p-4 text-sm text-error" role="alert">
           <p>{error}</p>
           <p className="mt-2">
             You can still message us on{" "}
-            <a className="font-semibold underline" href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
+            <a className="font-semibold text-blue hover:underline" href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
             .
@@ -188,7 +188,7 @@ export function ContactForm() {
         </div>
       )}
 
-      <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={status === "loading"}>
+      <Button type="submit" size="lg" className="w-full bg-navy text-white hover:bg-blue" disabled={status === "loading"}>
         {status === "loading" ? (
           <>
             <Loader2 className="mr-2 h-5 w-5 animate-spin" aria-hidden="true" />

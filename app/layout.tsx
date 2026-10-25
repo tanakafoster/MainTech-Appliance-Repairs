@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
-      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0F2C59" },
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0E2A47" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -101,7 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en-ZA">
       <head>
-        <meta name="theme-color" content="#0F2C59" />
+        <meta name="theme-color" content="#0E2A47" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=yes" />

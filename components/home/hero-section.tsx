@@ -72,7 +72,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="group h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-semibold bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-xl shadow-[#25D366]/25 transition-all hover:scale-105"
+                className="group h-12 border border-navy bg-surface px-6 text-sm font-semibold text-navy hover:bg-ice-tint sm:h-14 sm:px-8 sm:text-base"
               >
                 <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />

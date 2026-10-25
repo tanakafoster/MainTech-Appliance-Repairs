@@ -4,90 +4,79 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* MainTech Appliance Repairs Brand Colors - Navy + Electric Cyan + Safety Orange */
-  --background: oklch(0.99 0.002 60);
-  --foreground: oklch(0.2 0.008 60);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.008 60);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.008 60);
+  --color-navy: #0E2A47;
+  --color-blue: #1F5FAE;
+  --color-amber: #FFB703;
+  --color-amber-hover: #F59E0B;
+  --color-ice: #4FB3E8;
+  --color-ice-tint: #EAF4FB;
+  --color-ink: #1A2433;
+  --color-slate: #5B6878;
+  --color-border: #D8E1EA;
+  --color-surface: #FFFFFF;
+  --color-on-navy: #C7D3E0;
+  --color-success: #1E7A4C;
+  --color-error: #C62828;
+  --color-white: #FFFFFF;
 
-  /* Primary - Navy Blue #0F2C59 */
-  --primary: oklch(0.30 0.09 259);
-  --primary-foreground: oklch(0.99 0.002 60);
+  --background: var(--color-surface);
+  --foreground: var(--color-ink);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-navy);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-blue);
+  --secondary-foreground: var(--color-white);
+  --muted: var(--color-ice-tint);
+  --muted-foreground: var(--color-slate);
+  --accent: var(--color-ice-tint);
+  --accent-foreground: var(--color-navy);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-white);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-blue);
 
-  /* Secondary - Electric Cyan #00B4D8 */
-  --secondary: oklch(0.71 0.13 219);
-  --secondary-foreground: oklch(0.15 0.02 259);
-
-  /* Accent - Safety Orange #FF9F1C */
-  --accent: oklch(0.78 0.17 66);
-  --accent-foreground: oklch(0.99 0.002 60);
-
-  --muted: oklch(0.96 0.004 60);
-  --muted-foreground: oklch(0.45 0.01 60);
-
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.006 60);
-  --input: oklch(0.92 0.006 60);
-  --ring: oklch(0.78 0.17 66);
-
-  --chart-1: oklch(0.78 0.17 66);
-  --chart-2: oklch(0.71 0.13 219);
-  --chart-3: oklch(0.30 0.09 259);
-  --chart-4: oklch(0.58 0.16 50);
-  --chart-5: oklch(0.8 0.14 65);
+  --chart-1: var(--color-navy);
+  --chart-2: var(--color-blue);
+  --chart-3: var(--color-ice);
+  --chart-4: var(--color-slate);
+  --chart-5: var(--color-ice-tint);
 
   --radius: 0.5rem;
   --space-section: 4.5rem;
   --measure: 68ch;
   --tap-target: 2.75rem;
-  --shadow-card: 0 1px 2px oklch(0.2 0.02 259 / 0.08);
+  --shadow-card: 0 1px 2px color-mix(in srgb, var(--color-navy) 12%, transparent);
 
-  --sidebar: oklch(0.30 0.09 259);
-  --sidebar-foreground: oklch(0.99 0.002 60);
-  --sidebar-primary: oklch(0.78 0.17 66);
-  --sidebar-primary-foreground: oklch(0.99 0.002 60);
-  --sidebar-accent: oklch(0.71 0.13 219);
-  --sidebar-accent-foreground: oklch(0.15 0.02 259);
-  --sidebar-border: oklch(0.35 0.08 259);
-  --sidebar-ring: oklch(0.78 0.17 66);
-}
-
-.dark {
-  --background: oklch(0.16 0.006 60);
-  --foreground: oklch(0.95 0.002 60);
-  --card: oklch(0.2 0.006 60);
-  --card-foreground: oklch(0.95 0.002 60);
-  --popover: oklch(0.2 0.006 60);
-  --popover-foreground: oklch(0.95 0.002 60);
-  --primary: oklch(0.78 0.17 66);
-  --primary-foreground: oklch(0.15 0.02 259);
-  --secondary: oklch(0.71 0.13 219);
-  --secondary-foreground: oklch(0.15 0.02 259);
-  --muted: oklch(0.26 0.006 60);
-  --muted-foreground: oklch(0.66 0.008 60);
-  --accent: oklch(0.78 0.17 66);
-  --accent-foreground: oklch(0.15 0.02 259);
-  --destructive: oklch(0.5 0.2 27);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.3 0.008 60);
-  --input: oklch(0.28 0.008 60);
-  --ring: oklch(0.78 0.17 66);
-  --sidebar: oklch(0.2 0.006 60);
-  --sidebar-foreground: oklch(0.95 0.002 60);
-  --sidebar-primary: oklch(0.78 0.17 66);
-  --sidebar-primary-foreground: oklch(0.15 0.02 259);
-  --sidebar-accent: oklch(0.28 0.006 60);
-  --sidebar-accent-foreground: oklch(0.95 0.002 60);
-  --sidebar-border: oklch(0.3 0.008 60);
-  --sidebar-ring: oklch(0.78 0.17 66);
+  --sidebar: var(--color-navy);
+  --sidebar-foreground: var(--color-white);
+  --sidebar-primary: var(--color-blue);
+  --sidebar-primary-foreground: var(--color-white);
+  --sidebar-accent: var(--color-ice-tint);
+  --sidebar-accent-foreground: var(--color-navy);
+  --sidebar-border: var(--color-border);
+  --sidebar-ring: var(--color-blue);
 }
 
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-navy: var(--color-navy);
+  --color-blue: var(--color-blue);
+  --color-amber: var(--color-amber);
+  --color-amber-hover: var(--color-amber-hover);
+  --color-ice: var(--color-ice);
+  --color-ice-tint: var(--color-ice-tint);
+  --color-ink: var(--color-ink);
+  --color-slate: var(--color-slate);
+  --color-surface: var(--color-surface);
+  --color-on-navy: var(--color-on-navy);
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-white: var(--color-white);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -129,9 +118,20 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-surface text-ink;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-navy);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--color-white);
   }
 }

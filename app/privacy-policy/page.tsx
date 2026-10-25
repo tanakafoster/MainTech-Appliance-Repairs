@@ -13,21 +13,21 @@ export const metadata = pageMetadata({
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-surface">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/10 to-background py-16 lg:py-24">
+      <section className="bg-navy py-16 text-white lg:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 flex justify-center">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Shield className="h-12 w-12 text-primary" />
+              <div className="rounded-full bg-white/10 p-4">
+                <Shield className="h-12 w-12 text-ice" />
               </div>
             </div>
-            <h1 className="mb-4 text-4xl font-bold lg:text-5xl">Privacy Policy</h1>
-            <p className="text-lg text-muted-foreground">
+            <h1 className="mb-4 text-4xl font-bold text-white lg:text-5xl">Privacy Policy</h1>
+            <p className="text-lg text-on-navy">
               MainTech Appliance Repairs
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-on-navy">
               <div className="flex items-center gap-2">
                 <FileText className="h-4 w-4" />
                 <span>Effective Date: July 30, 2026</span>
@@ -42,45 +42,45 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 lg:py-24">
+      <section className="bg-surface py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl">
             
             {/* Introduction */}
-            <div className="mb-12 rounded-xl bg-muted p-8">
+            <div className="mb-12 rounded-xl bg-ice-tint p-8">
               <h2 className="mb-4 text-2xl font-bold">1. Introduction</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 MainTech Appliance Repairs (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or &quot;MainTech Appliance Repairs&quot;) is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website{" "}
-                <a href={site.url} className="text-primary hover:underline">
+                <a href={site.url} className="text-blue hover:underline">
                   {site.url}
                 </a>
                 , use our services, or interact with us.
               </p>
-              <p className="mb-6 leading-relaxed text-muted-foreground">
+              <p className="mb-6 leading-relaxed text-ink">
                 This policy complies with the <strong>Protection of Personal Information Act, 2013 (POPIA)</strong> and other applicable South African data protection legislation.
               </p>
 
-              <div className="space-y-2 rounded-lg bg-card p-6 border border-border">
+              <div className="space-y-2 rounded-lg bg-surface p-6 border border-border">
                 <h3 className="mb-4 font-bold text-lg">Our Contact Details:</h3>
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <MapPin className="h-5 w-5 text-blue mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-sm text-muted-foreground">Gauteng, South Africa</p>
+                    <p className="text-sm text-slate">Gauteng, South Africa</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-blue mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-sm text-muted-foreground">065 650 8504</p>
+                    <p className="text-sm text-slate">065 650 8504</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-blue mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-sm text-muted-foreground">{site.email}</p>
+                    <p className="text-sm text-slate">{site.email}</p>
                   </div>
                 </div>
               </div>
@@ -93,10 +93,10 @@ export default function PrivacyPolicyPage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="mb-3 text-xl font-semibold">2.1 Personal Information You Provide</h3>
-                  <p className="mb-4 leading-relaxed text-muted-foreground">
+                  <p className="mb-4 leading-relaxed text-ink">
                     We collect personal information that you voluntarily provide to us when you:
                   </p>
-                  <ul className="mb-4 ml-6 space-y-2 list-disc text-muted-foreground">
+                  <ul className="mb-4 ml-6 space-y-2 list-disc text-ink">
                     <li>Request a quote or consultation</li>
                     <li>Contact us via phone, email, or contact forms</li>
                     <li>Subscribe to our newsletter or marketing communications</li>
@@ -104,7 +104,7 @@ export default function PrivacyPolicyPage() {
                     <li>Engage our services</li>
                     <li>Provide feedback or reviews</li>
                   </ul>
-                  <p className="mb-3 leading-relaxed text-muted-foreground">
+                  <p className="mb-3 leading-relaxed text-ink">
                     This information may include:
                   </p>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -118,8 +118,8 @@ export default function PrivacyPolicyPage() {
                       "Service requirements and preferences",
                       "Payment information",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <div key={index} className="flex items-center gap-2 text-sm text-slate">
+                        <div className="h-1.5 w-1.5 rounded-full bg-blue flex-shrink-0" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
 
                 <div>
                   <h3 className="mb-3 text-xl font-semibold">2.2 Information Automatically Collected</h3>
-                  <p className="mb-4 leading-relaxed text-muted-foreground">
+                  <p className="mb-4 leading-relaxed text-ink">
                     When you visit our website, we may automatically collect certain information, including:
                   </p>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -142,8 +142,8 @@ export default function PrivacyPolicyPage() {
                       "Geographic location data",
                       "Cookies and tracking technologies",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Eye className="h-4 w-4 text-primary flex-shrink-0" />
+                      <div key={index} className="flex items-center gap-2 text-sm text-slate">
+                        <Eye className="h-4 w-4 text-blue flex-shrink-0" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
 
                 <div>
                   <h3 className="mb-3 text-xl font-semibold">2.3 Information from Third Parties</h3>
-                  <p className="mb-4 leading-relaxed text-muted-foreground">
+                  <p className="mb-4 leading-relaxed text-ink">
                     We may receive information about you from third parties, such as:
                   </p>
                   <div className="space-y-2">
@@ -162,8 +162,8 @@ export default function PrivacyPolicyPage() {
                       "Marketing partners",
                       "Publicly available sources",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <div key={index} className="flex items-center gap-2 text-sm text-slate">
+                        <div className="h-1.5 w-1.5 rounded-full bg-blue flex-shrink-0" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -226,12 +226,12 @@ export default function PrivacyPolicyPage() {
                     ],
                   },
                 ].map((section, index) => (
-                  <div key={index} className="rounded-lg bg-muted p-6">
+                  <div key={index} className="rounded-lg bg-ice-tint p-6">
                     <h3 className="mb-3 text-lg font-semibold">{section.title}</h3>
                     <ul className="space-y-2">
                       {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                        <li key={itemIndex} className="flex items-start gap-2 text-sm text-slate">
+                          <div className="h-1.5 w-1.5 rounded-full bg-blue flex-shrink-0 mt-2" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -244,7 +244,7 @@ export default function PrivacyPolicyPage() {
             {/* Legal Basis */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">4. Legal Basis for Processing (POPIA Compliance)</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 We process your personal information based on the following lawful grounds:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
@@ -266,9 +266,9 @@ export default function PrivacyPolicyPage() {
                     description: "Processing is necessary for our legitimate business interests, provided your rights are not overridden",
                   },
                 ].map((item, index) => (
-                  <div key={index} className="rounded-lg bg-muted p-6 border border-border">
-                    <h3 className="mb-2 font-semibold text-primary">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <div key={index} className="rounded-lg bg-ice-tint p-6 border border-border">
+                    <h3 className="mb-2 font-semibold text-navy">{item.title}</h3>
+                    <p className="text-sm text-slate">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -319,8 +319,8 @@ export default function PrivacyPolicyPage() {
                     <h3 className="mb-3 text-lg font-semibold">{section.title}</h3>
                     <ul className="space-y-2 ml-4">
                       {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                        <li key={itemIndex} className="flex items-start gap-2 text-sm text-slate">
+                          <div className="h-1.5 w-1.5 rounded-full bg-blue flex-shrink-0 mt-2" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -329,7 +329,7 @@ export default function PrivacyPolicyPage() {
                 ))}
               </div>
 
-              <div className="rounded-lg bg-primary/10 p-6 border-2 border-primary/20">
+              <div className="rounded-lg bg-ice-tint p-6 border-2 border-border">
                 <p className="font-semibold text-center">
                   We do not sell your personal information to third parties.
                 </p>
@@ -339,7 +339,7 @@ export default function PrivacyPolicyPage() {
             {/* Data Security */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">6. Data Security</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction, including:
               </p>
               <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -351,13 +351,13 @@ export default function PrivacyPolicyPage() {
                   "Employee training on data protection",
                   "Secure payment processing systems",
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 rounded-lg bg-muted p-4">
-                    <Lock className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{item}</span>
+                  <div key={index} className="flex items-center gap-3 rounded-lg bg-ice-tint p-4">
+                    <Lock className="h-5 w-5 text-blue flex-shrink-0" />
+                    <span className="text-sm text-slate">{item}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-sm italic text-muted-foreground">
+              <p className="text-sm italic text-ink">
                 However, no method of transmission over the internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
               </p>
             </div>
@@ -365,10 +365,10 @@ export default function PrivacyPolicyPage() {
             {/* Data Retention */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">7. Data Retention</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 We retain your personal information for as long as necessary to:
               </p>
-              <ul className="mb-6 ml-6 space-y-2 list-disc text-muted-foreground">
+              <ul className="mb-6 ml-6 space-y-2 list-disc text-ink">
                 <li>Fulfill the purposes outlined in this Privacy Policy</li>
                 <li>Comply with legal, regulatory, and contractual obligations</li>
                 <li>Resolve disputes and enforce agreements</li>
@@ -395,16 +395,16 @@ export default function PrivacyPolicyPage() {
                     period: "Until you unsubscribe or withdraw consent",
                   },
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 rounded-lg bg-muted p-4">
-                    <FileText className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div key={index} className="flex items-start gap-4 rounded-lg bg-ice-tint p-4">
+                    <FileText className="h-5 w-5 text-blue flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">{item.type}</p>
-                      <p className="text-sm text-muted-foreground">{item.period}</p>
+                      <p className="text-sm text-slate">{item.period}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="mt-4 text-sm text-slate">
                 After the retention period, we securely delete or anonymize your information.
               </p>
             </div>
@@ -412,7 +412,7 @@ export default function PrivacyPolicyPage() {
             {/* Your Rights Under POPIA */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">8. Your Rights Under POPIA</h2>
-              <p className="mb-6 leading-relaxed text-muted-foreground">
+              <p className="mb-6 leading-relaxed text-ink">
                 You have the following rights regarding your personal information:
               </p>
               
@@ -451,14 +451,14 @@ export default function PrivacyPolicyPage() {
                     description: "Lodge a complaint with the Information Regulator of South Africa",
                   },
                 ].map((right, index) => (
-                  <div key={index} className="rounded-lg bg-muted p-6 border border-border">
-                    <h3 className="mb-2 font-semibold text-primary">{right.title}</h3>
-                    <p className="text-sm text-muted-foreground">{right.description}</p>
+                  <div key={index} className="rounded-lg bg-ice-tint p-6 border border-border">
+                    <h3 className="mb-2 font-semibold text-navy">{right.title}</h3>
+                    <p className="text-sm text-slate">{right.description}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-xl bg-primary/10 p-6 border-2 border-primary/20">
+              <div className="rounded-xl bg-ice-tint p-6 border-2 border-border">
                 <h3 className="mb-4 font-bold">To exercise your rights, contact us at:</h3>
                 <div className="space-y-2 text-sm">
                   <p><strong>Email:</strong> {site.email}</p>
@@ -472,7 +472,7 @@ export default function PrivacyPolicyPage() {
             {/* Cookies */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">9. Cookies and Tracking Technologies</h2>
-              <p className="mb-6 leading-relaxed text-muted-foreground">
+              <p className="mb-6 leading-relaxed text-ink">
                 Our website uses cookies and similar tracking technologies to enhance user experience and analyze website performance.
               </p>
 
@@ -496,15 +496,15 @@ export default function PrivacyPolicyPage() {
                     description: "Track advertising effectiveness (with consent)",
                   },
                 ].map((cookie, index) => (
-                  <div key={index} className="rounded-lg bg-muted p-4 border border-border">
+                  <div key={index} className="rounded-lg bg-ice-tint p-4 border border-border">
                     <h4 className="mb-2 font-semibold">{cookie.type}</h4>
-                    <p className="text-sm text-muted-foreground">{cookie.description}</p>
+                    <p className="text-sm text-slate">{cookie.description}</p>
                   </div>
                 ))}
               </div>
 
               <h3 className="mb-3 text-lg font-semibold">9.2 Managing Cookies</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-slate">
                 You can control cookies through your browser settings. Note that disabling cookies may affect website functionality.
               </p>
             </div>
@@ -513,21 +513,21 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-12 mb-12">
               <div>
                 <h2 className="mb-4 text-2xl font-bold">10. Third-Party Links</h2>
-                <p className="text-muted-foreground">
+                <p className="text-ink">
                   Our website may contain links to third-party websites (social media, suppliers, partners). We are not responsible for the privacy practices of these external sites. Please review their privacy policies before providing personal information.
                 </p>
               </div>
 
               <div>
                 <h2 className="mb-4 text-2xl font-bold">11. Children&apos;s Privacy</h2>
-                <p className="text-muted-foreground">
+                <p className="text-ink">
                   Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
                 </p>
               </div>
 
               <div>
                 <h2 className="mb-4 text-2xl font-bold">12. International Data Transfers</h2>
-                <p className="text-muted-foreground">
+                <p className="text-ink">
                   We primarily operate within South Africa. If we transfer your information internationally, we ensure appropriate safeguards are in place to protect your data in accordance with POPIA.
                 </p>
               </div>
@@ -539,22 +539,22 @@ export default function PrivacyPolicyPage() {
               
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold">13.1 Consent</h3>
-                <p className="text-muted-foreground">
+                <p className="text-ink">
                   We will only send marketing communications with your explicit consent.
                 </p>
               </div>
 
               <div>
                 <h3 className="mb-3 text-lg font-semibold">13.2 Unsubscribe</h3>
-                <p className="mb-4 text-muted-foreground">
+                <p className="mb-4 text-ink">
                   You can unsubscribe from marketing communications at any time by:
                 </p>
-                <ul className="mb-4 ml-6 space-y-2 list-disc text-muted-foreground">
+                <ul className="mb-4 ml-6 space-y-2 list-disc text-ink">
                   <li>Clicking the &quot;unsubscribe&quot; link in emails</li>
                   <li>Contacting us at {site.email}</li>
                   <li>Calling us at 065 650 8504</li>
                 </ul>
-                <p className="text-sm italic text-muted-foreground">
+                <p className="text-sm italic text-ink">
                   You will continue to receive service-related communications even after unsubscribing from marketing.
                 </p>
               </div>
@@ -563,10 +563,10 @@ export default function PrivacyPolicyPage() {
             {/* Changes to Policy */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">14. Changes to This Privacy Policy</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or business operations. We will notify you of significant changes by:
               </p>
-              <ul className="ml-6 space-y-2 list-disc text-muted-foreground">
+              <ul className="ml-6 space-y-2 list-disc text-ink">
                 <li>Posting the updated policy on our website</li>
                 <li>Updating the &quot;Last Updated&quot; date</li>
                 <li>Sending email notifications for material changes (where appropriate)</li>
@@ -582,8 +582,8 @@ export default function PrivacyPolicyPage() {
               
               <div className="mb-8">
                 <h3 className="mb-4 text-lg font-semibold">15.1 Information Officer</h3>
-                <div className="rounded-xl bg-muted p-6">
-                  <p className="mb-4 text-muted-foreground">
+                <div className="rounded-xl bg-ice-tint p-6">
+                  <p className="mb-4 text-ink">
                     Our designated Information Officer under POPIA is available to address privacy concerns:
                   </p>
                   <div className="space-y-2">
@@ -597,10 +597,10 @@ export default function PrivacyPolicyPage() {
 
               <div className="mb-8">
                 <h3 className="mb-4 text-lg font-semibold">15.2 Complaints Process</h3>
-                <p className="mb-4 text-muted-foreground">
+                <p className="mb-4 text-ink">
                   If you have concerns about how we handle your personal information:
                 </p>
-                <ol className="ml-6 space-y-2 list-decimal text-muted-foreground">
+                <ol className="ml-6 space-y-2 list-decimal text-ink">
                   <li>Contact our Information Officer using the details above</li>
                   <li>We will acknowledge your complaint within 5 business days</li>
                   <li>We will investigate and respond within 30 days</li>
@@ -610,14 +610,14 @@ export default function PrivacyPolicyPage() {
 
               <div>
                 <h3 className="mb-4 text-lg font-semibold">15.3 Information Regulator of South Africa</h3>
-                <div className="rounded-xl bg-primary/10 p-6 border-2 border-primary/20">
+                <div className="rounded-xl bg-ice-tint p-6 border-2 border-border">
                   <p className="mb-4 font-semibold">Information Regulator (South Africa)</p>
                   <div className="space-y-2 text-sm">
                     <p><strong>Address:</strong> JD House, 27 Stiemens Street, Braamfontein, Johannesburg, 2001</p>
                     <p><strong>Phone:</strong> +27 10 023 5200</p>
                     <p><strong>Email:</strong> inforeg@justice.gov.za</p>
                     <p><strong>Website:</strong>{" "}
-                      <a href="https://www.justice.gov.za/inforeg/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.justice.gov.za/inforeg/" className="text-blue hover:underline" target="_blank" rel="noopener noreferrer">
                         https://www.justice.gov.za/inforeg/
                       </a>
                     </p>
@@ -629,20 +629,20 @@ export default function PrivacyPolicyPage() {
             {/* Consent */}
             <div className="mb-12">
               <h2 className="mb-6 text-2xl font-bold">16. Consent</h2>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
+              <p className="mb-4 leading-relaxed text-ink">
                 By using our website and services, you consent to this Privacy Policy and our collection, use, and disclosure of your information as described herein.
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-slate">
                 For specific processing activities, we will obtain your explicit consent where required by law.
               </p>
             </div>
 
             {/* Footer */}
             <div className="border-t border-border pt-8">
-              <div className="rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 p-8 text-center">
-                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Your Privacy Matters to Us</h3>
-                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <div className="rounded-xl bg-navy p-8 text-center text-white">
+                <Shield className="mx-auto mb-4 h-12 w-12 text-ice" />
+                <h3 className="mb-3 text-xl font-bold text-white">Your Privacy Matters to Us</h3>
+                <p className="mx-auto mb-6 max-w-2xl text-on-navy">
                   We are committed to protecting your personal information and respecting your privacy rights. 
                   If you have any questions or concerns about this Privacy Policy or our data practices, 
                   please don&apos;t hesitate to contact us.
@@ -650,20 +650,20 @@ export default function PrivacyPolicyPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href={`mailto:${site.email}`} 
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white px-6 py-3 font-semibold text-white"
                   >
                     <Mail className="h-4 w-4" />
                     Email Us
                   </a>
                   <a 
                     href="tel:+27656508504" 
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary/90 transition-colors"
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-amber px-6 py-3 font-semibold text-navy hover:bg-amber-hover"
                   >
                     <Phone className="h-4 w-4" />
                     Call: 065 650 8504
                   </a>
                 </div>
-                <p className="mt-6 text-sm text-muted-foreground">
+                <p className="mt-6 text-sm text-on-navy">
                   Last Updated: July 30, 2026 | Effective Date: July 30, 2026
                 </p>
               </div>

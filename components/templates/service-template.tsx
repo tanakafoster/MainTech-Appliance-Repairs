@@ -44,104 +44,124 @@ export function ServiceTemplate({ service }: { service: ServiceContent }) {
   }
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-section">
+    <article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <Breadcrumbs currentPath={`/${service.slug}`} items={[{ label: "Services", href: "/services" }, { label: service.nav }]} />
-      <header className="grid items-center gap-8 md:grid-cols-2">
+      <header className="bg-navy text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-section md:grid-cols-2">
         <div className="max-w-[var(--measure)]">
-          <h1 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">{service.h1}</h1>
-          <p className="mt-4 text-base leading-7 text-foreground">{service.intro}</p>
-          <CallActions className="mt-6" />
+          <Breadcrumbs variant="onDark" currentPath={`/${service.slug}`} items={[{ label: "Services", href: "/services" }, { label: service.nav }]} />
+          <p className="text-sm font-semibold uppercase tracking-wide text-ice">Repair</p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">{service.h1}</h1>
+          <p className="mt-4 text-base leading-7 text-on-navy">{service.intro}</p>
+          <CallActions className="mt-6" onDark />
         </div>
         <Image src={service.image} alt={service.imageAlt} width={service.width} height={service.height} priority className="h-auto w-full rounded-lg object-cover" />
+        </div>
       </header>
 
-      <section className="mt-section max-w-[var(--measure)]">
-        <h2 className="text-2xl font-bold text-primary">Signs you need a repair</h2>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Signs you need a repair</h2>
         <div className="mt-4 space-y-4">
           {service.faults.map((fault) => (
             <div key={fault.name}>
-              <h3 className="text-lg font-semibold">{fault.name}</h3>
-              <p className="mt-1 leading-7 text-muted-foreground">{fault.detail}</p>
+              <h3 className="text-lg font-semibold text-navy">{fault.name}</h3>
+              <p className="mt-1 leading-7 text-slate">{fault.detail}</p>
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="mt-section max-w-[var(--measure)]">
-        <h2 className="text-2xl font-bold text-primary">What our technician does</h2>
-        <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7">
+      <section className="bg-ice-tint">
+        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">What our technician does</h2>
+        <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7 text-ink">
           {service.work.map((step) => (
             <li key={step}>{step}</li>
           ))}
         </ol>
+        </div>
       </section>
 
-      <section className="mt-section max-w-[var(--measure)]">
-        <h2 className="text-2xl font-bold text-primary">Brands we work on</h2>
+      <section className="bg-surface">
+        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Brands we work on</h2>
         {service.brands.length > 0 ? (
-          <p className="mt-4 leading-7">This site already names {service.brands.join(", ")}. If yours is not in that list, tell us the make when you call and we will say if we can take the job.</p>
+          <p className="mt-4 leading-7 text-ink">This site already names {service.brands.join(", ")}. If yours is not in that list, tell us the make when you call and we will say if we can take the job.</p>
         ) : (
-          <p className="mt-4 leading-7">This page does not name brands, because the old site did not publish a list for this work. Tell us the make when you call.</p>
+          <p className="mt-4 leading-7 text-ink">This page does not name brands, because the old site did not publish a list for this work. Tell us the make when you call.</p>
         )}
+        </div>
       </section>
 
-      {service.sections.map((section) => (
-        <section key={section.heading} className="mt-section max-w-[var(--measure)]">
-          <h2 className="text-2xl font-bold text-primary">{section.heading}</h2>
-          <p className="mt-4 leading-7">{section.body}</p>
+      {service.sections.map((section, index) => (
+        <section key={section.heading} className={index % 2 === 0 ? "bg-ice-tint" : "bg-surface"}>
+          <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
+          <h2 className="text-2xl font-bold text-navy">{section.heading}</h2>
+          <p className="mt-4 leading-7 text-ink">{section.body}</p>
+          </div>
         </section>
       ))}
 
-      <section className="mt-section">
-        <h2 className="text-2xl font-bold text-primary">Areas we cover</h2>
+      <section className={service.sections.length % 2 === 0 ? "bg-ice-tint" : "bg-surface"}>
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Areas we cover</h2>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
           {areas.map((area) => (
             <li key={area.slug}>
-              <Link className="inline-flex min-h-11 items-center text-primary underline" href={`/service-areas/${area.slug}`}>
+              <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href={`/service-areas/${area.slug}`}>
                 Appliance repairs in {area.name}
               </Link>
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="mt-section max-w-[var(--measure)]">
-        <h2 className="text-2xl font-bold text-primary">Questions people ask</h2>
-        <div className="mt-4 space-y-4">
-          {service.faqs.map((faq) => (
-            <div key={faq.question}>
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <p className="mt-1 leading-7 text-muted-foreground">{faq.answer}</p>
-            </div>
-          ))}
         </div>
       </section>
 
-      <section className="mt-section">
-        <h2 className="text-2xl font-bold text-primary">Related services</h2>
+      <section className={service.sections.length % 2 === 0 ? "bg-surface" : "bg-ice-tint"}>
+        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Questions people ask</h2>
+        <div className="mt-4 space-y-4">
+          {service.faqs.map((faq) => (
+            <div key={faq.question}>
+              <h3 className="text-lg font-semibold text-navy">{faq.question}</h3>
+              <p className="mt-1 leading-7 text-slate">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+        </div>
+      </section>
+
+      <section className={service.sections.length % 2 === 0 ? "bg-ice-tint" : "bg-surface"}>
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <h2 className="text-2xl font-bold text-navy">Related services</h2>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
           {related.map((item) => (
             <li key={item.slug}>
-              <Link className="inline-flex min-h-11 items-center text-primary underline" href={`/${item.slug}`}>
+              <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href={`/${item.slug}`}>
                 {item.nav}
               </Link>
             </li>
           ))}
           <li>
-            <Link className="inline-flex min-h-11 items-center text-primary underline" href="/services">
+            <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href="/services">
               All repair services
             </Link>
           </li>
         </ul>
+        </div>
       </section>
 
-      <section className="mt-section rounded-lg bg-primary px-6 py-8 text-primary-foreground">
-        <h2 className="text-2xl font-bold">Book this repair</h2>
-        <p className="mt-3 max-w-[var(--measure)] leading-7">Call MainTech or send a WhatsApp with the fault. You can also use the contact form if you would rather write it down.</p>
+      <section className="bg-navy text-white">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+        <p className="text-sm font-semibold uppercase tracking-wide text-ice">Book this repair</p>
+        <h2 className="mt-2 text-2xl font-bold text-white">Talk to MainTech</h2>
+        <p className="mt-3 max-w-[var(--measure)] leading-7 text-on-navy">Call MainTech or send a WhatsApp with the fault. You can also use the contact form if you would rather write it down.</p>
         <CallActions className="mt-6" onDark />
+        </div>
       </section>
     </article>
   )

@@ -113,7 +113,7 @@ export function Footer() {
                   href={site.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/70 transition-all hover:bg-[#25D366] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white text-white"
                   aria-label={`WhatsApp ${site.name}`}
                 >
                   <WhatsAppIcon className="h-5 w-5" />

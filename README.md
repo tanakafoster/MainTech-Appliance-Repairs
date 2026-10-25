@@ -37,7 +37,7 @@ Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_FORM_KEY` to a [Web3For
 | **WhatsApp** | https://wa.me/27656508504 |
 | **Email** | info@maintechappliancerepairs.co.za |
 | **Location** | Gauteng, South Africa (Pretoria, Johannesburg, Midrand and surrounds — no public street address) |
-| **Primary color (theme/mask-icon)** | `#0F2C59` (deep navy) |
+| **Primary color (theme/mask-icon)** | `#0E2A47` (`--color-navy`) |
 | **Logo mark** | See `/public/logo-icon.png`, `/public/logo-square.png` |
 | **Positioning** | Certified, fully insured technicians; same day quotes and 24/7 emergency callouts |
 | **Years in operation** | 10+ |
