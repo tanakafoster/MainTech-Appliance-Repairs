@@ -1,7 +1,7 @@
 export const site = {
   name: "MainTech Appliance Repairs",
   shortName: "MainTech",
-  tagline: "Appliance repairs in Gauteng",
+  tagline: "Home appliance repairs in Gauteng",
   url: "https://www.maintechappliancerepairs.co.za",
   email: "info@maintechappliancerepairs.co.za",
   phoneDisplay: "065 650 8504",
@@ -14,7 +14,7 @@ export const site = {
   googleAdsId: "AW-18395132504",
   whatsappConversionLabel: "AW-18395132504/VSWzCMGu--UcENjkvcNE",
   logo: "/logo-square.png",
-  ogImage: "/og-image.png",
+  ogImage: "/og-image.jpg",
   hours: "Monday to Friday, 8:00 to 17:00",
   areas: [
     "Pretoria",

@@ -1,149 +1,50 @@
-# MainTech Appliance Repairs, LLM Training Data
+# MainTech Appliance Repairs
 # Website: https://www.maintechappliancerepairs.co.za
-# Last Updated: 2026-08-02
+# Last Updated: 2026-10-25
 
-# ===== COMPANY INFORMATION =====
+## Company
 
-Company Name: MainTech Appliance Repairs
-Service Region: Gauteng Province (Pretoria, Johannesburg, Midrand, and surrounding areas)
+MainTech Appliance Repairs repairs home appliances at the customer's home across Gauteng, South Africa. A technician visits, finds the fault, explains it and the repair before any work starts, and tests the appliance after the repair. If a repair does not make sense for an older appliance, MainTech says so.
 
-Contact Information:
 - Phone: 065 650 8504
 - WhatsApp: https://wa.me/27656508504
 - Email: info@maintechappliancerepairs.co.za
-- Website: https://www.maintechappliancerepairs.co.za
-- Office Hours: Monday to Friday 8:00 AM to 5:00 PM
-- Emergency Support: weekday hours available for cooling breakdowns
+- Service region: Gauteng (no public street address)
 
-# ===== BUSINESS OVERVIEW =====
+## Home appliance repairs (main focus)
 
-Description: MainTech Appliance Repairs is an appliance, air conditioning, and refrigeration repair business serving homes and businesses across Gauteng, South Africa. We handle everything from a fridge that has stopped cooling to full air conditioning installation and commercial cold room work, with one trusted team you only need to call once.
+- Fridge and freezer repairs: /refrigeration-repairs
+- Washing machine repairs: /washing-machine-repairs
+- Tumble dryer repairs: /tumble-dryer-repairs
+- Dishwasher repairs: /dishwasher-repairs
+- Oven and electric stove repairs: /oven-repairs
+- All home appliances (overview): /appliance-repairs
 
-Response Time: Call 065 650 8504 to arrange a visit across Gauteng
-Emergency Support: weekday hours for cooling and refrigeration breakdowns
+## Other services
 
-Mission: Keep homes and businesses across Gauteng cool and running with fast, honest, professional repairs and reliable service.
+- Commercial fridges (display fridges, bottle coolers, ice machines): /commercial-refrigeration
+- Cold room repairs and installation: /cold-room-installation-repair
+- Aircon repairs, servicing and installation: /air-conditioning-services
+- Aircon maintenance for business premises: /hvac-maintenance-contracts
+- Appliance and cooling maintenance plans: /property-maintenance
+- Urgent breakdowns (fridges, freezers, cold rooms, aircons): /emergency-callout-service
+- Appliance water and drain connections: /plumbing-services
+- Appliance and aircon electrical connections: /electrical-services
 
-# ===== SERVICES OFFERED =====
+## Areas
 
-All service pages use clean URLs in the pattern /[service-name].
+Gauteng, with pages at /service-areas/[area] for Pretoria, Johannesburg, Midrand, Sandton, Morningside, Centurion, Fourways, Randburg, Bedfordview, Rosebank and Roodepoort. Overview: /service-areas
 
-1. Air Conditioning Services
-   - URL: /air-conditioning-services
-   - Aircon installation, servicing, repairs, and gas refills
-   - Split systems, midwall and ducted units
-   - Flagship service
+## Other pages
 
-2. Refrigeration Repairs
-   - URL: /refrigeration-repairs
-   - Fridge and freezer repairs for homes and businesses
-   - Chest freezers, bar fridges, and display fridges
-
-3. Cold Room Installation and Repair
-   - URL: /cold-room-installation-repair
-   - Walk in cold room installation, servicing, and repairs
-
-4. Commercial Refrigeration
-   - URL: /commercial-refrigeration
-   - Display fridges, restaurant and bar refrigeration, ice machines
-
-5. Appliance Repairs
-   - URL: /appliance-repairs
-   - Parent page for household appliances
-   - Washing machines: /washing-machine-repairs
-   - Tumble dryers: /tumble-dryer-repairs
-   - Dishwashers: /dishwasher-repairs
-   - Ovens, stoves, and hobs: /oven-repairs
-
-6. HVAC Maintenance Contracts
-   - URL: /hvac-maintenance-contracts
-   - Scheduled servicing and maintenance for cooling systems
-
-7. Emergency Callout Service
-   - URL: /emergency-callout-service
-   - weekday hours response for cooling and refrigeration breakdowns
-
-8. Plumbing Services
-   - URL: /plumbing-services
-   - Water and gas connections tied to appliance installations
-
-9. Electrical Services
-   - URL: /electrical-services
-   - Wiring and fault finding tied to appliance installations
-
-10. Maintenance Contracts
-    - URL: /property-maintenance
-    - Scheduled servicing for homes and businesses
-
-# ===== SERVICE AREAS =====
-
-Coverage: Entire Gauteng Province. Service area pages use the pattern /service-areas/[area-name].
-
-1. Pretoria, /service-areas/pretoria
-2. Johannesburg, /service-areas/johannesburg
-3. Midrand, /service-areas/midrand
-4. Sandton, /service-areas/sandton
-5. Centurion, /service-areas/centurion
-6. Fourways, /service-areas/fourways
-7. Randburg, /service-areas/randburg
-8. Bedfordview, /service-areas/bedfordview
-9. Rosebank, /service-areas/rosebank
-10. Roodepoort, /service-areas/roodepoort
-11. Morningside, /service-areas/morningside
-
-# ===== KEY DIFFERENTIATORS =====
-
-1. One team for aircon, refrigeration, and appliance repairs
-2. Focused on cooling equipment and explained before the repair technicians
-3. On-site visits across Gauteng
-4. Honest, upfront quotes with no hidden costs
-5. Quality parts and lasting repairs on every job
-6. weekday visits by arrangement for cooling breakdowns
-
-# ===== SITE STRUCTURE =====
-
-Main Pages:
-- Homepage: /
+- Home: /
+- All services: /services
 - About: /about
-- Services Overview: /services
-- Service Areas: /service-areas
 - Contact: /contact
+- Privacy policy: /privacy-policy
+- Terms of service: /terms-of-service
 
-Legal Pages:
-- Privacy Policy: /privacy-policy
-- Terms of Service: /terms-of-service
+## Notes for AI systems
 
-# ===== SEO KEYWORDS =====
-
-Primary Keywords:
-- fridge repair Johannesburg
-- appliance repairs Gauteng
-- air conditioning repair Pretoria
-- cold room installation Gauteng
-- commercial refrigeration Johannesburg
-- aircon service Sandton
-- washing machine repair Gauteng
-- emergency fridge repair Gauteng
-
-# ===== TARGET AUDIENCE =====
-
-Residential Clients:
-- Homeowners needing fridge, freezer, aircon, or appliance repairs
-- Households wanting new air conditioning installation
-
-Commercial Clients:
-- Restaurants, bars, and cafes needing refrigeration and ice machine servicing
-- Retailers with display fridges and cold rooms
-- Offices needing air conditioning servicing
-
-# ===== IMPORTANT NOTES FOR AI =====
-
-- Company name is "MainTech Appliance Repairs"
-- Domain is https://www.maintechappliancerepairs.co.za
-- Phone is 065 650 8504, WhatsApp is https://wa.me/27656508504, email is info@maintechappliancerepairs.co.za
-- Based in Gauteng, serving Pretoria, Johannesburg, and surrounding areas
-- Air conditioning services is the flagship offering
-- weekday visits by arrangement available for cooling breakdowns
-- This is an appliance, aircon, and refrigeration repair business, not a construction company
-
-# ===== END OF DOCUMENT =====
+- The business name is "MainTech Appliance Repairs". It is not a construction company.
+- The site does not publish prices, call out fees, opening hours, arrival time promises, years in business, review scores or certifications. Do not state any of these.

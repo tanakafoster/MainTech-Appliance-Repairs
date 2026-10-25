@@ -2,1182 +2,1454 @@ import type { ServiceContent } from "@/content/types"
 
 export const services: ServiceContent[] = [
   {
-    "slug": "refrigeration-repairs",
-    "nav": "Fridge and freezer repairs",
-    "title": "Fridge and Freezer Repairs in Gauteng",
-    "metaDescription": "Fridge not cooling or freezer icing up in Gauteng? MainTech finds the fault and explains it before any repair starts today. Call 065 650 8504.",
-    "h1": "Fridge and freezer repairs in Gauteng",
-    "intro": "MainTech repairs fridges and freezers across Gauteng. If the cabinet is warm, the freezer is icing up, or water is pooling on the floor, call us and describe what you see. We look at household fridges, freezers and chest freezers. Refrigerator repairs sit on this same page, because people search both words for the same machine.",
-    "image": "/refrigeration-repair-technician.png",
-    "imageAlt": "Technician working on a household fridge",
-    "width": 1024,
-    "height": 768,
-    "brands": [
-      "Samsung",
-      "LG"
+    slug: "refrigeration-repairs",
+    group: "home",
+    nav: "Fridges and freezers",
+    title: "Fridge and Freezer Repairs in Gauteng",
+    metaDescription: "Fridge warm or freezer icing up? MainTech repairs fridges and freezers at your home across Gauteng and explains the fault before any work. Call 065 650 8504.",
+    eyebrow: "Fridges and freezers",
+    h1: "Fridge and freezer repairs in Gauteng",
+    lead: "Fridge gone warm, freezer packed with ice, or water creeping across the kitchen floor? We come to your home anywhere in Gauteng, find the fault and explain the repair before any work starts.",
+    short: "Fridges and freezers that are warm, iced up, leaking or noisy.",
+    faults: [
+      {
+        name: "Fridge not cooling",
+        detail: "The light comes on but the milk is warm. This is often a fan, a thermostat or the defrost system rather than the compressor, so we test before we name a part.",
+      },
+      {
+        name: "Freezer icing up",
+        detail: "A thick wall of ice on the back panel usually means the defrost system has stopped clearing it. Scraping it off buys you time, but the ice comes back until the heater, sensor or drain is fixed.",
+      },
+      {
+        name: "Water on the floor",
+        detail: "Puddles under the fridge or water pooling under the salad drawers usually come from a blocked defrost drain. A tired door seal can add to it by letting warm, damp air in.",
+      },
+      {
+        name: "Running all the time",
+        detail: "A fridge that never switches off may have dusty condenser coils, poor airflow or a cooling fault. We measure temperatures and listen to the compressor before we suggest anything.",
+      },
+      {
+        name: "Clicking, buzzing or rattling",
+        detail: "A new noise often points to a fan catching on ice, a loose pipe or a compressor that keeps trying to start. Tell us when you hear it, because that narrows things down quickly.",
+      },
+      {
+        name: "Chest freezer not freezing",
+        detail: "Soft ice cream or meat thawing at the edges calls for a look at the lid seal, the thermostat and the cooling system. Chest freezers and upright freezers are both part of what we do.",
+      },
     ],
-    "related": [
-      "commercial-refrigeration",
-      "cold-room-installation-repair",
-      "appliance-repairs",
-      "emergency-callout-service"
+    work: [
+      {
+        title: "Tell us the symptoms",
+        detail: "Call or WhatsApp us with the make and model if you can see the sticker, and say whether the fridge, the freezer or both are warm.",
+      },
+      {
+        title: "We check it properly",
+        detail: "At your home we measure temperatures, check the airflow, door seals and defrost drain, and listen to the fans and compressor.",
+      },
+      {
+        title: "You decide",
+        detail: "We explain what has failed and what the repair involves. Nothing gets replaced until you say go ahead.",
+      },
+      {
+        title: "Tested before we leave",
+        detail: "After the repair we run the fridge and check that the temperature is dropping the way it should.",
+      },
     ],
-    "faults": [
+    brands: ["Samsung", "LG"],
+    sections: [
       {
-        "name": "Fridge not cooling",
-        "detail": "The light may still work while the food goes warm. That can be a fan, a thermostat, a defrost fault or a cooling problem. We test the cabinet before we name a part."
+        heading: "Every kind of home fridge and freezer",
+        paragraphs: [
+          "We repair the fridges and freezers you find in Gauteng homes: fridge freezer combinations, side by side models, upright freezers, chest freezers and bar fridges. If it keeps your food cold at home, we can look at it.",
+          "Shop display fridges and walk in cold rooms are a different kind of equipment, so we treat those as commercial work. If you are not sure which you have, just call and describe it.",
+        ],
       },
       {
-        "name": "Freezer icing up",
-        "detail": "A thick coat of ice often means the defrost system is not clearing the evaporator. Scraping the ice is only a short pause. We check the heater, the timer or control, and the drain."
+        heading: "Is it worth fixing?",
+        paragraphs: [
+          "Plenty of warm fridges come down to one small part: a fan motor, a thermostat, a defrost heater or a blocked drain. Repairs like these usually make good sense.",
+          "If the compressor or the sealed cooling system has failed on an older fridge, the picture changes. We will tell you honestly when a repair is not worth it, so you can decide whether to fix it or replace it.",
+        ],
       },
       {
-        "name": "Fridge leaking water",
-        "detail": "Water inside the fridge or on the kitchen floor is often a blocked defrost drain. We also check the door seal, because warm air makes extra moisture."
+        heading: "Keeping your food safe while you wait",
+        paragraphs: [
+          "Keep the doors shut. A closed fridge or freezer holds its cold far longer than one that keeps being opened to check on it. If you have a cooler box and some ice, move the most perishable food into it first.",
+        ],
       },
-      {
-        "name": "Running all the time",
-        "detail": "A fridge that never rests can be low on refrigerant, short of airflow, or sitting in a hot spot. We measure temperatures and listen to the compressor before we talk about gas."
-      },
-      {
-        "name": "Noisy fridge or freezer",
-        "detail": "A rattle, buzz or knock can be a fan, a loose pipe or a compressor that is struggling. Tell us when the noise happens. That saves a wrong guess."
-      },
-      {
-        "name": "Freezer not freezing",
-        "detail": "Soft ice cream or a chest freezer that will not hold temperature needs a temperature check, a sealed system check and a look at the lid seal."
-      }
     ],
-    "work": [
-      "You tell us the brand, the model if you have it, and whether the fridge, the freezer, or both are warm.",
-      "On site we measure temperatures, check airflow, the door seal and the defrost drain, then listen to the fans and compressor.",
-      "If refrigerant is part of the fault, we say so. Samsung and LG are brands this site already names for household refrigeration. Other makes are discussed when you call.",
-      "We explain the fault and the repair before work starts. After a repair we run the unit and check that the temperature is moving the right way."
+    tips: [
+      "Keep the fridge and freezer doors closed as much as you can until we arrive.",
+      "Photograph the model sticker, usually on an inside wall or behind the salad drawer, and send it to us on WhatsApp.",
+      "Clear the space in front of the fridge so the technician can pull it out and reach the back.",
+      "If you smell burning or the plug point feels hot, switch off at the wall and leave it off.",
     ],
-    "sections": [
+    faqs: [
       {
-        "heading": "Fridge repairs and refrigerator repairs",
-        "body": "You do not need two pages for the same cabinet. A refrigerator and a fridge are the same search for most homes. This page covers both, plus upright freezers and chest freezers. Commercial display fridges and walk-in cold rooms have their own pages, because the job and the equipment are different."
+        question: "Can you fix a fridge that is not cooling?",
+        answer: "Usually, yes. Most warm fridges turn out to be a fan, thermostat, defrost or airflow fault. We find the cause first and tell you what the repair involves before we start.",
       },
       {
-        "heading": "What to say when you call",
-        "body": "Tell us how long it has been warm, whether the freezer still has ice, and if you heard a new noise. A photo of the model sticker helps. We cover Gauteng, including the suburbs that already have their own area pages."
+        question: "Do you repair freezers too?",
+        answer: "Yes. Upright freezers, chest freezers and the freezer section of a combination fridge are all part of the job. Walk in freezer rooms are handled as cold room work.",
       },
       {
-        "heading": "Before you call",
-        "body": "When you ask for fridge and freezer repairs, tell us which of these matches what you see: fridge not cooling, freezer icing up, fridge leaking water, running all the time, noisy fridge or freezer, freezer not freezing. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+        question: "Will you just top up the refrigerant?",
+        answer: "Only if our tests show that refrigerant is the problem. A warm fridge is often a fan or defrost fault, and adding refrigerant would not fix that.",
+      },
+      {
+        question: "Can load shedding damage my fridge?",
+        answer: "Power cuts, and the surge when the power comes back, can upset electronic controls and strain the compressor. If your fridge has played up since a power cut, tell us, because it helps us know where to look.",
+      },
+      {
+        question: "Do you come to my area?",
+        answer: "We cover Gauteng, including Pretoria, Johannesburg, Centurion, Midrand, Sandton and Fourways. Call or WhatsApp us and we will let you know when we can come.",
+      },
     ],
-    "faqs": [
-      {
-        "question": "Can you fix a fridge that is not cooling?",
-        "answer": "Often, yes. We first find out whether the problem is airflow, defrost, the thermostat or the cooling system. We will tell you if the repair does not make sense."
-      },
-      {
-        "question": "Do you repair freezers as well as fridges?",
-        "answer": "Yes. Upright freezers and chest freezers are part of this page. Walk-in freezer rooms are on the cold room page."
-      },
-      {
-        "question": "Do you cover my part of Gauteng?",
-        "answer": "We cover Gauteng. Use the area pages for Pretoria, Johannesburg, Midrand, Sandton and the other suburbs that already have a page."
-      },
-      {
-        "question": "How do I book a visit?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the quote form. Tell us the fault in your own words."
-      },
-      {
-        "question": "Will you add gas to a fridge that is warm?",
-        "answer": "Only if the tests show that refrigerant is the problem. A warm fridge is not always a gas fault."
-      }
-    ]
+    related: ["commercial-refrigeration", "cold-room-installation-repair", "appliance-repairs", "emergency-callout-service"],
   },
   {
-    "slug": "washing-machine-repairs",
-    "nav": "Washing machine repairs",
-    "title": "Washing Machine Repairs in Gauteng",
-    "metaDescription": "Washing machine not draining, not spinning or leaking in Gauteng? MainTech checks the fault and explains it before the repair. Call 065 650 8504.",
-    "h1": "Washing machine repairs in Gauteng",
-    "intro": "MainTech repairs washing machines across Gauteng. If the drum will not spin, the water will not leave, or the machine leaks onto the floor, call and tell us what it does on a wash. We look at the machine in front of us. This site has not published a brand list for washing machines, so name the make when you call.",
-    "image": "/washing_machine_repairs.jpg",
-    "imageAlt": "Washing machine in a laundry with the door open",
-    "width": 1024,
-    "height": 432,
-    "brands": [],
-    "related": [
-      "tumble-dryer-repairs",
-      "appliance-repairs",
-      "plumbing-services",
-      "electrical-services"
+    slug: "washing-machine-repairs",
+    group: "home",
+    nav: "Washing machines",
+    title: "Washing Machine Repairs in Gauteng",
+    metaDescription: "Washing machine not draining, not spinning or leaking? MainTech repairs front and top loaders at your home in Gauteng and finds the fault. Call 065 650 8504.",
+    eyebrow: "Laundry",
+    h1: "Washing machine repairs in Gauteng",
+    lead: "Drum full of water, stuck before the spin, or leaking across the laundry floor? We repair washing machines at your home across Gauteng, find the real fault and tell you what the repair involves before we touch a part.",
+    short: "Front and top loaders that will not drain, spin, start or stop leaking.",
+    faults: [
+      {
+        name: "Not draining",
+        detail: "Water left sitting in the drum is often a blocked pump filter or a kinked drain hose. We clear the easy causes first and only test the pump once those are ruled out.",
+      },
+      {
+        name: "Not spinning",
+        detail: "If the machine washes but will not spin, the door lock, the motor, the carbon brushes or the belt could be involved. An unbalanced load is sometimes the cause, but not always the whole story.",
+      },
+      {
+        name: "Leaking water",
+        detail: "A leak at the door, under the machine or behind it points to different parts. We check the door seal, hoses, internal joints and the soap drawer before we name the cause.",
+      },
+      {
+        name: "Will not start",
+        detail: "No lights at all, or lights with no programme, can be the door lock, the controls or the power reaching the machine. We test at the appliance so you know which it is.",
+      },
+      {
+        name: "Banging on spin",
+        detail: "A machine that thumps, shakes or walks across the floor may have worn shock absorbers, loose counterweights or failing drum bearings. A loud rumble during the spin is often the bearings.",
+      },
+      {
+        name: "Door will not open",
+        detail: "A door that stays locked after a wash usually means water is still inside or the lock has failed. Try not to force it, as that can break the handle and the lock.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Washing machine not draining",
-        "detail": "A tub full of water can be a blocked filter, a kinked hose or a pump that is not turning. We check the easy blockages before we talk about a pump."
+        title: "Describe what happens",
+        detail: "Tell us where in the cycle it goes wrong: filling, washing, rinsing, draining or spinning. A short video on WhatsApp helps a lot.",
       },
       {
-        "name": "Not spinning",
-        "detail": "If the machine washes but will not spin, the load, the door lock or the motor circuit can be involved. An unbalanced load is not always the whole story."
+        title: "We find the fault",
+        detail: "We check the filter, hoses, door lock and the parts that match your symptom, then run the machine to see the fault for ourselves.",
       },
       {
-        "name": "Leaking",
-        "detail": "Water at the door, under the machine or from the hose are different leaks. We look at the door seal, the joints and the drain hose, and we do not treat every puddle as a failed tub."
+        title: "Your go ahead",
+        detail: "We explain what has failed and what the repair involves. Work only starts once you are happy to go ahead.",
       },
       {
-        "name": "Not starting",
-        "detail": "No lights, or lights with no programme, can be the door switch, the controls or the supply at the machine. We test at the appliance. Whole-house wiring is not this job."
+        title: "A test wash",
+        detail: "After the repair we run a short cycle to check that the machine fills, drains and spins properly before we leave.",
       },
-      {
-        "name": "Shaking or walking",
-        "detail": "A machine that bangs the cabinet can have a failed shock, a worn bearing or a load that cannot balance. We say which one the inspection supports."
-      },
-      {
-        "name": "Bad smell",
-        "detail": "A smell can be residue in the drawer and drum, or water sitting in the sump. We tell you what is cleaning and what is a repair."
-      }
     ],
-    "work": [
-      "You describe the programme it fails on: wash, rinse, spin or drain.",
-      "We inspect the filter, hoses, door lock and the parts that match that symptom.",
-      "Water connections that belong to the washing machine can be checked with the repair. That is not a general plumbing visit.",
-      "We explain the fault before parts are fitted, then run a short cycle if the repair is done."
+    brands: [],
+    sections: [
+      {
+        heading: "Front loaders and top loaders",
+        paragraphs: [
+          "We repair front loaders, top loaders and washer dryer combinations. They fail in different ways. A front loader relies heavily on its door lock and door seal, while a top loader is more likely to have trouble with its lid switch, belt or drive.",
+          "Tell us which type you have when you call, along with the make and model. That way the technician arrives knowing what to look for.",
+        ],
+      },
+      {
+        heading: "Repair or replace?",
+        paragraphs: [
+          "Most washing machine faults are well worth repairing. Pumps, door locks, hoses and seals are everyday fixes. Drum bearings take more work, and on some machines the drum and bearings are sealed together as one unit.",
+          "When that happens on an older machine, we will tell you plainly whether the repair still makes sense, so you do not spend money on work that is not worth it.",
+        ],
+      },
+      {
+        heading: "Sometimes it is the tap or the hose",
+        paragraphs: [
+          "A tap that is only half open, a cracked inlet hose or a drain that backs up can all look like a washing machine fault. We check the water connections that belong to the machine and can sort them out on the same visit.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Linked appliance work",
-        "body": "Tumble dryers, dishwashers and ovens have their own pages. The appliance repairs page is the parent list. If the washing machine also needs a water connection checked, the plumbing page describes that limited job."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for washing machine repairs, tell us which of these matches what you see: washing machine not draining, not spinning, leaking, not starting, shaking or walking, bad smell. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "If the machine is leaking, turn off the tap that feeds it.",
+      "If water is still in the drum, leave the door shut and put towels down to protect the floor.",
+      "Clear washing baskets and anything stored on top of or beside the machine so we can move it.",
+      "Photograph the model sticker, usually on the door rim or the back, and send it on WhatsApp.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you fix a washing machine that will not drain?",
-        "answer": "We start with the filter and hose, then test the pump if those are clear. Not every full tub is a failed pump."
+        question: "Why is my washing machine not draining?",
+        answer: "The usual causes are a blocked pump filter, a kinked or blocked drain hose, or a pump that has failed. We check the simple blockages first, so you do not end up with a new pump you did not need.",
       },
       {
-        "question": "Do you repair every brand?",
-        "answer": "Tell us the make. This site does not publish a washing machine brand list, so we confirm the job when you call."
+        question: "Is a leak always the door seal?",
+        answer: "No. Hoses, the soap drawer, the pump and internal joints can all leak. We find where the water is really coming from before we name the part.",
       },
       {
-        "question": "Do you come to my area?",
-        "answer": "Yes, across Gauteng. The area pages name the suburbs that already have their own page."
+        question: "Why does my washing machine smell?",
+        answer: "A musty smell usually comes from soap residue and lint in the drawer, the door seal and the filter. A hot cleaning wash and a clean filter often fix it. If the smell keeps coming back, water may be sitting in the machine because of a drain fault.",
       },
       {
-        "question": "How do I ask for a visit?",
-        "answer": "Call, WhatsApp or use the contact form. Say whether it leaks, will not spin, or will not drain."
+        question: "Can I keep using it until you come?",
+        answer: "If it leaks, trips the power or smells of burning, please stop using it. If it only fails on one part of the cycle, ask us when you call and we will tell you whether it is sensible to carry on.",
       },
       {
-        "question": "Is a leak always a door seal?",
-        "answer": "No. Hoses and joints leak as well. We look before we name the part."
-      }
-    ]
+        question: "Do you repair washing machines in my area?",
+        answer: "We cover Gauteng, including Pretoria, Johannesburg, Centurion, Midrand, Sandton, Randburg and Roodepoort. Call or WhatsApp us and we will confirm when we can come.",
+      },
+    ],
+    related: ["tumble-dryer-repairs", "appliance-repairs", "plumbing-services", "electrical-services"],
   },
   {
-    "slug": "tumble-dryer-repairs",
-    "nav": "Tumble dryer repairs",
-    "title": "Tumble Dryer Repairs in Gauteng",
-    "metaDescription": "Dryer not heating or not tumbling in Gauteng? MainTech checks the airflow and the heat circuit before naming a part today. Call 065 650 8504.",
-    "h1": "Tumble dryer repairs in Gauteng",
-    "intro": "MainTech repairs tumble dryers across Gauteng. If clothes stay wet, the drum will not turn, or the dryer stops mid cycle, tell us which of those you see. Vented and condenser dryers are both in scope. This site has not published a dryer brand list.",
-    "image": "/Appliances-All-scaled-e1585943218453.webp",
-    "imageAlt": "Row of household laundry appliances",
-    "width": 1024,
-    "height": 450,
-    "brands": [],
-    "related": [
-      "washing-machine-repairs",
-      "appliance-repairs",
-      "electrical-services"
+    slug: "tumble-dryer-repairs",
+    group: "home",
+    nav: "Tumble dryers",
+    title: "Tumble Dryer Repairs in Gauteng",
+    metaDescription: "Tumble dryer not heating, not turning or cutting out halfway? MainTech repairs vented and condenser dryers at your home across Gauteng. Call 065 650 8504.",
+    eyebrow: "Laundry",
+    h1: "Tumble dryer repairs in Gauteng",
+    lead: "Clothes still damp after a full cycle, a drum that will not turn, or a dryer that cuts out halfway? We repair vented and condenser tumble dryers at your home across Gauteng, and we explain the fault before any work starts.",
+    short: "Vented and condenser dryers that run cold, cut out or will not tumble.",
+    faults: [
+      {
+        name: "Not heating",
+        detail: "If the drum turns but the air stays cold, the element, a thermostat or the thermal fuse may have failed. Poor airflow can trip a safety cutout as well, so we check that too.",
+      },
+      {
+        name: "Drum not turning",
+        detail: "If you can hear the motor but the drum stays still, a snapped drive belt is the usual suspect. If there is no sound at all, we look at the door switch, the motor and the controls.",
+      },
+      {
+        name: "Takes too long",
+        detail: "Two cycles for one load usually means the air is not getting through. A packed lint filter, a crushed vent hose or a clogged condenser are the first things we check.",
+      },
+      {
+        name: "Stops mid cycle",
+        detail: "A dryer that cuts out partway through is often overheating and switching itself off to stay safe. Clearing the blockage and testing the thermostats usually finds the cause.",
+      },
+      {
+        name: "Squealing or thumping",
+        detail: "A high squeal often points to worn drum rollers or a tired belt tensioner, and a steady thump can be a flat spot on a roller. We find which part is worn before replacing anything.",
+      },
+      {
+        name: "Condenser tank warnings",
+        detail: "On a condenser dryer, a tank that barely fills or a warning light that stays on after you empty it can be a pump or sensor fault. We test the water path from the drum to the tank.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Not heating",
-        "detail": "A dryer that runs cold can have a failed element, a thermostat, or air that cannot move. We check airflow and the heat circuit, not just one part."
+        title: "Tell us the symptom",
+        detail: "Let us know whether the dryer is vented or condenser, and whether it runs cold, stops or will not turn. A photo of the model sticker on WhatsApp helps.",
       },
       {
-        "name": "Not tumbling",
-        "detail": "A drum that stays still can be a belt, a motor or a door switch. Noise before it stopped is useful information."
+        title: "Airflow and heat checks",
+        detail: "We check the filter, the vent or condenser and the heating circuit together, because a dryer's heat and airflow depend on each other.",
       },
       {
-        "name": "Taking too long",
-        "detail": "A cycle that never feels dry is often blocked filters, a packed condenser or a weak heater. We look at airflow first."
+        title: "You approve the repair",
+        detail: "We show you what we found and explain the repair. No parts are fitted until you agree.",
       },
       {
-        "name": "Stopping mid cycle",
-        "detail": "If it cuts out, we check overheating protection and the controls after the simple blockages."
+        title: "A full test run",
+        detail: "We run the dryer with heat to make sure it warms up, tumbles and keeps running.",
       },
-      {
-        "name": "Noisy drum",
-        "detail": "Squealing or thumping points at rollers, the belt or the motor. We do not replace all three because of a noise."
-      },
-      {
-        "name": "Burning smell",
-        "detail": "Stop using it and tell us. A smell can be lint on a heater or a failing motor. We inspect before anyone runs it again."
-      }
     ],
-    "work": [
-      "You call tumble dryer repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Vented or condenser, we repair both",
+        paragraphs: [
+          "A vented dryer pushes warm, damp air out through a hose, usually through a wall or a window. A condenser dryer cools that air inside the machine and collects the water in a tank or sends it down a drain. They dry clothes the same way but fail in slightly different places.",
+          "With vented dryers, a squashed or blocked vent hose causes a lot of slow drying. With condenser dryers, a condenser packed with fluff is the usual culprit. Many of these faults are simple to fix once they are found.",
+        ],
+      },
+      {
+        heading: "Lint, heat and safety",
+        paragraphs: [
+          "Lint burns easily, and a dryer running hot behind a blocked filter or vent is working harder than it should. Cleaning the filter after every load is the most useful habit you can give your dryer.",
+          "If you notice a burning smell, scorch marks on clothes or a drum that feels much hotter than usual, stop using the dryer and unplug it. Tell us what you noticed so we can check the heater and thermostats first.",
+        ],
+      },
+      {
+        heading: "Laundry problems often come in pairs",
+        paragraphs: [
+          "If your washing machine is leaving clothes soaking wet, even a healthy dryer will struggle. We can check the washer's spin and the dryer on the same visit, so you get to the real cause.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs tumble dryers across Gauteng. If clothes stay wet, the drum will not turn, or the dryer stops mid cycle, tell us which of those you see. Vented and condenser dryers are both in scope. This site has not published a dryer brand list. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for tumble dryer repairs, tell us which of these matches what you see: not heating, not tumbling, taking too long, stopping mid cycle, noisy drum, burning smell. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Clean the lint filter before we come, as a blocked filter alone can stop a dryer drying.",
+      "Check that the vent hose behind a vented dryer is not crushed against the wall.",
+      "If you smell burning, unplug the dryer and do not run it again until it has been checked.",
+      "Clear space around the dryer, especially if it is stacked on top of a washing machine.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with not heating?",
-        "answer": "A dryer that runs cold can have a failed element, a thermostat, or air that cannot move. We check airflow and the heat circuit, not just one part."
+        question: "Why is my tumble dryer not heating?",
+        answer: "The usual causes are the heating element, a thermostat or the thermal fuse. A blocked filter or vent can also trip the safety cutout. We test all of these, so the cause gets fixed and not just the symptom.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Why does my dryer take so long to dry clothes?",
+        answer: "Usually the air is not getting through. Clean the lint filter and check the vent hose first. On a condenser dryer, the condenser needs a rinse now and then. If it is still slow, the heater or a sensor may be at fault.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Is a noisy dryer safe to keep using?",
+        answer: "A squeal from worn rollers is not usually dangerous straight away, but it will get worse. A grinding noise, a burning smell or a drum that jams is a reason to stop and call us.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Do you repair condenser dryers?",
+        answer: "Yes. We repair vented and condenser tumble dryers, including faults with the water tank, the pump and the condenser itself.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Can you look at my washing machine on the same visit?",
+        answer: "Yes. If your washer and dryer are both giving trouble, tell us when you book and we will plan to look at both while we are there.",
+      },
+    ],
+    related: ["washing-machine-repairs", "appliance-repairs", "electrical-services"],
   },
   {
-    "slug": "dishwasher-repairs",
-    "nav": "Dishwasher repairs",
-    "title": "Dishwasher Repairs in Gauteng",
-    "metaDescription": "Dishwasher not draining or not cleaning in Gauteng? MainTech checks filters, spray arms and the pump before the repair today. Call 065 650 8504.",
-    "h1": "Dishwasher repairs in Gauteng",
-    "intro": "MainTech repairs dishwashers across Gauteng. Standing water, dirty dishes or a leak at the door are different faults. Say which one you have. This site has not published a dishwasher brand list, so tell us the make when you call.",
-    "image": "/appliance_repairs.jpg",
-    "imageAlt": "Household appliances including a dishwasher",
-    "width": 1024,
-    "height": 400,
-    "brands": [],
-    "related": [
-      "washing-machine-repairs",
-      "plumbing-services",
-      "appliance-repairs"
+    slug: "dishwasher-repairs",
+    group: "home",
+    nav: "Dishwashers",
+    title: "Dishwasher Repairs in Gauteng",
+    metaDescription: "Dishwasher not draining, not cleaning or leaking at the door? MainTech repairs freestanding and built in dishwashers at your home in Gauteng. Call 065 650 8504.",
+    eyebrow: "Kitchen",
+    h1: "Dishwasher repairs in Gauteng",
+    lead: "Standing water in the bottom, dishes coming out dirty, or a puddle at the door? We repair dishwashers at your home across Gauteng, find the fault first and explain the repair before any work starts.",
+    short: "Dishwashers that will not drain, clean, fill or dry, or that leak.",
+    faults: [
+      {
+        name: "Not draining",
+        detail: "Dirty water left in the base is usually a blocked filter, a kinked drain hose or something stuck in the drain pump. We clear the blockages first and test the pump if they are clean.",
+      },
+      {
+        name: "Dishes not clean",
+        detail: "Gritty glasses and food left on plates can come from blocked spray arms, a weak wash pump or water that never heats up. We check all three, because each one needs a different fix.",
+      },
+      {
+        name: "Leaking at the door",
+        detail: "Water on the floor in front of the machine often comes from a worn door seal, a loose spray arm or too much foam. Water under the machine is a different leak, usually from a hose or the pump.",
+      },
+      {
+        name: "Not filling",
+        detail: "If you hear the dishwasher humming but no water comes in, the inlet valve, the inlet hose or the tap that feeds it may be the problem. We check the water supply first.",
+      },
+      {
+        name: "Dishes still wet",
+        detail: "Wet dishes at the end of a cycle can come down to rinse aid, a heating fault or a drying fan that has stopped on models that use one. We tell you which it is before suggesting a repair.",
+      },
+      {
+        name: "Will not start",
+        detail: "Lights that come on but no wash often means the door latch is not registering as closed. If nothing lights up at all, we test the power at the machine and the controls.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Not draining",
-        "detail": "A dishwasher full of water is often a blocked filter or hose. The pump is tested if those are clear."
+        title: "Tell us the fault",
+        detail: "Let us know if there is water in the base, dirty dishes, a leak or no power. A photo of the model sticker on the edge of the door helps us prepare.",
       },
       {
-        "name": "Not cleaning",
-        "detail": "Dirty results can be blocked spray arms, a weak wash pump or water that never gets hot."
+        title: "On site checks",
+        detail: "We look at the filter, spray arms, hoses and door seal, and run a short programme to watch the fault happen.",
       },
       {
-        "name": "Leaking",
-        "detail": "A door leak and water in the base are different. We check the seal, hoses and the base before we name a part."
+        title: "A clear explanation",
+        detail: "We explain what has failed and what the repair involves, and wait for your go ahead before starting.",
       },
       {
-        "name": "Not drying",
-        "detail": "Drying problems can be heat, rinse aid use or a fan on models that have one. We say which applies."
+        title: "A tested wash",
+        detail: "Once it is repaired, we run the dishwasher to check that it fills, heats, washes and drains properly.",
       },
-      {
-        "name": "Not filling",
-        "detail": "No water can be the inlet, the valve or the tap that feeds the machine. We check the appliance side."
-      },
-      {
-        "name": "Door not locking",
-        "detail": "If the programme will not start, the lock is one of the first tests."
-      }
     ],
-    "work": [
-      "You call dishwasher repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Freestanding and built in dishwashers",
+        paragraphs: [
+          "We repair freestanding dishwashers and built in models that sit behind a kitchen cabinet door. A built in machine has to slide out so we can reach the hoses and the base, and we fit it neatly back in place when we are done.",
+          "Slimline and full size machines fail in much the same ways. Tell us which you have and the technician will come prepared.",
+        ],
+      },
+      {
+        heading: "Small habits that prevent big faults",
+        paragraphs: [
+          "Most draining and cleaning problems start with food and grease building up in the filter. Scraping plates before loading and rinsing the filter every week or two keeps a lot of these faults away.",
+          "If your water is hard, limescale can build up on the heater and spray arms and stop the machine heating properly. Dishwasher salt and rinse aid, where your machine uses them, really do help.",
+        ],
+      },
+      {
+        heading: "When the problem is the connection",
+        paragraphs: [
+          "Sometimes the dishwasher is fine and the fault is in the tap, the inlet hose or the drain under the sink. We can sort out the water connections that belong to the dishwasher on the same visit, so you do not need someone else for that part.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs dishwashers across Gauteng. Standing water, dirty dishes or a leak at the door are different faults. Say which one you have. This site has not published a dishwasher brand list, so tell us the make when you call. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for dishwasher repairs, tell us which of these matches what you see: not draining, not cleaning, leaking, not drying, not filling, door not locking. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Check that the tap feeding the dishwasher, usually under the sink, is fully open.",
+      "If water is standing in the base, scoop out what you can with a cup and dry the rest with a towel.",
+      "Unload the dishes and clear the cupboard under the sink so we can reach the hoses.",
+      "If the dishwasher has tripped the power, leave it switched off at the wall until we have checked it.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with not draining?",
-        "answer": "A dishwasher full of water is often a blocked filter or hose. The pump is tested if those are clear."
+        question: "Why is there water left in my dishwasher?",
+        answer: "Most often the filter or drain hose is blocked, or something small like a piece of glass or a bottle cap is stuck in the drain pump. We check the simple causes first.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Why are my dishes coming out dirty?",
+        answer: "Blocked spray arm holes, a clogged filter, overloading and a weak wash pump are the usual causes. If the water is not getting hot, the heater may have failed too.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Can I clean the filter myself?",
+        answer: "Yes. On most machines the filter twists out of the base. Rinse it under the tap and lock it firmly back in place. If that does not fix the fault, give us a call.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Do you repair built in dishwashers?",
+        answer: "Yes. We slide the machine out carefully to reach the hoses and base, then fit it back in place once the repair is done.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Is it worth repairing an older dishwasher?",
+        answer: "Often it is. Pumps, seals, valves and heaters can usually be replaced. If the repair does not make sense for the age of the machine, we will tell you honestly.",
+      },
+    ],
+    related: ["washing-machine-repairs", "plumbing-services", "appliance-repairs"],
   },
   {
-    "slug": "oven-repairs",
-    "nav": "Oven and stove repairs",
-    "title": "Oven and Stove Repairs in Gauteng",
-    "metaDescription": "Stove plate not heating or oven not getting hot in Gauteng? MainTech tests the element and controls before any repair today. Call 065 650 8504.",
-    "h1": "Oven and stove repairs in Gauteng",
-    "intro": "MainTech repairs ovens, stoves and hobs across Gauteng. A cold plate, an oven that will not heat, or a door that will not close are all on this page. Gas stove overhauls are not offered as their own service. This site has not published an oven brand list.",
-    "image": "/appliance_repairs.jpg",
-    "imageAlt": "Kitchen appliances lined up for repair",
-    "width": 1024,
-    "height": 400,
-    "brands": [],
-    "related": [
-      "appliance-repairs",
-      "electrical-services",
-      "dishwasher-repairs"
+    slug: "oven-repairs",
+    group: "home",
+    nav: "Ovens and stoves",
+    title: "Oven and Stove Repairs in Gauteng",
+    metaDescription: "Oven not heating or stove plate gone cold? MainTech repairs electric ovens, stoves and hobs at your home in Gauteng and explains the fault. Call 065 650 8504.",
+    eyebrow: "Kitchen",
+    h1: "Oven and stove repairs in Gauteng",
+    lead: "Oven not heating, a stove plate gone cold, or a grill that will not come on? We repair electric ovens, stoves and hobs at your home across Gauteng, and explain the fault before any work starts.",
+    short: "Electric ovens, stoves, plates and hobs that will not heat or keep tripping.",
+    faults: [
+      {
+        name: "Oven not heating",
+        detail: "An oven that stays cold, or only gets warm, often has a failed element, thermostat or selector switch. We test each one before replacing anything.",
+      },
+      {
+        name: "Stove plate not working",
+        detail: "One dead plate is usually the plate itself or its switch. If several plates stopped at the same time, we check the supply and the connections to the stove.",
+      },
+      {
+        name: "Uneven cooking",
+        detail: "Cakes that burn on one side and stay raw on the other can point to a failed fan, a fan element or a door that does not seal. We check the heat and airflow inside the oven.",
+      },
+      {
+        name: "Grill not working",
+        detail: "If the oven heats but the grill does not, the top element or its switch is the first thing we test.",
+      },
+      {
+        name: "Tripping the power",
+        detail: "A stove that trips the electricity when you switch on a plate or the oven often has an element that has developed a fault to earth. We find the exact part so you are not left guessing.",
+      },
+      {
+        name: "Door or seal problems",
+        detail: "A door that will not close, a broken hinge or a perished seal lets heat escape and makes cooking slow. Hinges and seals can usually be replaced so the oven holds its heat again.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Stove plate not heating",
-        "detail": "One dead plate is not the same job as a whole oven that stays cold. We test that plate and its connection."
+        title: "Describe the fault",
+        detail: "Tell us which part is not working: the oven, the grill, one plate or the whole stove. Send a photo of the model sticker, usually on the door frame or the back, on WhatsApp.",
       },
       {
-        "name": "Oven not heating",
-        "detail": "No heat can be an element, a selector or the supply at the appliance. We test those before we change parts."
+        title: "Safe testing",
+        detail: "We isolate the power, then test the elements, switches, thermostat and connections that match your fault.",
       },
       {
-        "name": "Uneven cooking",
-        "detail": "Hot spots can be a failed fan, a tired element or a door that does not seal."
+        title: "Your decision",
+        detail: "We explain what has failed and what the repair involves. Work starts only once you agree.",
       },
       {
-        "name": "Grill not working",
-        "detail": "The grill circuit is checked on its own when the oven still heats."
+        title: "A heat test",
+        detail: "After the repair we heat the oven or plate and check that it reaches temperature and holds it.",
       },
-      {
-        "name": "Door not closing",
-        "detail": "A door that hangs open lets heat out. We look at hinges and the seal."
-      },
-      {
-        "name": "Hob clicking",
-        "detail": "A hob that clicks and does not light is described when you call. We will say if that fault is in the work we do."
-      }
     ],
-    "work": [
-      "You call oven and stove repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Electric ovens, stoves and hobs",
+        paragraphs: [
+          "We repair freestanding electric stoves, built in ovens, eye level ovens and separate hobs, including solid plate hobs and ceramic glass hobs. If it cooks with electricity, we can usually help.",
+        ],
+      },
+      {
+        heading: "One dead plate is not a dead stove",
+        paragraphs: [
+          "A stove has several separate circuits: each plate, the oven element, the grill and the fan. When one fails, the rest usually carry on working. That makes the fault easier to find, and the repair is often a single element or switch.",
+          "When everything stops at once, the cause is more likely to be the supply, a connection or a main control. That is a different job, so we check the power at the stove before opening up the appliance.",
+        ],
+      },
+      {
+        heading: "Looking after your oven",
+        paragraphs: [
+          "Spills that bake onto the oven floor and door seal slowly wear them down. Wiping up big spills once the oven has cooled, and keeping the seal clean, helps the oven heat evenly and keeps the door closing properly.",
+          "If the glass on a ceramic hob cracks, stop using it straight away and switch it off at the wall. Cracked glass can let spills reach the parts underneath.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs ovens, stoves and hobs across Gauteng. A cold plate, an oven that will not heat, or a door that will not close are all on this page. Gas stove overhauls are not offered as their own service. This site has not published an oven brand list. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for oven and stove repairs, tell us which of these matches what you see: stove plate not heating, oven not heating, uneven cooking, grill not working, door not closing, hob clicking. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "If the stove trips the power or smells of burning, switch it off at the wall isolator and leave it off.",
+      "Leave the oven off on the day of the visit so it is cool enough to work on safely.",
+      "Clear the stove top and take pots, pans and trays out of the oven and the drawer.",
+      "Note which plates, settings or functions still work, as this helps us test faster.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with stove plate not heating?",
-        "answer": "One dead plate is not the same job as a whole oven that stays cold. We test that plate and its connection."
+        question: "Why is my oven not heating?",
+        answer: "The most common causes are a failed element, a faulty thermostat or a selector switch that no longer makes contact. If the oven light and fan work but there is no heat, an element is the likely culprit.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Can you fix one stove plate that is not working?",
+        answer: "Yes. A single dead plate is usually the plate itself or its control switch. Both can normally be replaced without affecting the rest of the stove.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Do you repair ceramic glass hobs?",
+        answer: "Yes. We repair electric ceramic hobs where a zone will not heat or the controls do not respond. If the glass itself is cracked, stop using the hob and tell us when you call.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Why does my stove trip the electricity?",
+        answer: "Usually an element has developed a fault to earth, often after a spill or simply with age. We test each element and connection to find the part that is causing the trip.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Can you connect a new stove or oven?",
+        answer: "Yes. We handle the electrical connection for a stove or oven at the appliance. Tell us what you are installing when you call and we will talk you through it.",
+      },
+    ],
+    related: ["appliance-repairs", "electrical-services", "dishwasher-repairs"],
   },
   {
-    "slug": "appliance-repairs",
-    "nav": "All appliance repairs",
-    "title": "Home Appliance Repairs in Gauteng",
-    "metaDescription": "Need appliance repairs in Gauteng? MainTech covers laundry and kitchen machines and links you to the right repair page today. Call 065 650 8504.",
-    "h1": "Appliance repairs in Gauteng",
-    "intro": "MainTech repairs household appliances across Gauteng. This page is the parent list. Washing machines, tumble dryers, dishwashers and ovens each have their own page, because the faults are different. Fridges are on the fridge and freezer page.",
-    "image": "/appliance_repairs.jpg",
-    "imageAlt": "Several household appliances together",
-    "width": 1024,
-    "height": 400,
-    "brands": [],
-    "related": [
-      "washing-machine-repairs",
-      "tumble-dryer-repairs",
-      "dishwasher-repairs",
-      "oven-repairs",
-      "refrigeration-repairs"
+    slug: "appliance-repairs",
+    group: "home",
+    nav: "All home appliances",
+    title: "Home Appliance Repairs in Gauteng",
+    metaDescription: "Fridge, washing machine, dryer, dishwasher or stove playing up? MainTech repairs home appliances on site in Gauteng and explains the fault. Call 065 650 8504.",
+    eyebrow: "Home appliances",
+    h1: "Home appliance repairs in Gauteng",
+    lead: "When the fridge, washing machine, tumble dryer, dishwasher or stove stops working, the whole house feels it. MainTech repairs household appliances at your home across Gauteng, finds the fault first and explains the repair before any work starts.",
+    short: "Fridges, washers, dryers, dishwashers and stoves repaired at your home.",
+    faults: [
+      {
+        name: "Fridge or freezer warm",
+        detail: "Food going soft, ice building up or water under the drawers. Our fridge and freezer repairs page explains the common causes and what we check.",
+      },
+      {
+        name: "Washing machine not draining",
+        detail: "Water left in the drum, no spin or a puddle on the floor. Our washing machine repairs page covers front loaders and top loaders.",
+      },
+      {
+        name: "Tumble dryer not heating",
+        detail: "Damp clothes, a drum that will not turn or a dryer that cuts out halfway. Our tumble dryer repairs page covers vented and condenser models.",
+      },
+      {
+        name: "Dishwasher not cleaning",
+        detail: "Dirty dishes, standing water or a leak at the door. Our dishwasher repairs page covers freestanding and built in machines.",
+      },
+      {
+        name: "Oven or plate cold",
+        detail: "An oven that will not heat, a dead plate or a stove that trips the power. Our oven and stove repairs page covers electric ovens, stoves and hobs.",
+      },
+      {
+        name: "Not sure what is wrong",
+        detail: "Call or WhatsApp us and describe what the appliance is doing. We will help you work out the likely fault and book the right visit.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Washer not draining",
-        "detail": "Use the washing machine page if the tub stays full or the machine will not spin."
+        title: "Call or WhatsApp",
+        detail: "Tell us which appliance it is, the make and model if you can see the sticker, and what it is doing.",
       },
       {
-        "name": "Dryer not heating",
-        "detail": "Use the tumble dryer page if clothes stay wet or the drum will not turn."
+        title: "We come to you",
+        detail: "A technician visits your home, checks the appliance and finds the actual cause of the fault.",
       },
       {
-        "name": "Dishwasher not cleaning",
-        "detail": "Use the dishwasher page for standing water, dirty washes or leaks."
+        title: "You approve first",
+        detail: "We explain what has failed and what the repair involves. Nothing is done without your go ahead.",
       },
       {
-        "name": "Stove plate not heating",
-        "detail": "Use the oven page for cold plates, ovens that will not heat, and hobs."
+        title: "Tested and working",
+        detail: "We test the appliance after the repair, so you know it works properly before we leave.",
       },
-      {
-        "name": "Fridge not cooling",
-        "detail": "Use the fridge and freezer page. Do not treat a warm fridge as a laundry repair."
-      },
-      {
-        "name": "Unsure which machine",
-        "detail": "Call and name the appliance. We will point you at the right page and the right visit."
-      }
     ],
-    "work": [
-      "You call all appliance repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "One call for the whole house",
+        paragraphs: [
+          "Most homes rely on the same handful of machines: a fridge and freezer and a dishwasher and stove in the kitchen, with a washing machine and tumble dryer in the laundry. When one breaks, you should not need a different company for each.",
+          "MainTech repairs all of them. If two machines are playing up, tell us when you book and we can look at both on one visit.",
+        ],
+      },
+      {
+        heading: "Straight answers, no guesswork",
+        paragraphs: [
+          "Every visit starts with finding the fault, not guessing at a part. Once we know what has failed, we explain it in plain language and tell you what the repair involves before anything is done.",
+          "Some appliances are not worth fixing. If a repair does not make sense for the age or condition of the machine, we say so, and you can decide what to do next.",
+        ],
+      },
+      {
+        heading: "Power, water and the appliance",
+        paragraphs: [
+          "Not every fault is inside the machine. A worn plug point, a half closed tap or a crushed drain hose can stop a perfectly good appliance. We check the connections that belong to the appliance as part of the visit and can put those right too.",
+          "Power cuts and surges can damage the electronics in modern appliances. If a machine stopped working after the power went off and came back on, mention it when you call.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs household appliances across Gauteng. This page is the parent list. Washing machines, tumble dryers, dishwashers and ovens each have their own page, because the faults are different. Fridges are on the fridge and freezer page. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for all appliance repairs, tell us which of these matches what you see: washer not draining, dryer not heating, dishwasher not cleaning, stove plate not heating, fridge not cooling, unsure which machine. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Find the make and model on the appliance sticker and send us a photo on WhatsApp if you can.",
+      "Write down what the appliance is doing, including any error code or flashing lights.",
+      "Switch off and unplug any appliance that smells of burning or has tripped the power.",
+      "Clear space around the machine so the technician can move it and reach the back.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with washer not draining?",
-        "answer": "Use the washing machine page if the tub stays full or the machine will not spin."
+        question: "Which home appliances do you repair?",
+        answer: "We repair fridges, freezers, washing machines, tumble dryers, dishwashers, electric ovens, stoves and hobs. Each one has its own page with the common faults and what we check.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Do you come to my home?",
+        answer: "Yes. Our technician comes to you anywhere in Gauteng, including Pretoria, Johannesburg, Midrand, Sandton, Centurion, Fourways, Randburg and Roodepoort.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Can you look at more than one appliance on a visit?",
+        answer: "Yes. Tell us about every appliance that is giving trouble when you book, so the technician can plan for all of them.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Do I need to know what is wrong before I call?",
+        answer: "Not at all. Just describe what the appliance is doing, or not doing. We will ask a few questions and find the fault on site.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "What happens if my appliance cannot be repaired?",
+        answer: "We tell you honestly and explain why. You will never be pushed into a repair that does not make sense.",
+      },
+    ],
+    related: ["washing-machine-repairs", "tumble-dryer-repairs", "dishwasher-repairs", "oven-repairs", "refrigeration-repairs"],
   },
   {
-    "slug": "commercial-refrigeration",
-    "nav": "Commercial refrigeration",
-    "title": "Commercial Refrigeration in Gauteng",
-    "metaDescription": "Display fridge warm or ice machine not making ice? MainTech repairs commercial refrigeration across Gauteng today with us. Call 065 650 8504.",
-    "h1": "Commercial refrigeration repairs in Gauteng",
-    "intro": "MainTech repairs commercial refrigeration across Gauteng. This page is for shops, restaurants and other businesses. It is not the page for a household fridge. Display fridges, bottle coolers, under-counter units and ice machines are the equipment this site already describes.",
-    "image": "/commercial-refrigeration-display.png",
-    "imageAlt": "Commercial display fridges in a shop",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "cold-room-installation-repair",
-      "refrigeration-repairs",
-      "emergency-callout-service",
-      "hvac-maintenance-contracts"
+    slug: "commercial-refrigeration",
+    group: "more",
+    nav: "Commercial fridges",
+    title: "Commercial Fridge Repairs in Gauteng",
+    metaDescription: "Display fridge, bottle cooler or ice machine not cold? MainTech repairs commercial fridges on site for shops and restaurants across Gauteng. Call 065 650 8504.",
+    eyebrow: "Commercial",
+    h1: "Commercial fridge repairs in Gauteng",
+    lead: "When a display fridge or bottle cooler goes warm, your stock is on the line. MainTech also repairs commercial refrigeration for shops, restaurants and other businesses across Gauteng, on site at your premises.",
+    short: "Display fridges, bottle coolers, under counter units and ice machines.",
+    faults: [
+      {
+        name: "Display fridge warm",
+        detail: "Stock that is going soft needs quick attention. We check the temperature, fans, door seals and cooling circuit to find out why the cabinet cannot hold its setting.",
+      },
+      {
+        name: "Bottle cooler not cold",
+        detail: "A cooler that runs but stays warm often has a dirty condenser or a fan that has stopped. We check the airflow before anyone talks about refrigerant.",
+      },
+      {
+        name: "Under counter fridge warm",
+        detail: "Kitchen units work hard in hot spaces next to ovens and fryers. Grease on the condenser and worn door seals are common causes.",
+      },
+      {
+        name: "Ice machine not making ice",
+        detail: "Little or no ice can be the water supply, a dirty condenser or a refrigeration fault. Tell us the type of machine when you call.",
+      },
+      {
+        name: "Coil icing up",
+        detail: "Ice on the evaporator coil blocks the airflow and warms the cabinet. We check the defrost system and the fans.",
+      },
+      {
+        name: "Doors not sealing",
+        detail: "A door that does not close properly lets warm air in all day. We check the gaskets, hinges and door closers.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Display fridge warm",
-        "detail": "Stock going soft is urgent for a shop. We check temperature, fans, doors and the cooling circuit."
+        title: "Tell us the unit",
+        detail: "Let us know the type of fridge, what it is holding and the temperature it is showing.",
       },
       {
-        "name": "Bottle cooler not cold",
-        "detail": "A cooler that runs but stays warm needs airflow and temperature checks before anyone talks about gas."
+        title: "We check on site",
+        detail: "We measure temperatures, check the airflow, fans, seals and condenser, and see how the system is running.",
       },
       {
-        "name": "Under-counter fridge warm",
-        "detail": "Kitchen units under the counter are a different shape from a household fridge. Tell us the type of cabinet."
+        title: "Agree the repair",
+        detail: "We explain the fault and the repair, and get your go ahead before work starts.",
       },
       {
-        "name": "Ice machine not making ice",
-        "detail": "Low ice can be water, a dirty condenser or a refrigeration fault. We look at the machine you have."
+        title: "Back to temperature",
+        detail: "After the repair we run the unit and check that it is pulling down to the right temperature.",
       },
-      {
-        "name": "Unit icing up",
-        "detail": "Ice on the coil can block airflow. We check defrost and the fans."
-      },
-      {
-        "name": "Door left out of alignment",
-        "detail": "A door that does not seal lets heat in all day. We check the gasket and the hinges."
-      }
     ],
-    "work": [
-      "You call commercial refrigeration and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Equipment that keeps you trading",
+        paragraphs: [
+          "We work on glass door display fridges, bottle coolers, under counter fridges and freezers in commercial kitchens, and ice machines. These units run hard, often in warm spaces, and they wear differently from a fridge at home.",
+        ],
+      },
+      {
+        heading: "Fewer surprises",
+        paragraphs: [
+          "Condenser coils in shops and kitchens collect dust and grease quickly, and a choked condenser is behind many warm cabinets. Keeping them clean prevents a lot of breakdowns, and we can add your fridges to a planned maintenance visit.",
+          "If the problem is a walk in cold room rather than a cabinet, we repair and install those too.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs commercial refrigeration across Gauteng. This page is for shops, restaurants and other businesses. It is not the page for a household fridge. Display fridges, bottle coolers, under-counter units and ice machines are the equipment this site already describes. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for commercial refrigeration, tell us which of these matches what you see: display fridge warm, bottle cooler not cold, under-counter fridge warm, ice machine not making ice, unit icing up, door left out of alignment. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Move stock from a warm unit into a working fridge or cold room if you have one.",
+      "Keep the faulty unit's doors closed so it holds whatever cold it still has.",
+      "Note the temperature on the display and when you first noticed it rising.",
+      "Clear boxes away from the unit and its condenser so the technician can get to it.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with display fridge warm?",
-        "answer": "Stock going soft is urgent for a shop. We check temperature, fans, doors and the cooling circuit."
+        question: "Do you repair commercial fridges as well as home ones?",
+        answer: "Yes. We repair display fridges, bottle coolers, under counter units and ice machines for businesses, as well as fridges and freezers at home.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Can you come to my shop or restaurant?",
+        answer: "Yes. We work on site at your premises across Gauteng, so the unit does not need to be moved.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "My display fridge is warm. What should I do first?",
+        answer: "Keep the doors closed, move the most valuable stock to another fridge if you can, and call us with the temperature it is showing.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Do you repair ice machines?",
+        answer: "Yes. We look at ice machines that make little or no ice, leak, or stop running. Tell us the make and model when you call.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "What if it is urgent?",
+        answer: "Call and tell us what stock is at risk. We take urgent breakdown calls and will tell you when we can come.",
+      },
+    ],
+    related: ["cold-room-installation-repair", "refrigeration-repairs", "emergency-callout-service", "hvac-maintenance-contracts"],
   },
   {
-    "slug": "cold-room-installation-repair",
-    "nav": "Cold room repairs",
-    "title": "Cold Room Repairs in Gauteng",
-    "metaDescription": "Cold room too warm or freezer room not holding temperature? MainTech repairs walk-in rooms across Gauteng today with us on site. Call 065 650 8504.",
-    "h1": "Cold room and freezer room repairs in Gauteng",
-    "intro": "MainTech repairs and installs walk-in cold rooms and freezer rooms across Gauteng. If the room is too warm, ice is building on the evaporator, or the door does not seal, call and tell us which room it is. This is separate from a household fridge repair.",
-    "image": "/cold-room-installation.png",
-    "imageAlt": "Walk-in cold room panels and door",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "commercial-refrigeration",
-      "refrigeration-repairs",
-      "emergency-callout-service"
+    slug: "cold-room-installation-repair",
+    group: "more",
+    nav: "Cold rooms",
+    title: "Cold Room Repairs and Installation in Gauteng",
+    metaDescription: "Cold room too warm or freezer room icing up? MainTech repairs and installs walk in cold rooms and freezer rooms on site across Gauteng. Call 065 650 8504.",
+    eyebrow: "Commercial",
+    h1: "Cold room repairs and installation in Gauteng",
+    lead: "A cold room that will not hold temperature puts everything inside it at risk. MainTech also repairs and installs walk in cold rooms and freezer rooms for businesses across Gauteng.",
+    short: "Walk in cold rooms and freezer rooms repaired, and new rooms installed.",
+    faults: [
+      {
+        name: "Room too warm",
+        detail: "We check the set point, the fans, the door and whether the condensing unit outside is running as it should.",
+      },
+      {
+        name: "Ice on the evaporator",
+        detail: "A coil covered in ice cannot cool the room. The defrost system and the airflow are the first things we check.",
+      },
+      {
+        name: "Door not sealing",
+        detail: "A torn gasket, a dragging door or a strip curtain that has come down lets warm air pour in. It is one of the most common reasons a room struggles.",
+      },
+      {
+        name: "Temperature swinging",
+        detail: "A room that drifts too warm and then too cold can have a control, sensor or door fault. We watch how it cycles before naming a cause.",
+      },
+      {
+        name: "Freezer room not holding",
+        detail: "Freezer rooms work harder than cold rooms. Tell us the temperature you need and the temperature the display shows.",
+      },
+      {
+        name: "Water on the floor",
+        detail: "Water under the evaporator usually means a blocked or frozen drain line. Left alone, it can turn into a sheet of ice on the floor.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Room too warm",
-        "detail": "We check the set point, the fans, the door and whether the plant is running."
+        title: "Describe the room",
+        detail: "Let us know if it is a cold room or a freezer room, the temperature it shows and what is stored inside.",
       },
       {
-        "name": "Ice on the evaporator",
-        "detail": "A blocked coil stops the room cooling. Defrost and airflow are the first checks."
+        title: "Inspect the system",
+        detail: "We check the door, evaporator, fans, defrost and the condensing unit outside, and see how the whole system is running.",
       },
       {
-        "name": "Door not sealing",
-        "detail": "Warm air through a bad gasket or a dragging door is a common reason a room struggles."
+        title: "Explain and agree",
+        detail: "We explain what has failed and what the repair involves, then wait for your go ahead.",
       },
       {
-        "name": "Temperature swinging",
-        "detail": "A room that cycles too wide can be a control, a door or a plant fault. We log what it is doing."
+        title: "Cooling checked",
+        detail: "After the repair we check that the room is cooling down properly before we leave.",
       },
-      {
-        "name": "Freezer room not holding",
-        "detail": "Freezer rooms are part of this page. Tell us the temperature you need and the temperature you have."
-      },
-      {
-        "name": "New room or a repair",
-        "detail": "Installation and repair both sit on this page. Say whether you need a new room or a room that has failed."
-      }
     ],
-    "work": [
-      "You call cold room repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Repairs and new installations",
+        paragraphs: [
+          "We repair existing walk in cold rooms and freezer rooms, and we install new ones. If you are planning a new room, tell us the space you have, what you want to store and the temperature you need. We will talk you through the options before anything is agreed.",
+        ],
+      },
+      {
+        heading: "Protecting what is inside",
+        paragraphs: [
+          "Every time the door opens on a struggling room, more warm air gets in. Keep it closed, check the strip curtain is in place, and only go in when you have to.",
+          "If stock is at risk, say so when you call so we understand how urgent the job is.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs and installs walk-in cold rooms and freezer rooms across Gauteng. If the room is too warm, ice is building on the evaporator, or the door does not seal, call and tell us which room it is. This is separate from a household fridge repair. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for cold room repairs, tell us which of these matches what you see: room too warm, ice on the evaporator, door not sealing, temperature swinging, freezer room not holding, new room or a repair. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Keep the cold room door closed and limit trips inside until we arrive.",
+      "Note the temperature on the controller and roughly when it started to rise.",
+      "Make sure we can reach the outdoor condensing unit, including any locked gates or roof access.",
+      "Do not chip ice off the evaporator coil, as that can puncture the pipes.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with room too warm?",
-        "answer": "We check the set point, the fans, the door and whether the plant is running."
+        question: "Do you install new cold rooms?",
+        answer: "Yes. We install walk in cold rooms and freezer rooms as well as repairing them. Tell us the size of the space and what you need to store.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Why is my cold room icing up?",
+        answer: "Ice on the evaporator usually points to a defrost fault, a door that lets in damp air, or a fan that has stopped. We check all three.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Can you repair freezer rooms?",
+        answer: "Yes. Freezer rooms run colder and work harder, but the checks are similar. Tell us the temperature you need to hold.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "What should I do if the room is warm right now?",
+        answer: "Keep the door shut, move the most sensitive stock elsewhere if you can, and call us. We will tell you when we can come.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Do you repair home fridges too?",
+        answer: "Yes. Household fridges and freezers are at the heart of what we do, and we repair them at your home across Gauteng.",
+      },
+    ],
+    related: ["commercial-refrigeration", "refrigeration-repairs", "emergency-callout-service"],
   },
   {
-    "slug": "air-conditioning-services",
-    "nav": "Air conditioner repairs",
-    "title": "Aircon Repairs in Gauteng",
-    "metaDescription": "Aircon not cooling or leaking water in Gauteng? MainTech repairs, services and installs split and ducted units today with us. Call 065 650 8504.",
-    "h1": "Air conditioner repairs in Gauteng",
-    "intro": "MainTech repairs, services and installs air conditioners across Gauteng. If the unit is not cooling, it is leaking water, or it will not turn on, start with this page. Servicing and installation are sections of the same visit range, not separate websites. Brands already named here are Samsung, LG, Midea, Panasonic and Hisense.",
-    "image": "/air-conditioning-service-gauteng.png",
-    "imageAlt": "Technician at an indoor air conditioning unit",
-    "width": 1024,
-    "height": 768,
-    "brands": [
-      "Samsung",
-      "LG",
-      "Midea",
-      "Panasonic",
-      "Hisense"
+    slug: "air-conditioning-services",
+    group: "more",
+    nav: "Aircon repairs",
+    title: "Aircon Repairs and Servicing in Gauteng",
+    metaDescription: "Aircon not cooling, dripping water or not switching on? MainTech repairs, services and installs split and ducted aircons across Gauteng. Call 065 650 8504.",
+    eyebrow: "Air conditioning",
+    h1: "Aircon repairs and servicing in Gauteng",
+    lead: "Aircon blowing warm air, dripping water down the wall, or refusing to switch on? MainTech also repairs, services and installs split and ducted air conditioners in homes and businesses across Gauteng.",
+    short: "Split and ducted aircons repaired, serviced and installed.",
+    faults: [
+      {
+        name: "Not cooling",
+        detail: "Warm air can come from a dirty filter, a blocked coil, a control fault or low refrigerant. We test the system before adding any refrigerant.",
+      },
+      {
+        name: "Water dripping indoors",
+        detail: "Water running down the wall or dripping from the indoor unit usually means a blocked drain line or an overflowing tray. We clear and check the full drain path.",
+      },
+      {
+        name: "Will not switch on",
+        detail: "No response to the remote can be the remote itself, the power to the unit or the control board. We check the simple things first.",
+      },
+      {
+        name: "Noisy unit",
+        detail: "Rattles and buzzing can come from fans, loose panels or pipework. Tell us whether the noise is inside or at the outdoor unit.",
+      },
+      {
+        name: "Keeps switching on and off",
+        detail: "A unit that keeps starting and stopping can have a sensor fault or a dirty coil, or it may be too small for the room. We tell you what the inspection shows.",
+      },
+      {
+        name: "Musty smell",
+        detail: "A stale smell when the aircon starts usually comes from a dirty filter and coil. A proper service with a thorough clean normally sorts it out.",
+      },
     ],
-    "related": [
-      "hvac-maintenance-contracts",
-      "electrical-services",
-      "emergency-callout-service",
-      "refrigeration-repairs"
+    work: [
+      {
+        title: "Describe the problem",
+        detail: "Tell us the make, whether it is a split or ducted system, and what it is doing. A photo of the sticker on the indoor unit helps.",
+      },
+      {
+        title: "Inspect both units",
+        detail: "We check the filters, coils, drain, fans and controls on the indoor unit, and look at the outdoor unit too.",
+      },
+      {
+        title: "Agree the work",
+        detail: "We explain the fault and what the repair involves before any work starts.",
+      },
+      {
+        title: "Test the cooling",
+        detail: "After the repair or service we run the aircon and check that cold air is coming through properly.",
+      },
     ],
-    "faults": [
+    brands: ["Samsung", "LG", "Midea", "Panasonic", "Hisense"],
+    sections: [
       {
-        "name": "Not cooling",
-        "detail": "A unit that blows warm air can be airflow, a dirty filter, a control fault or refrigerant. We test before we add gas."
+        heading: "Repairs, servicing and installation",
+        paragraphs: [
+          "We repair aircons that have stopped working properly, service units that need a clean and a check, and install new split units and ducted systems.",
+          "If a new unit needs its own power supply, we can handle that electrical connection as part of the same job.",
+        ],
       },
       {
-        "name": "Leaking water",
-        "detail": "Water indoors is often a blocked drain or a poorly fitted tray. We clear and check the drain path."
+        heading: "Why a service matters",
+        paragraphs: [
+          "A filter clogged with dust makes the aircon work harder and cool less. Dirty coils do the same, and a blocked drain is what sends water down your wall. A regular service keeps all three in check and lets us spot small faults before they become a breakdown.",
+          "Businesses with several units may prefer a planned maintenance schedule, which we also offer.",
+        ],
       },
-      {
-        "name": "Not turning on",
-        "detail": "No power at the unit is checked at the appliance. A new circuit for an install is described on the electrical page."
-      },
-      {
-        "name": "Noisy unit",
-        "detail": "Rattles can be fans, panels or pipework. Tell us if the noise is indoors or on the outdoor unit."
-      },
-      {
-        "name": "Short cycling",
-        "detail": "A unit that starts and stops can be a sensor, a dirty coil or a sizing question. We say what the inspection shows."
-      },
-      {
-        "name": "Needs a service",
-        "detail": "Filters, coils and drains are the normal service items. Say if you also want a repair looked at on the same visit."
-      }
     ],
-    "work": [
-      "You call air conditioner repairs and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    tips: [
+      "If water is dripping from the indoor unit, switch the aircon off and put a towel underneath.",
+      "Check that the remote has working batteries before you call.",
+      "Move furniture away from the indoor unit and make sure we can reach the outdoor unit.",
+      "Rinse the indoor filter if you can reach it easily, as a dirty filter alone can stop it cooling.",
     ],
-    "sections": [
+    faqs: [
       {
-        "heading": "Where this page fits",
-        "body": "MainTech repairs, services and installs air conditioners across Gauteng. If the unit is not cooling, it is leaking water, or it will not turn on, start with this page. Servicing and installation are sections of the same visit range, not separate websites. Brands already named here are Samsung, LG, Midea, Panasonic and Hisense. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
+        question: "Why is my aircon not cooling?",
+        answer: "The most common causes are dirty filters, blocked coils and low refrigerant from a leak. We test the system to find the real cause rather than just topping up refrigerant.",
       },
       {
-        "heading": "Before you call",
-        "body": "When you ask for air conditioner repairs, tell us which of these matches what you see: not cooling, leaking water, not turning on, noisy unit, short cycling, needs a service. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+        question: "Why is my aircon leaking water inside?",
+        answer: "Usually the condensate drain is blocked or the drain tray is overflowing. We clear the drain and make sure the water has a clear path out.",
+      },
+      {
+        question: "How often should my aircon be serviced?",
+        answer: "It depends on how much you use it and how dusty the room is. Units that run every day need more frequent attention. We can advise once we have seen your system.",
+      },
+      {
+        question: "Which aircon brands do you work on?",
+        answer: "We work on Samsung, LG, Midea, Panasonic and Hisense aircons. If you have a different make, tell us when you call.",
+      },
+      {
+        question: "Do you install new aircons?",
+        answer: "Yes. We install split units and ducted systems. Tell us the size of the room and where you would like the indoor and outdoor units to go.",
+      },
     ],
-    "faqs": [
-      {
-        "question": "Can you help with not cooling?",
-        "answer": "A unit that blows warm air can be airflow, a dirty filter, a control fault or refrigerant. We test before we add gas."
-      },
-      {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
-      },
-      {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
-      },
-      {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
-      },
-      {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+    related: ["hvac-maintenance-contracts", "electrical-services", "emergency-callout-service", "refrigeration-repairs"],
   },
   {
-    "slug": "hvac-maintenance-contracts",
-    "nav": "Aircon maintenance plans",
-    "title": "Aircon Maintenance in Gauteng",
-    "metaDescription": "Want aircon maintenance in Gauteng? MainTech plans filter, coil and drain checks for offices and retail sites today with us. Call 065 650 8504.",
-    "h1": "Air conditioner maintenance in Gauteng",
-    "intro": "MainTech sets up air conditioner maintenance for offices, retail and other commercial sites in Gauteng. This page is for planned visits, not a household fridge service. A maintenance visit covers filters, coils, drains and a check that the unit runs. It is not a promise about how fast we arrive.",
-    "image": "/hvac-maintenance-technician.png",
-    "imageAlt": "Technician servicing an air conditioning system",
-    "width": 1024,
-    "height": 768,
-    "brands": [
-      "Samsung",
-      "LG",
-      "Midea",
-      "Panasonic",
-      "Hisense"
+    slug: "hvac-maintenance-contracts",
+    group: "more",
+    nav: "Aircon maintenance",
+    title: "Aircon Maintenance Plans in Gauteng",
+    metaDescription: "Planned aircon maintenance for offices and shops in Gauteng. MainTech cleans filters, checks coils and clears drains on a regular schedule. Call 065 650 8504.",
+    eyebrow: "Business aircon",
+    h1: "Aircon maintenance plans in Gauteng",
+    lead: "Aircons in an office or shop work hard every day. MainTech also sets up planned aircon maintenance for businesses across Gauteng, with regular visits to clean filters, check coils and clear drains before they cause trouble.",
+    short: "Planned aircon servicing for offices, shops and other business premises.",
+    faults: [
+      {
+        name: "Blocked filters",
+        detail: "Dusty filters are the most common reason an office aircon struggles to cool. Every planned visit includes a filter check and clean.",
+      },
+      {
+        name: "Dirty coils",
+        detail: "Coils coated in dust make the system work harder and cool less. Cleaning them is part of the service.",
+      },
+      {
+        name: "Overflowing drains",
+        detail: "A blocked drain can leak into a ceiling or onto desks and stock. We clear and check the drains on each visit.",
+      },
+      {
+        name: "Several units on site",
+        detail: "Tell us how many units you have and where they are. The plan is built around your premises, not a fixed template.",
+      },
+      {
+        name: "Small faults found early",
+        detail: "Regular visits let us spot worn parts, noisy fans or weak cooling before they turn into a breakdown.",
+      },
+      {
+        name: "A unit has failed",
+        detail: "A breakdown between visits is a repair job. Call us and we will book it as an aircon repair.",
+      },
     ],
-    "related": [
-      "air-conditioning-services",
-      "property-maintenance",
-      "commercial-refrigeration"
+    work: [
+      {
+        title: "Describe your site",
+        detail: "Let us know how many units you have, the makes, where they are and how often they run.",
+      },
+      {
+        title: "Agree the plan",
+        detail: "We agree which units are included and what each visit covers, so everyone knows what to expect.",
+      },
+      {
+        title: "Regular visits",
+        detail: "On each visit we check the filters, coils, drains and controls, and confirm that every unit is running properly.",
+      },
+      {
+        title: "Report back",
+        detail: "We tell you what we found and flag any repairs, which only go ahead with your approval.",
+      },
     ],
-    "faults": [
+    brands: ["Samsung", "LG", "Midea", "Panasonic", "Hisense"],
+    sections: [
       {
-        "name": "Filters blocked",
-        "detail": "A blocked filter is a common reason an office unit struggles. We include filter checks in a planned visit."
+        heading: "What a maintenance visit covers",
+        paragraphs: [
+          "Each visit focuses on the parts behind most aircon complaints: filters, coils, drains and controls. We clean what needs cleaning and check that every unit on the plan cools the way it should.",
+          "If we find a fault that needs a repair, we explain it and get your approval first, so there are no surprises.",
+        ],
       },
       {
-        "name": "Coils dirty",
-        "detail": "Dirty coils make the unit work harder. Cleaning them is part of a service, not a guess at a gas fault."
+        heading: "Who it suits",
+        paragraphs: [
+          "Planned maintenance suits offices, shops and other business premises with several units that need to keep running. If you also want fridges, cold rooms or other equipment looked after on a schedule, ask about our wider appliance maintenance plans.",
+        ],
       },
-      {
-        "name": "Drains overflowing",
-        "detail": "A blocked drain leaks into the ceiling. Drain checks belong on this plan."
-      },
-      {
-        "name": "Several indoor units",
-        "detail": "Tell us how many units and where they are. The plan follows the site, not a template price."
-      },
-      {
-        "name": "Unit already failed",
-        "detail": "A breakdown is an aircon repair. Book that page if you need a fault found now."
-      },
-      {
-        "name": "Home and shop mixed",
-        "detail": "Home appliance schedules are on the maintenance contracts page. This page stays with air conditioning."
-      }
     ],
-    "work": [
-      "You call aircon maintenance plans and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    tips: [
+      "List every unit on site, with its location and the make if you know it.",
+      "Arrange access to ceilings, roofs or yards where the outdoor units are fitted.",
+      "Let staff know we are coming so rooms with indoor units can be opened.",
+      "Point out any units that are noisy, leaking or not cooling so we can look at them first.",
     ],
-    "sections": [
+    faqs: [
       {
-        "heading": "Where this page fits",
-        "body": "MainTech sets up air conditioner maintenance for offices, retail and other commercial sites in Gauteng. This page is for planned visits, not a household fridge service. A maintenance visit covers filters, coils, drains and a check that the unit runs. It is not a promise about how fast we arrive. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
+        question: "What is included in an aircon maintenance plan?",
+        answer: "Filter cleaning, coil checks, drain clearing and a check that each unit runs properly. We agree the exact list for your premises before the first visit.",
       },
       {
-        "heading": "Before you call",
-        "body": "When you ask for aircon maintenance plans, tell us which of these matches what you see: filters blocked, coils dirty, drains overflowing, several indoor units, unit already failed, home and shop mixed. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+        question: "How often will you visit?",
+        answer: "That depends on how many units you have, how hard they run and how dusty the space is. We agree a schedule that suits your premises.",
+      },
+      {
+        question: "Which brands do you maintain?",
+        answer: "We work on Samsung, LG, Midea, Panasonic and Hisense units. Tell us about any other makes you have on site.",
+      },
+      {
+        question: "What happens if a unit breaks down between visits?",
+        answer: "Call us and describe the fault. We will treat it as a repair and tell you when we can come.",
+      },
+      {
+        question: "Will you repair faults you find during a visit?",
+        answer: "We explain the fault and what the repair involves. Nothing is done without your approval.",
+      },
     ],
-    "faqs": [
-      {
-        "question": "Can you help with filters blocked?",
-        "answer": "A blocked filter is a common reason an office unit struggles. We include filter checks in a planned visit."
-      },
-      {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
-      },
-      {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
-      },
-      {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
-      },
-      {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+    related: ["air-conditioning-services", "property-maintenance", "commercial-refrigeration"],
   },
   {
-    "slug": "property-maintenance",
-    "nav": "Appliance maintenance plans",
-    "title": "Appliance Maintenance in Gauteng",
-    "metaDescription": "Need scheduled appliance maintenance in Gauteng? MainTech plans checks for home and business equipment you already use today. Call 065 650 8504.",
-    "h1": "Appliance maintenance in Gauteng",
-    "intro": "MainTech offers maintenance contracts for homes and businesses across Gauteng that want planned checks on appliances and cooling equipment. This is broader than the aircon-only plan. We agree what is on the list before any visit. There is no published price on this site.",
-    "image": "/property-maintenance-worker-fixing-repairs-profess.jpg",
-    "imageAlt": "Person repairing equipment inside a building",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "hvac-maintenance-contracts",
-      "appliance-repairs",
-      "air-conditioning-services"
+    slug: "property-maintenance",
+    group: "more",
+    nav: "Maintenance plans",
+    title: "Appliance Maintenance Plans in Gauteng",
+    metaDescription: "Planned checks for your fridges, washers, cold rooms and aircons. MainTech sets up maintenance plans for homes and businesses in Gauteng. Call 065 650 8504.",
+    eyebrow: "Planned maintenance",
+    h1: "Appliance maintenance plans in Gauteng",
+    lead: "Planned checks catch small problems before they turn into breakdowns. MainTech also offers maintenance plans for homes and businesses across Gauteng, covering the appliances and cooling equipment you rely on.",
+    short: "Scheduled checks for your appliances and cooling equipment, at home or work.",
+    faults: [
+      {
+        name: "Seals and filters",
+        detail: "Worn fridge seals, blocked lint filters and dirty dishwasher filters make machines work harder. Planned visits keep them in good order.",
+      },
+      {
+        name: "Several appliances",
+        detail: "Tell us which machines you want on the plan. A fridge, a washing machine and a cold room each need different checks.",
+      },
+      {
+        name: "Business kitchens",
+        detail: "Display fridges, under counter units, ice machines and cold rooms can all go on one plan with your other equipment.",
+      },
+      {
+        name: "Aircons included",
+        detail: "Aircons can be part of a wider plan. If aircons are all you need looked after, our aircon maintenance plan may suit you better.",
+      },
+      {
+        name: "Early warning signs",
+        detail: "Noisy compressors, slow draining and weak cooling are easier to sort out early. We point them out on each visit.",
+      },
+      {
+        name: "A clear written list",
+        detail: "We write down exactly which equipment the plan covers, so you always know what is included.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Filters and seals",
-        "detail": "Planned visits look at filters, door seals and the simple parts that stop a machine struggling."
+        title: "List your equipment",
+        detail: "Tell us which appliances and cooling equipment you want included, and where they are.",
       },
       {
-        "name": "More than one appliance",
-        "detail": "Tell us which machines you want on the list. A washer and a fridge are not the same check."
+        title: "Agree the plan",
+        detail: "We agree the list, and what each visit covers, before the first visit.",
       },
       {
-        "name": "Business kitchen",
-        "detail": "If you also have a cold room or display fridge, those pages describe that equipment."
+        title: "Planned visits",
+        detail: "On each visit we check, clean and test the equipment on your list.",
       },
       {
-        "name": "Aircon on its own plan",
-        "detail": "Office air conditioning plans stay on the HVAC maintenance page so the two offers stay clear."
+        title: "Repairs with approval",
+        detail: "If something needs repairing, we explain it first and only go ahead once you agree.",
       },
-      {
-        "name": "A machine has already failed",
-        "detail": "A breakdown is a repair visit. Use the page for that appliance."
-      },
-      {
-        "name": "You want a written list",
-        "detail": "We write down what the plan covers. We do not imply cover for equipment you did not name."
-      }
     ],
-    "work": [
-      "You call appliance maintenance plans and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "What a plan can include",
+        paragraphs: [
+          "A plan can cover household appliances such as fridges, freezers, washing machines, tumble dryers, dishwashers and ovens, as well as commercial fridges, cold rooms and aircons. You choose what goes on the list.",
+          "Each visit focuses on the parts that wear or clog: seals, filters, coils, drains and hoses. Keeping those in good order often stops a breakdown before it starts.",
+        ],
+      },
+      {
+        heading: "When something has already broken",
+        paragraphs: [
+          "If a machine has stopped working, there is no need to wait for a planned visit. Call us and we will book it as a repair.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech offers maintenance contracts for homes and businesses across Gauteng that want planned checks on appliances and cooling equipment. This is broader than the aircon-only plan. We agree what is on the list before any visit. There is no published price on this site. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for appliance maintenance plans, tell us which of these matches what you see: filters and seals, more than one appliance, business kitchen, aircon on its own plan, a machine has already failed, you want a written list. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Make a list of the equipment you want covered, with makes and models if you have them.",
+      "Note any machine that is already giving trouble so we can look at it first.",
+      "Make sure we can reach each appliance, including outdoor units and locked rooms.",
+      "Let us know who on site can show the technician around.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with filters and seals?",
-        "answer": "Planned visits look at filters, door seals and the simple parts that stop a machine struggling."
+        question: "What does an appliance maintenance plan cover?",
+        answer: "Only the equipment you choose. We agree a written list together, then check, clean and test those items on each visit.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Is this for homes or businesses?",
+        answer: "Both. Homes can include their kitchen and laundry appliances. Businesses can add commercial fridges, cold rooms and aircons.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "How is this different from your aircon maintenance plan?",
+        answer: "The aircon plan covers air conditioners only. This plan can cover appliances, refrigeration and aircons together.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "What if you find a fault during a visit?",
+        answer: "We explain what we found and what the repair involves. Repairs go ahead only with your approval.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Can I add equipment later?",
+        answer: "Yes. Tell us what you want to add and we will update your list.",
+      },
+    ],
+    related: ["hvac-maintenance-contracts", "appliance-repairs", "air-conditioning-services"],
   },
   {
-    "slug": "emergency-callout-service",
-    "nav": "Urgent breakdown calls",
-    "title": "Emergency Repairs in Gauteng",
-    "metaDescription": "Fridge, freezer or cold room failed in Gauteng? MainTech takes urgent repair calls and tells you when we can come today with us. Call 065 650 8504.",
-    "h1": "Urgent appliance and cooling repairs in Gauteng",
-    "intro": "MainTech takes urgent repair calls across Gauteng when a fridge, freezer, cold room or air conditioner has failed. Call and describe the fault. We will tell you if we can come and when. This page does not promise a time. Household and business cooling both sit here, and the detailed repair pages still apply.",
-    "image": "/emergency-callout-technician.png",
-    "imageAlt": "Technician arriving with tools for a repair",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "refrigeration-repairs",
-      "commercial-refrigeration",
-      "air-conditioning-services",
-      "cold-room-installation-repair"
+    slug: "emergency-callout-service",
+    group: "more",
+    nav: "Urgent breakdowns",
+    title: "Emergency Fridge and Aircon Repairs in Gauteng",
+    metaDescription: "Fridge, freezer, cold room or aircon broken down in Gauteng? Tell MainTech what has failed and we will let you know when we can come. Call 065 650 8504.",
+    eyebrow: "Urgent breakdowns",
+    h1: "Urgent breakdown repairs in Gauteng",
+    lead: "When a fridge full of food goes warm, or a cold room starts losing temperature, you need help quickly. Call MainTech, describe the breakdown, and we will tell you honestly when we can get to you.",
+    short: "Help when a fridge, freezer, cold room or aircon breaks down.",
+    faults: [
+      {
+        name: "Fridge failed with food",
+        detail: "Tell us how warm it is and how long it has been off. That helps us judge how urgent the visit is.",
+      },
+      {
+        name: "Freezer thawing",
+        detail: "Keep the lid or door shut. A closed freezer holds its cold much longer than one that keeps being opened.",
+      },
+      {
+        name: "Cold room too warm",
+        detail: "A warm room full of stock is a real business risk. Tell us the temperature on the display and what is stored inside.",
+      },
+      {
+        name: "Aircon down at work",
+        detail: "An office or shop without cooling on a hot day is hard going. Describe the fault and we will tell you when we can come.",
+      },
+      {
+        name: "Burning smell or tripping",
+        detail: "Switch the machine off at the wall and leave it off. Do not keep resetting it, and tell us exactly what happened.",
+      },
+      {
+        name: "Not sure it is urgent",
+        detail: "Call anyway and describe it. If it can safely wait for a booked visit, we will say so.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Fridge failed with food inside",
-        "detail": "Say how warm it is and how long it has been off. That helps us judge the visit."
+        title: "Call or WhatsApp",
+        detail: "Tell us what has failed, what is at risk and where you are in Gauteng.",
       },
       {
-        "name": "Freezer lost temperature",
-        "detail": "A thawing freezer is a fridge and freezer repair. Call this page if you need us to treat it as urgent."
+        title: "Honest timing",
+        detail: "We tell you when we can come. We will not promise a time we cannot keep.",
       },
       {
-        "name": "Cold room too warm",
-        "detail": "A warm room with stock is a cold room job. Tell us the room temperature."
+        title: "Find and explain",
+        detail: "On site we find the fault and explain the repair before any work starts.",
       },
       {
-        "name": "Aircon failed in a work space",
-        "detail": "Use this page to ask for an urgent aircon visit, and the aircon page for the fault detail."
+        title: "Cold again",
+        detail: "After the repair we test the unit and check that it is cooling down again.",
       },
-      {
-        "name": "Not sure it is urgent",
-        "detail": "Call anyway and describe it. We will say if it can wait for a booked visit."
-      },
-      {
-        "name": "After you call",
-        "detail": "Keep the doors closed. Do not keep resetting a machine that smells of burning."
-      }
     ],
-    "work": [
-      "You call urgent breakdown calls and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "What counts as urgent",
+        paragraphs: [
+          "We treat a breakdown as urgent when food, stock or comfort is at real risk: a home fridge or freezer full of food, a commercial fridge or cold room full of stock, or an aircon that has failed in a busy workspace.",
+          "We take urgent calls from homes and businesses alike, for fridges, freezers, cold rooms and aircons.",
+        ],
+      },
+      {
+        heading: "While you wait",
+        paragraphs: [
+          "Keep fridge, freezer and cold room doors closed. Every time a door opens, cold air falls out and warm air rushes in. If you have another fridge or a cooler box with ice, move the most perishable food or stock there first.",
+          "If a machine smells of burning, has tripped the power or is sparking, switch it off at the wall and do not turn it back on until it has been checked.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech takes urgent repair calls across Gauteng when a fridge, freezer, cold room or air conditioner has failed. Call and describe the fault. We will tell you if we can come and when. This page does not promise a time. Household and business cooling both sit here, and the detailed repair pages still apply. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for urgent breakdown calls, tell us which of these matches what you see: fridge failed with food inside, freezer lost temperature, cold room too warm, aircon failed in a work space, not sure it is urgent, after you call. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Keep fridge, freezer and cold room doors closed as much as possible.",
+      "Move the most perishable food or stock to a working fridge or a cooler box.",
+      "Note the temperature on any display and when the problem started.",
+      "Send a photo of the model sticker and the fault on WhatsApp so we can prepare.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with fridge failed with food inside?",
-        "answer": "Say how warm it is and how long it has been off. That helps us judge the visit."
+        question: "Do you take urgent repair calls?",
+        answer: "Yes. Call or WhatsApp us when a fridge, freezer, cold room or aircon breaks down. We will tell you when we can come.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Can you promise a time?",
+        answer: "We would rather give you an honest answer than a promise we cannot keep. When you call, we tell you when a technician can get to you.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Do you help homes and businesses?",
+        answer: "Yes. We take urgent calls for household fridges and freezers, and for commercial fridges, cold rooms and aircons.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Should I keep checking the fridge?",
+        answer: "No. Opening the door lets the cold out. Leave it closed and only check the temperature when you really need to.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "What should I tell you when I call?",
+        answer: "Which machine has failed, what is inside it, how warm it is, how long it has been off and where you are. A photo of the model sticker helps too.",
+      },
+    ],
+    related: ["refrigeration-repairs", "commercial-refrigeration", "air-conditioning-services", "cold-room-installation-repair"],
   },
   {
-    "slug": "plumbing-services",
-    "nav": "Appliance water connections",
-    "title": "Appliance Plumbing in Gauteng",
-    "metaDescription": "Need a washing machine, dishwasher or ice maker connected in Gauteng? MainTech does that appliance plumbing only today with us. Call 065 650 8504.",
-    "h1": "Appliance plumbing connections in Gauteng",
-    "intro": "MainTech connects water for appliances across Gauteng. This page is for washing machines, dishwashers, fridge ice makers and the drains that belong to those machines. It is not a general plumbing service for the rest of the building. If the fault is inside the appliance, use that appliance page as well.",
-    "image": "/professional-plumber-working-on-pipes-installation.jpg",
-    "imageAlt": "Plumber working on water pipes",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "washing-machine-repairs",
-      "dishwasher-repairs",
-      "appliance-repairs",
-      "commercial-refrigeration"
+    slug: "plumbing-services",
+    group: "more",
+    nav: "Appliance water connections",
+    title: "Appliance Water Connections in Gauteng",
+    metaDescription: "Washing machine, dishwasher or ice maker to connect in Gauteng? MainTech does appliance water and drain connections, not general plumbing. Call 065 650 8504.",
+    eyebrow: "Water connections",
+    h1: "Appliance water connections in Gauteng",
+    lead: "A new washing machine to connect, a dishwasher hose that drips, or a fridge ice maker that needs a water line? MainTech also handles the water connections for your appliances across Gauteng.",
+    short: "Water and drain connections for washing machines, dishwashers and ice makers.",
+    faults: [
+      {
+        name: "New washing machine",
+        detail: "We connect the inlet hose to the tap and set the drain hose at the right height so the machine drains properly.",
+      },
+      {
+        name: "Dishwasher connection",
+        detail: "We connect the inlet and the drain for your dishwasher under the sink, then check for leaks once it runs.",
+      },
+      {
+        name: "Fridge ice maker line",
+        detail: "Fridges with an ice maker or water dispenser need a water feed. We fit and connect it so nothing leaks behind the fridge.",
+      },
+      {
+        name: "Commercial ice machine",
+        detail: "Ice machines in bars and restaurants need a steady water supply and a drain. We connect both.",
+      },
+      {
+        name: "Leak at the hose",
+        detail: "Water around the tap, the hose or the drain point is a connection job. Water from inside the machine is an appliance repair, and we can look at both.",
+      },
+      {
+        name: "Drain backing up",
+        detail: "If the appliance drain backs up or smells, we look at the standpipe or trap the machine drains into.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Washer connection",
-        "detail": "A new machine, a leaking hose or a tap that feeds the washer."
+        title: "Tell us the appliance",
+        detail: "Let us know which machine needs connecting and whether it is new or already installed.",
       },
       {
-        "name": "Dishwasher connection",
-        "detail": "Inlet and drain for the dishwasher, not the kitchen sink as a whole."
+        title: "Check the supply",
+        detail: "We check the tap, the drain point and the space, so the hoses fit without kinks.",
       },
       {
-        "name": "Ice maker water",
-        "detail": "A fridge or ice machine that needs a water feed. Tell us which machine."
+        title: "Connect with approval",
+        detail: "We explain what is needed and get your go ahead, then make the connections.",
       },
       {
-        "name": "Leak at the appliance",
-        "detail": "Water at the hose or valve is this page. Water inside the drum may be the appliance repair."
+        title: "Leak test",
+        detail: "We run the appliance and check every joint for leaks before we leave.",
       },
-      {
-        "name": "Drain that belongs to the machine",
-        "detail": "We look at the drain the appliance uses. We do not take on unrelated drainage."
-      },
-      {
-        "name": "Gas supply work",
-        "detail": "Gas stove repairs are not a published service. Ask before you assume we do that job."
-      }
     ],
-    "work": [
-      "You call appliance water connections and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Connections for appliances only",
+        paragraphs: [
+          "Our water work is all about appliances. We connect and fix the water supply and drains for washing machines, dishwashers, fridge ice makers and commercial ice machines. We do not take on general plumbing such as geysers, bathrooms or burst pipes elsewhere in the house.",
+          "Because we repair the appliances too, we can tell whether a leak is coming from the connection or the machine, and sort out either one on the same visit.",
+        ],
+      },
+      {
+        heading: "Getting the drain right",
+        paragraphs: [
+          "A drain hose pushed too far down a standpipe, or fitted too low, can siphon water out of a washing machine while it is filling. The machine then seems to fill forever. Small details like hose height and a tight clamp make a big difference.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech connects water for appliances across Gauteng. This page is for washing machines, dishwashers, fridge ice makers and the drains that belong to those machines. It is not a general plumbing service for the rest of the building. If the fault is inside the appliance, use that appliance page as well. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for appliance water connections, tell us which of these matches what you see: washer connection, dishwasher connection, ice maker water, leak at the appliance, drain that belongs to the machine, gas supply work. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "Make sure there is a tap and a drain point close to where the appliance will stand.",
+      "If a hose or connection is leaking, turn off the tap that feeds the appliance.",
+      "Keep the hoses that came with a new appliance, because we may use them.",
+      "Clear the cupboard under the sink if the connection is for a dishwasher.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with washer connection?",
-        "answer": "A new machine, a leaking hose or a tap that feeds the washer."
+        question: "Can you connect my new washing machine?",
+        answer: "Yes. We connect the water supply and the drain, then run a short cycle to check that it fills and drains without leaks.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Do you do general plumbing?",
+        answer: "No. We only handle the water and drain connections that belong to appliances such as washing machines, dishwashers and ice makers.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Can you connect a fridge with an ice maker?",
+        answer: "Yes. We run and connect the water line for fridges with an ice maker or water dispenser, and check it for leaks.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "My dishwasher is leaking. Is it the connection or the machine?",
+        answer: "It could be either. We check both, and because we repair dishwashers too, we can fix whichever it turns out to be.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
+        question: "Do you connect ice machines for businesses?",
+        answer: "Yes. We connect the water supply and drain for commercial ice machines in bars, restaurants and shops.",
+      },
+    ],
+    related: ["washing-machine-repairs", "dishwasher-repairs", "appliance-repairs", "commercial-refrigeration"],
   },
   {
-    "slug": "electrical-services",
-    "nav": "Appliance electrical connections",
-    "title": "Appliance Electrical in Gauteng",
-    "metaDescription": "Need an appliance or aircon connected safely in Gauteng? MainTech does that electrical work, not general house wiring today. Call 065 650 8504.",
-    "h1": "Appliance electrical connections in Gauteng",
-    "intro": "MainTech does electrical connections for appliances and air conditioners across Gauteng. That includes the supply at the machine, an isolator, and fault finding on that circuit. It is not a general electrical service for the whole property. If the oven or aircon itself has failed, use that repair page too.",
-    "image": "/electrician-working-on-electrical-panel-wiring-sou.jpg",
-    "imageAlt": "Electrician working at an electrical panel",
-    "width": 1024,
-    "height": 768,
-    "brands": [],
-    "related": [
-      "air-conditioning-services",
-      "oven-repairs",
-      "appliance-repairs",
-      "hvac-maintenance-contracts"
+    slug: "electrical-services",
+    group: "more",
+    nav: "Appliance electrical connections",
+    title: "Appliance Electrical Connections in Gauteng",
+    metaDescription: "Oven, stove or aircon to connect, or an appliance tripping the power? MainTech handles appliance electrical connections across Gauteng. Call 065 650 8504.",
+    eyebrow: "Electrical connections",
+    h1: "Appliance electrical connections in Gauteng",
+    lead: "An oven that needs connecting, an aircon that needs its own supply, or an appliance that keeps tripping the power? MainTech also handles the electrical connections for appliances and aircons across Gauteng.",
+    short: "Supplies, isolators and plug points for your appliances and aircons.",
+    faults: [
+      {
+        name: "Appliance not powering up",
+        detail: "Before anyone opens the machine, we test the plug point, isolator and supply that feed it, so we know which side the fault is on.",
+      },
+      {
+        name: "New aircon supply",
+        detail: "A new aircon often needs its own dedicated supply and isolator. Tell us where the indoor and outdoor units will go.",
+      },
+      {
+        name: "Stove or oven connection",
+        detail: "A new stove or built in oven needs connecting to its supply. We also check the connection when a stove trips or several plates stop at once.",
+      },
+      {
+        name: "Tripping the power",
+        detail: "Tell us which appliance trips the electricity and when. We find out whether the fault is in the appliance or the circuit that feeds it.",
+      },
+      {
+        name: "Worn plug points",
+        detail: "We replace the isolator or plug point that serves an appliance when it is worn, scorched or loose.",
+      },
+      {
+        name: "After load shedding",
+        detail: "Power cuts and the surge when the power returns can damage plug points and appliance electronics. If something stopped working after the power came back, we can test both.",
+      },
     ],
-    "faults": [
+    work: [
       {
-        "name": "Appliance will not power up",
-        "detail": "We test at the machine before anyone opens the rest of the board."
+        title: "Tell us the appliance",
+        detail: "Let us know which appliance or aircon is involved, and what is happening or what you need connected.",
       },
       {
-        "name": "Aircon needs a supply",
-        "detail": "A new unit often needs a dedicated connection. Say whether this is an install or a failed unit."
+        title: "Test the supply",
+        detail: "We test the plug point, isolator and circuit that serve the appliance before touching anything else.",
       },
       {
-        "name": "Oven circuit",
-        "detail": "A stove or oven that trips can be the appliance or the connection. We separate those."
+        title: "Agree the work",
+        detail: "We explain the fault or the connection needed and get your go ahead first.",
       },
       {
-        "name": "Isolator or plug",
-        "detail": "The local isolator and the plug for the appliance are in scope. Whole-board upgrades are not assumed."
+        title: "Switch on and test",
+        detail: "We power up the appliance and check that it runs properly without tripping.",
       },
-      {
-        "name": "Tripping when it starts",
-        "detail": "Tell us which machine trips the power. That points the test."
-      },
-      {
-        "name": "Other house wiring",
-        "detail": "If the fault is not tied to an appliance or aircon, we will say it is outside this page."
-      }
     ],
-    "work": [
-      "You call appliance electrical connections and describe the fault in plain words.",
-      "We look at the parts that match that symptom before we name a replacement.",
-      "We explain what we found and what the repair involves before work starts.",
-      "If a repair is completed, we test the appliance or plant before we leave."
+    brands: [],
+    sections: [
+      {
+        heading: "Connections for appliances and aircons",
+        paragraphs: [
+          "Our electrical work covers the supply at the appliance: plug points, isolators and the connections that feed ovens, stoves, washing machines, dishwashers, fridges and aircons. It also covers finding faults on those circuits.",
+          "We do not take on general house wiring, lighting or distribution board upgrades. If a fault turns out to be elsewhere in the house, we will tell you so you can call the right person.",
+        ],
+      },
+      {
+        heading: "Appliance or circuit?",
+        paragraphs: [
+          "When a machine will not start or keeps tripping, it is hard to tell whether the appliance or the supply is to blame. Because we repair the appliances as well, we can test both and fix the right one, without you having to call two different people.",
+        ],
+      },
     ],
-    "sections": [
-      {
-        "heading": "Where this page fits",
-        "body": "MainTech does electrical connections for appliances and air conditioners across Gauteng. That includes the supply at the machine, an isolator, and fault finding on that circuit. It is not a general electrical service for the whole property. If the oven or aircon itself has failed, use that repair page too. Use the area pages if you want to confirm that your suburb already has a page. Use the contact page to send the fault in writing."
-      },
-      {
-        "heading": "Before you call",
-        "body": "When you ask for appliance electrical connections, tell us which of these matches what you see: appliance will not power up, aircon needs a supply, oven circuit, isolator or plug, tripping when it starts, other house wiring. Add the brand and the model if the sticker is easy to read. Say how long it has been happening and whether anyone has already replaced a part. If a fridge, freezer or cold room is warm, keep the door closed until the visit. If a machine smells of burning, switch it off and say so when you call. Those details let the technician start with your symptom instead of a general inspection. If the problem is a different appliance, open that appliance's page so the visit is booked against the right fault. MainTech covers Gauteng. The area links on this page are the suburbs that already have their own page. You can call, use WhatsApp, or send the contact form. We explain the fault before repair work starts, and we will say if a repair does not make sense."
-      }
+    tips: [
+      "If an appliance trips the power, leave it switched off until we have tested it.",
+      "Do not use a plug point that is scorched, loose or warm to the touch.",
+      "Note which appliance trips the power and what it was doing at the time.",
+      "Make sure we can reach the distribution board as well as the appliance.",
     ],
-    "faqs": [
+    faqs: [
       {
-        "question": "Can you help with appliance will not power up?",
-        "answer": "We test at the machine before anyone opens the rest of the board."
+        question: "Can you connect my new stove or oven?",
+        answer: "Yes. We connect stoves and ovens to their supply and test them once they are connected.",
       },
       {
-        "question": "Do you cover Gauteng?",
-        "answer": "Yes. Area pages list the suburbs that already have their own page, including Pretoria, Johannesburg, Midrand and Sandton."
+        question: "Do you install the power supply for aircons?",
+        answer: "Yes. We install the dedicated supply and isolator a new aircon needs, and we can install the aircon itself too.",
       },
       {
-        "question": "How do I book?",
-        "answer": "Call 065 650 8504, use WhatsApp, or send the form on the contact page."
+        question: "Why does my appliance keep tripping the power?",
+        answer: "A failed element, a damaged cable, moisture inside the machine or a faulty plug point can all cause it. We test each one to find the cause.",
       },
       {
-        "question": "Will you name a price on the phone?",
-        "answer": "This site does not publish prices. We explain the fault and the work before a repair starts."
+        question: "Do you do general electrical work?",
+        answer: "No. We focus on the electrical connections for appliances and aircons. If the fault is somewhere else, we will tell you.",
       },
       {
-        "question": "What if you cannot repair it?",
-        "answer": "We say so. We do not claim that every fault can be repaired."
-      }
-    ]
-  }
+        question: "Can you fix the appliance as well as the connection?",
+        answer: "Yes. We repair fridges, washing machines, tumble dryers, dishwashers, ovens and aircons, so we can sort out whichever part is at fault.",
+      },
+    ],
+    related: ["air-conditioning-services", "oven-repairs", "appliance-repairs", "hvac-maintenance-contracts"],
+  },
 ]
+
+export const homeServices = services.filter((service) => service.group === "home")
+export const moreServices = services.filter((service) => service.group === "more")
 
 export function getService(slug: string) {
   const service = services.find((item) => item.slug === slug)

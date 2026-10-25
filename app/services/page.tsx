@@ -1,35 +1,75 @@
-import Link from "next/link"
-import { services } from "@/content/services"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { CallActions } from "@/components/site/call-actions"
+import { CtaBand, Eyebrow, Framed, SectionHeading, ServiceCard } from "@/components/site/blocks"
+import { illustrations, photos } from "@/content/media"
+import { homeServices, moreServices } from "@/content/services"
 import { pageMetadata } from "@/lib/seo"
+import { site } from "@/lib/site"
 
 export const metadata = pageMetadata({
-  title: "Our Repair Services in Gauteng",
-  description: "See every MainTech repair page: fridges, laundry, ovens, cold rooms and aircons in Gauteng. Pick the machine that failed. Call 065 650 8504.",
+  title: "Appliance Repair Services in Gauteng",
+  description: "Fridge, washing machine, tumble dryer, dishwasher and oven repairs at your home in Gauteng, plus commercial fridges and aircons. Call 065 650 8504.",
   path: "/services",
+  image: illustrations.appliances.src,
+  imageAlt: illustrations.appliances.alt,
+  imageWidth: illustrations.appliances.width,
+  imageHeight: illustrations.appliances.height,
 })
 
 export default function ServicesPage() {
   return (
     <article>
-      <header className="bg-navy text-white">
-        <div className="mx-auto max-w-6xl px-4 py-section">
-          <p className="text-sm font-semibold uppercase tracking-wide text-ice">Services</p>
-          <h1 className="max-w-[var(--measure)] text-3xl font-bold tracking-tight text-white md:text-4xl">Repair services in Gauteng</h1>
-          <p className="mt-4 max-w-[var(--measure)] leading-7 text-on-navy">MainTech publishes a page for each repair. Open the one that matches the appliance. If you are unsure, call and describe the fault.</p>
+      <header className="relative overflow-hidden bg-navy text-white">
+        <div className="pointer-events-none absolute -left-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-blue/25 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-4 md:pb-20 lg:grid-cols-[1.05fr_1fr]">
+          <div>
+            <Breadcrumbs variant="onDark" currentPath="/services" items={[{ label: "Services" }]} />
+            <Eyebrow onDark>Our services</Eyebrow>
+            <h1 className="mt-3 text-4xl font-extrabold leading-[1.08] tracking-tight text-white md:text-5xl">Appliance repair services in Gauteng</h1>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-on-navy">
+              Household appliances come first: fridges, washing machines, tumble dryers, dishwashers, ovens and stoves, repaired at your home. The same team also looks after commercial fridges, cold rooms and aircons.
+            </p>
+            <CallActions className="mt-8" onDark />
+          </div>
+          <Framed picture={illustrations.appliances} priority className="ring-white/10" />
         </div>
       </header>
+
       <section className="bg-surface">
-        <ul className="mx-auto grid max-w-6xl gap-4 px-4 py-section md:grid-cols-2">
-          {services.map((service) => (
-            <li key={service.slug} className="rounded-lg border border-border bg-ice-tint p-4 shadow-[var(--shadow-card)]">
-              <h2 className="text-xl font-semibold text-navy">
-                <Link className="text-blue hover:underline" href={`/${service.slug}`}>{service.nav}</Link>
-              </h2>
-              <p className="mt-2 leading-7 text-slate">{service.intro.split(". ")[0]}.</p>
-            </li>
-          ))}
-        </ul>
+        <div className="mx-auto max-w-6xl px-4 py-section">
+          <SectionHeading
+            eyebrow="Home appliances"
+            title="Repairs at your home"
+            intro="Pick the appliance that has stopped working. Each page lists the common faults, how the visit works and what to check before we arrive."
+          />
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {homeServices.map((service) => (
+              <ServiceCard key={service.slug} service={service} headingLevel="h3" />
+            ))}
+          </ul>
+        </div>
       </section>
+
+      <section className="bg-ice-tint">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+          <SectionHeading
+            eyebrow="Also from MainTech"
+            title="Businesses, aircons and connections"
+            intro="Shop fridges and cold rooms, aircon repairs and maintenance, urgent breakdowns, and the water and power connections your appliances need."
+          />
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {moreServices.map((service) => (
+              <ServiceCard key={service.slug} service={service} headingLevel="h3" />
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <CtaBand
+        title="Not sure which one you need?"
+        text={`Call ${site.phoneDisplay} or WhatsApp us and describe what the appliance is doing. We will point you in the right direction.`}
+        picture={photos.team_sm}
+      />
     </article>
   )
 }

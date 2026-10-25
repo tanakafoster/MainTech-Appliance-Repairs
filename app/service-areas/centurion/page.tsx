@@ -1,17 +1,7 @@
-import { AreaTemplate } from "@/components/templates/area-template"
-import { getArea } from "@/content/areas"
-import { pageMetadata } from "@/lib/seo"
+import { AreaTemplate, areaMetadata } from "@/components/templates/area-template"
 
-const area = getArea("centurion")
-
-export const metadata = pageMetadata({
-  title: area.title,
-  description: area.metaDescription,
-  path: "/service-areas/centurion",
-  image: area.image,
-  imageAlt: area.imageAlt,
-})
+export const metadata = areaMetadata("centurion")
 
 export default function CenturionAreaPage() {
-  return <AreaTemplate area={area} />
+  return <AreaTemplate slug="centurion" />
 }

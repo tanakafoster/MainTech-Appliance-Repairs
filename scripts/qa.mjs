@@ -51,7 +51,8 @@ for (const file of htmlFiles) {
   const visible = text(html)
   const imgs = [...html.matchAll(/<img\b[^>]*>/gi)].map((match) => match[0])
   for (const img of imgs) {
-    if (!/\balt="[^"]+"/.test(img) && !/\balt='[^']+'/.test(img)) add(`${rel}: image missing alt ${img.slice(0, 80)}`)
+    // alt="" is allowed: it marks a decorative image whose meaning is already in nearby text
+    if (!/\balt=("|')/.test(img)) add(`${rel}: image missing alt ${img.slice(0, 80)}`)
   }
   for (const href of html.matchAll(/href="(\/[^"]*)"/g)) {
     const url = href[1].split("#")[0]

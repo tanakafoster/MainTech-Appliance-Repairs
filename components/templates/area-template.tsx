@@ -1,127 +1,156 @@
-import Image from "next/image"
-import Link from "next/link"
+import { MapPin } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { CallActions } from "@/components/site/call-actions"
+import {
+  ChipLinks,
+  CompactServiceLink,
+  CtaBand,
+  Eyebrow,
+  FaqList,
+  Framed,
+  JsonLd,
+  SectionHeading,
+  ServiceCard,
+  StepList,
+  faqJsonLd,
+} from "@/components/site/blocks"
 import { getArea } from "@/content/areas"
-import { services } from "@/content/services"
-import type { AreaContent } from "@/content/types"
-import { absoluteUrl, site } from "@/lib/site"
+import { areaMap, photos } from "@/content/media"
+import { homeServices, moreServices } from "@/content/services"
+import { pageMetadata } from "@/lib/seo"
+import { site } from "@/lib/site"
 
-const steps = [
-  "Contact us and name the appliance, the fault, and that you are in this area.",
-  "We diagnose the fault on site. We tell you what we found before any repair starts.",
-  "If you go ahead, we repair and test. If a repair does not make sense, we say so.",
-]
+export function areaMetadata(slug: string) {
+  const area = getArea(slug)
+  const map = areaMap(area.slug, area.name)
+  return pageMetadata({
+    title: area.title,
+    description: area.metaDescription,
+    path: `/service-areas/${slug}`,
+    image: map.src,
+    imageAlt: map.alt,
+    imageWidth: map.width,
+    imageHeight: map.height,
+  })
+}
 
-export function AreaTemplate({ area }: { area: AreaContent }) {
-  const nearby = area.nearby.map((slug) => getArea(slug))
-  const crumbs = [
-    { name: "Home", path: "/" },
-    { name: "Areas", path: "/service-areas" },
-    { name: area.name, path: `/service-areas/${area.slug}` },
+export function AreaTemplate({ slug }: { slug: string }) {
+  const area = getArea(slug)
+  const nearby = area.nearby.map((item) => getArea(item))
+  const steps = [
+    {
+      title: "Call or WhatsApp",
+      detail: `Tell us the appliance, what it is doing and that you are in ${area.name}. Add the suburb and the make if you can.`,
+    },
+    {
+      title: "We find the fault",
+      detail: "A technician comes to you and tests the parts that match the symptom, then explains what has failed.",
+    },
+    {
+      title: "Repair and test",
+      detail: "With your go ahead we repair the appliance and run it before we leave. If a repair is not worth it, we say so.",
+    },
   ]
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((crumb, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: crumb.name,
-      item: absoluteUrl(crumb.path),
-    })),
-  }
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: area.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  }
 
   return (
     <article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <header className="bg-navy text-white">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-section md:grid-cols-2">
-          <div className="max-w-[var(--measure)]">
-            <Breadcrumbs variant="onDark" currentPath={`/service-areas/${area.slug}`} items={[{ label: "Areas", href: "/service-areas" }, { label: area.name }]} />
-            <p className="text-sm font-semibold uppercase tracking-wide text-ice">{area.name}</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">{area.h1}</h1>
-            <p className="mt-4 leading-7 text-on-navy">{area.intro}</p>
-            <CallActions className="mt-6" onDark />
+      <JsonLd data={faqJsonLd(area.faqs)} />
+
+      <header className="relative overflow-hidden bg-navy text-white">
+        <div className="pointer-events-none absolute -right-40 -top-32 h-[28rem] w-[28rem] rounded-full bg-blue/25 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-4 md:pb-20 lg:grid-cols-[1.05fr_1fr]">
+          <div>
+            <Breadcrumbs
+              variant="onDark"
+              currentPath={`/service-areas/${area.slug}`}
+              items={[{ label: "Areas", href: "/service-areas" }, { label: area.name }]}
+            />
+            <Eyebrow onDark>
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="h-4 w-4" aria-hidden="true" />
+                {area.name}, Gauteng
+              </span>
+            </Eyebrow>
+            <h1 className="mt-3 text-4xl font-extrabold leading-[1.08] tracking-tight text-white md:text-5xl">{area.h1}</h1>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-on-navy">{area.lead}</p>
+            <CallActions className="mt-8" onDark />
           </div>
-          <Image src={area.image} alt={area.imageAlt} width={area.width} height={area.height} priority className="h-auto w-full rounded-lg object-cover" />
+          <Framed picture={areaMap(area.slug, area.name)} priority className="ring-white/10" />
         </div>
       </header>
+
       <section className="bg-surface">
-        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
-          <h2 className="text-2xl font-bold text-navy">This area</h2>
-          <p className="mt-4 leading-7 text-ink">{area.local}</p>
-          <p className="mt-4 leading-7 text-ink">Suburbs already named for {area.name}: {area.suburbs.join(", ")}.</p>
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 py-section lg:grid-cols-[1.4fr_1fr]">
+          <div className="max-w-[var(--measure)]">
+            <SectionHeading eyebrow={`Repairs in ${area.name}`} title={`Getting your appliance fixed in ${area.name}`} />
+            {area.local.map((paragraph) => (
+              <p key={paragraph} className="mt-4 text-lg leading-8 text-ink">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <aside className="rounded-2xl border border-border bg-ice-tint p-6 lg:self-start">
+            <h2 className="text-lg font-bold text-navy">Suburbs we visit around {area.name}</h2>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {area.suburbs.map((suburb) => (
+                <li key={suburb} className="rounded-full bg-surface px-3 py-1.5 text-sm font-semibold text-navy ring-1 ring-border">
+                  {suburb}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm leading-6 text-slate">Not on the list? Call {site.phoneDisplay} and ask.</p>
+          </aside>
         </div>
       </section>
+
       <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
-          <h2 className="text-2xl font-bold text-navy">Services available in {area.name}</h2>
-          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-            {services.map((service) => (
-              <li key={service.slug}>
-                <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href={`/${service.slug}`}>
-                  {service.nav} in {area.name}
-                </Link>
-              </li>
+          <SectionHeading
+            eyebrow="Home appliances"
+            title={`What we repair in ${area.name}`}
+            intro="Pick the appliance to see the common faults and what the visit involves."
+          />
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {homeServices.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </ul>
+          <h3 className="mt-14 text-xl font-bold text-navy">Also available in {area.name}</h3>
+          <ul className="mt-5 grid gap-4 md:grid-cols-2">
+            {moreServices.map((service) => (
+              <CompactServiceLink key={service.slug} service={service} />
             ))}
           </ul>
         </div>
       </section>
+
       <section className="bg-surface">
-        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
-          <h2 className="text-2xl font-bold text-navy">How it works</h2>
-          <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7 text-ink">
-            {steps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-        </div>
-      </section>
-      <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
-          <h2 className="text-2xl font-bold text-navy">Nearby areas</h2>
-          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-            {nearby.map((item) => (
-              <li key={item.slug}>
-                <Link className="inline-flex min-h-11 items-center text-blue hover:underline" href={`/service-areas/${item.slug}`}>
-                  Appliance repairs in {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      <section className="bg-surface">
-        <div className="mx-auto max-w-[var(--measure)] px-4 py-section">
-          <h2 className="text-2xl font-bold text-navy">Questions about {area.name}</h2>
-          <div className="mt-4 space-y-4">
-            {area.faqs.map((faq) => (
-              <div key={faq.question}>
-                <h3 className="text-lg font-semibold text-navy">{faq.question}</h3>
-                <p className="mt-1 leading-7 text-slate">{faq.answer}</p>
-              </div>
-            ))}
+          <SectionHeading eyebrow="How it works" title="Three steps to working again" />
+          <div className="mt-10">
+            <StepList steps={steps} />
           </div>
         </div>
       </section>
-      <section className="bg-navy text-white">
-        <div className="mx-auto max-w-6xl px-4 py-section">
-          <p className="text-sm font-semibold uppercase tracking-wide text-ice">Book a visit</p>
-          <h2 className="mt-2 text-2xl font-bold text-white">Book a visit in {area.name}</h2>
-          <p className="mt-3 max-w-[var(--measure)] leading-7 text-on-navy">Call {site.name} and say you are in {area.name}. Describe the appliance and the fault.</p>
-          <CallActions className="mt-6" onDark />
+
+      <section className="bg-ice-tint">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-section lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <SectionHeading eyebrow="Questions" title={`Repairs in ${area.name}`} />
+            <h3 className="mt-10 text-lg font-bold text-navy">Nearby areas</h3>
+            <div className="mt-4">
+              <ChipLinks links={nearby.map((item) => ({ href: `/service-areas/${item.slug}`, label: item.name }))} />
+            </div>
+          </div>
+          <FaqList faqs={area.faqs} />
         </div>
       </section>
+
+      <CtaBand
+        title={`Book a repair in ${area.name}`}
+        text={`Call ${site.phoneDisplay} or WhatsApp us. Say you are in ${area.name}, name the appliance and describe the fault.`}
+        picture={photos.callout_sm}
+      />
     </article>
   )
 }

@@ -8,6 +8,8 @@ type PageMetadataInput = {
   keywords?: string
   image?: string
   imageAlt?: string
+  imageWidth?: number
+  imageHeight?: number
   absolute?: boolean
 }
 
@@ -18,6 +20,8 @@ export function pageMetadata({
   keywords,
   image = site.ogImage,
   imageAlt,
+  imageWidth = 1200,
+  imageHeight = 630,
   absolute = false,
 }: PageMetadataInput): Metadata {
   const canonical = absoluteUrl(path)
@@ -39,8 +43,8 @@ export function pageMetadata({
       images: [
         {
           url: image,
-          width: 1200,
-          height: 630,
+          width: imageWidth,
+          height: imageHeight,
           alt,
         },
       ],

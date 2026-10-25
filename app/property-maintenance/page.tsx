@@ -1,17 +1,7 @@
-import { ServiceTemplate } from "@/components/templates/service-template"
-import { getService } from "@/content/services"
-import { pageMetadata } from "@/lib/seo"
+import { ServiceTemplate, serviceMetadata } from "@/components/templates/service-template"
 
-const service = getService("property-maintenance")
-
-export const metadata = pageMetadata({
-  title: service.title,
-  description: service.metaDescription,
-  path: "/property-maintenance",
-  image: service.image,
-  imageAlt: service.imageAlt,
-})
+export const metadata = serviceMetadata("property-maintenance")
 
 export default function PropertyMaintenancePage() {
-  return <ServiceTemplate service={service} />
+  return <ServiceTemplate slug="property-maintenance" />
 }

@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 // File path: app/privacy-policy/page.tsx
@@ -14,32 +15,19 @@ export const metadata = pageMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-surface">
-      {/* Hero Section */}
-      <section className="bg-navy py-16 text-white lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 flex justify-center">
-              <div className="rounded-full bg-white/10 p-4">
-                <Shield className="h-12 w-12 text-ice" />
-              </div>
-            </div>
-            <h1 className="mb-4 text-4xl font-bold text-white lg:text-5xl">Privacy Policy</h1>
-            <p className="text-lg text-on-navy">
-              MainTech Appliance Repairs
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-on-navy">
-              <div className="flex items-center gap-2">
-                <FileText className="h-4 w-4" />
-                <span>Effective Date: July 30, 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Lock className="h-4 w-4" />
-                <span>POPIA Compliant</span>
-              </div>
-            </div>
-          </div>
+      <header className="relative overflow-hidden bg-navy text-white">
+        <div className="pointer-events-none absolute -right-40 -top-32 h-[28rem] w-[28rem] rounded-full bg-blue/25 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto max-w-4xl px-4 pb-14 pt-4 md:pb-16">
+          <Breadcrumbs variant="onDark" currentPath="/privacy-policy" items={[{ label: "Privacy policy" }]} />
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-ice">Legal</p>
+          <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Privacy Policy</h1>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-on-navy">How MainTech Appliance Repairs collects, uses and protects your personal information under POPIA.</p>
+          <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-on-navy">
+            <FileText className="h-4 w-4" aria-hidden="true" />
+            Effective date: 30 July 2026
+          </p>
         </div>
-      </section>
+      </header>
 
       {/* Main Content */}
       <section className="bg-surface py-16 lg:py-24">

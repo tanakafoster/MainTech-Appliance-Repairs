@@ -22,9 +22,9 @@ function trackWhatsApp() {
 }
 
 const callClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-amber px-5 text-sm font-semibold text-navy hover:bg-amber-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-amber px-6 text-base font-bold text-navy shadow-sm transition hover:bg-amber-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
 const whatsappClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-navy bg-transparent px-5 text-sm font-semibold text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-navy bg-transparent px-6 text-base font-bold text-navy transition hover:bg-navy hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
 
 export function CallActions({ className, onDark = false }: { className?: string; onDark?: boolean }) {
   return (
@@ -37,7 +37,7 @@ export function CallActions({ className, onDark = false }: { className?: string;
         href={site.whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        className={cn(whatsappClass, onDark && "border-white bg-transparent text-white")}
+        className={cn(whatsappClass, onDark && "border-white/70 bg-transparent text-white hover:bg-white hover:text-navy")}
         onClick={trackWhatsApp}
       >
         <WhatsAppIcon className="h-4 w-4" aria-hidden="true" />
@@ -49,7 +49,7 @@ export function CallActions({ className, onDark = false }: { className?: string;
 
 export function MobileContactBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background p-3 md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden">
       <div className="mx-auto grid max-w-lg grid-cols-2 gap-3">
         <a href={`tel:${site.phoneTel}`} className={callClass}>
           <Phone className="h-4 w-4" aria-hidden="true" />

@@ -1,9 +1,9 @@
 # MainTech Appliance Repairs — Website
 
-Marketing website for **MainTech Appliance Repairs**, an appliance, air conditioning, and refrigeration repair company serving Gauteng, South Africa (Pretoria, Johannesburg, Midrand, and surrounds).
+Marketing website for **MainTech Appliance Repairs**, a home appliance repair business serving Gauteng, South Africa. The site leads with household appliances (fridges and freezers, washing machines, tumble dryers, dishwashers, ovens and stoves). Commercial fridges, cold rooms, aircons and appliance connections are secondary services.
 
 - **Live URL:** https://www.maintechappliancerepairs.co.za
-- **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
+- **Framework:** Next.js 16 (App Router, static export to `out/`) + TypeScript + Tailwind CSS v4
 - **Package manager:** pnpm
 - **Deployment:** Vercel
 
@@ -19,9 +19,9 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
 ```bash
-pnpm build   # production build
-pnpm start   # run the production build locally
-pnpm lint    # run eslint
+pnpm build          # production build (static export in out/)
+pnpm lint           # eslint
+node scripts/qa.mjs # checks titles, descriptions, H1s, alt text, links and banned words in out/
 ```
 
 Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_FORM_KEY` to a [Web3Forms](https://web3forms.com) access key. The quote form posts to Web3Forms with that key. Without it, the form shows an error and a WhatsApp fallback instead of a success message.
@@ -33,16 +33,18 @@ Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_FORM_KEY` to a [Web3For
 | | |
 |---|---|
 | **Company name** | MainTech Appliance Repairs |
-| **Phone** | 065 650 8504 |
-| **WhatsApp** | https://wa.me/27656508504 |
+| **Phone and WhatsApp** | 065 650 8504 (https://wa.me/27656508504) |
 | **Email** | info@maintechappliancerepairs.co.za |
-| **Location** | Gauteng, South Africa (Pretoria, Johannesburg, Midrand and surrounds — no public street address) |
-| **Primary color (theme/mask-icon)** | `#0E2A47` (`--color-navy`) |
-| **Logo mark** | See `/public/logo-icon.png`, `/public/logo-square.png` |
-| **Positioning** | Certified, fully insured technicians; same day quotes and 24/7 emergency callouts |
-| **Years in operation** | 10+ |
+| **Location** | Gauteng, South Africa (no public street address) |
+| **Primary colour** | `#0E2A47` navy, with ice blue `#4FB3E8` and amber `#FFB703` accents (see `app/globals.css`) |
+| **Logo** | `/public/logo-mark.svg` (star mark), `/public/logo-square.png` (mark with wordmark) |
+| **Positioning** | Home appliance repairs at your home. We find the fault and explain it before any work starts. |
 
-Keep any new copy consistent with this reference. Do not reintroduce the old ZECO Construction or Goshen Projects Solutions branding, their phone numbers, or a specific street address. Written copy on the site intentionally avoids the "-" character in body text.
+Copy rules:
+
+- Do not publish prices, call out fees, opening hours, arrival or same day promises, years in business, customer counts, reviews, certifications, insurance or guarantees unless the owner confirms them.
+- Written copy avoids the "-" character (and en or em dashes) in body text.
+- Do not reintroduce the old Cold Fix, ZECO Construction or Goshen Projects Solutions branding, their phone numbers, or a street address.
 
 ---
 
@@ -50,116 +52,52 @@ Keep any new copy consistent with this reference. Do not reintroduce the old ZEC
 
 ```
 app/
-├── layout.tsx                          # Root layout, metadata, JSON-LD, WhatsApp button
-├── page.tsx                            # Homepage
-├── about/                              # About page
-├── contact/                            # Contact page
-├── services/                           # Services overview (/services)
-├── service-areas/                      # Service area hub + per-suburb pages
-├── privacy-policy/
-├── terms-of-service/
-│
-├── air-conditioning-services/          # Service page
-├── refrigeration-repairs/              # Service page
-├── cold-room-installation-repair/      # Service page
-├── commercial-refrigeration/           # Service page
-├── appliance-repairs/                  # Service page
-├── hvac-maintenance-contracts/         # Service page
-├── emergency-callout-service/          # Service page
-├── plumbing-services/                  # Service page
-├── electrical-services/                # Service page
-└── property-maintenance/               # Service page (Maintenance Contracts)
+├── layout.tsx                    # Root layout, global metadata, LocalBusiness JSON-LD
+├── page.tsx                      # Home
+├── services/  service-areas/     # Index pages
+├── about/  contact/              # About and contact pages
+├── privacy-policy/  terms-of-service/
+├── <service-slug>/page.tsx       # 14 thin service routes, each renders ServiceTemplate
+└── service-areas/<area>/page.tsx # 11 thin area routes, each renders AreaTemplate
 
 components/
-├── header.tsx                          # Nav, services dropdown, contact bar
-├── footer.tsx                          # Footer nav, service list, contact info
-├── whatsapp-button.tsx                 # Floating WhatsApp CTA (rendered in layout.tsx)
-├── breadcrumbs.tsx                     # Shared breadcrumb trail
-├── contact-form.tsx                    # Contact / quote request form
-├── service-page-template.tsx           # Shared wrapper for all /service pages
-├── service-area-template.tsx           # Shared wrapper for all /service-areas/[suburb] pages
-├── theme-provider.tsx
-└── home/
-    ├── hero-section.tsx
-    ├── services-overview.tsx
-    ├── why-choose-us.tsx
-    ├── service-areas-preview.tsx
-    └── cta-section.tsx
+├── site/header.tsx  site/footer.tsx  site/call-actions.tsx
+├── site/blocks.tsx               # Shared sections: cards, FAQ accordion, steps, CTA band
+├── templates/home-view.tsx
+├── templates/service-template.tsx
+├── templates/area-template.tsx
+├── breadcrumbs.tsx  contact-form.tsx
+└── ui/                           # Form primitives used by the contact form
+
+content/
+├── services.ts                   # All service copy ("home" and "more" groups)
+├── areas.ts                      # All area copy
+├── media.ts                      # Every picture used on the site, by page
+└── types.ts
 
 public/
-├── favicon.ico, favicon-16x16.png, favicon-32x32.png
-├── apple-touch-icon.png
-├── android-chrome-192x192.png, android-chrome-512x512.png
-├── safari-pinned-tab.svg
-├── site.webmanifest
-├── logo-icon.png, logo-square.png
-├── og-image.png
-├── robots.txt, llms.txt
-└── service + area photography (aircon, refrigeration, appliance, plumbing, electrical, etc.)
+├── images/                       # Photos (4:3 WebP, plus -sm card copies)
+├── images/illustrations/         # Appliance illustrations
+├── images/areas/                 # Gauteng map per area
+├── logo-mark.svg  logo-square.png  og-image.jpg  favicons
+└── robots.txt  llms.txt  site.webmanifest
 ```
 
 ---
 
-## Current Services (10)
+## Editing content
 
-The active service list, consistent across the header nav, homepage grid, and `/services` page:
+- **Service or area copy:** edit `content/services.ts` or `content/areas.ts`. Titles must stay at 49 characters or fewer (the site adds " | MainTech") and meta descriptions between 140 and 160 characters, or `scripts/qa.mjs` fails.
+- **Adding a service:** add it to `content/services.ts`, add its pictures to `content/media.ts`, create `app/<slug>/page.tsx` like the others, and add the slug to `app/sitemap.ts` and `public/llms.txt`.
+- **Adding an area:** add it to `content/areas.ts`, create `app/service-areas/<slug>/page.tsx`, add a map at `public/images/areas/<slug>.webp` (and `-sm`), and update `app/sitemap.ts` and `public/llms.txt`.
+- **Contact details:** `lib/site.ts`.
 
-1. Air Conditioning Services
-2. Refrigeration Repairs
-3. Cold Room Installation and Repair
-4. Commercial Refrigeration
-5. Appliance Repairs
-6. HVAC Maintenance Contracts
-7. Emergency Callout Service
-8. Plumbing Services (appliance and refrigeration related)
-9. Electrical Services (appliance and refrigeration related)
-10. Maintenance Contracts (`/property-maintenance`)
+## Pictures
 
----
-
-## Service Areas (11)
-
-Each area has its own page at `/service-areas/[suburb]`, rendered via `ServiceAreaTemplate`:
-
-Pretoria, Johannesburg, Midrand, Sandton, Centurion, Fourways, Randburg, Bedfordview, Rosebank, Roodepoort, Morningside.
-
-Every area page uses a distinct `introImage` so the pages stay visually unique. The default image (`/technicians-servicing-air-conditioner.png`) is only used as a fallback when no `introImage` prop is passed.
-
----
-
-## URL Structure
-
-- Service pages: `/service-name` (e.g. `/refrigeration-repairs`)
-- Service areas: `/service-areas/[suburb]` (e.g. `/service-areas/sandton`)
-
----
-
-## SEO Files
-
-- **`app/sitemap.ts`** — generates `/sitemap.xml`. Includes the homepage, core pages, all 10 service pages, and all 11 service areas. Update it whenever a page is added or removed.
-- **`public/robots.txt`** — points crawlers to the sitemap at `https://www.maintechappliancerepairs.co.za/sitemap.xml`.
-- **`public/llms.txt`** — plain language summary of the business, services, and service areas for LLM consumption. Keep it in sync with the live service and area lists.
-- **`app/layout.tsx`** — global metadata, Open Graph/Twitter tags, and Organization + LocalBusiness JSON-LD.
-
----
+The technician photos are AI generated images rebranded with MainTech badges and van lettering. The appliance pictures and area maps are drawn illustrations. To swap any picture for a real photo, replace the file in `public/images/` with one of the same name and the same 4:3 shape. `IMAGE_PROMPTS.md` has a ready AI prompt for each picture.
 
 ## Known TODOs
 
-- [ ] **Search verification codes** — placeholder values (e.g. `your-google-verification-code`) still in `layout.tsx` metadata.
-- [ ] **Unconfirmed stats** — figures such as "100s of clients served" and "10+ years experience" carried through the templates should be confirmed as accurate.
-- [ ] **`safari-pinned-tab.svg`** — placeholder silhouette, not a true vector trace of the real logo. Replace if you want pixel perfect accuracy.
-
----
-
-## Notes for Future Edits
-
-- The **`ServicePageTemplate`** and **`ServiceAreaTemplate`** components in `components/` are shared wrappers. Editing them affects *every* service page or every service area page at once, so check there first before assuming a bug is page specific.
-- When adding or removing a service, update it in **all** of these places: `components/header.tsx`, `components/footer.tsx`, `components/home/services-overview.tsx`, `app/services/page.tsx`, `app/sitemap.ts`, `public/llms.txt`, and any `relatedServices` arrays on individual service pages that might link to it.
-- When adding or removing a service area, update `app/service-areas/` (the page), the service areas hub, `components/home/service-areas-preview.tsx`, `app/sitemap.ts`, and `public/llms.txt`.
-- Contact details live in `lib/site.ts`. Change the phone, WhatsApp link, and email there.
-- Bulk find and replace across the repo works well from Git Bash:
-  ```bash
-  find . -type f \( -name "*.tsx" -o -name "*.ts" \) -not -path "*/node_modules/*" \
-    -exec sed -i 's/OLD_VALUE/NEW_VALUE/g' {} +
-  ```
-  Always `grep -r` first to preview matches before running the replace.
+- [ ] **Search verification code** placeholder (`your-google-verification-code`) is still in `app/layout.tsx`.
+- [ ] **Web3Forms key** must be set in Vercel as `NEXT_PUBLIC_FORM_KEY`.
+- [ ] **Real job photos** would be stronger than AI images. See `IMAGE_PROMPTS.md`.
