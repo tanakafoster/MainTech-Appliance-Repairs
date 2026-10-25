@@ -1,153 +1,17 @@
+import { ServiceTemplate } from "@/components/templates/service-template"
+import { getService } from "@/content/services"
 import { pageMetadata } from "@/lib/seo"
-// File path: app/emergency-callout-service/page.tsx
-// Clean URL: https://www.maintechappliancerepairs.co.za/emergency-callout-service
 
-import { ServicePageTemplate } from "@/components/service-page-template"
-import { Clock, Phone, Wrench, Award, ShieldCheck, Snowflake, Refrigerator, Zap } from "lucide-react"
+const service = getService("emergency-callout-service")
 
 export const metadata = pageMetadata({
-  title: "Emergency Callout Service in Gauteng | Fast Refrigeration and Appliance Repairs",
-  description: "Emergency callout service for refrigeration, air conditioning, and appliance breakdowns across Gauteng. Fast response to protect your stock and get you running again. Serving Pretoria, Johannesburg and Midrand.",
+  title: service.title,
+  description: service.metaDescription,
   path: "/emergency-callout-service",
-  keywords: "emergency refrigeration repair Gauteng, emergency aircon repair Johannesburg, urgent fridge repair Pretoria, emergency appliance callout, breakdown repair Midrand",
-  image: "/emergency-callout-technician.png",
-  imageAlt: "Emergency callout service in Gauteng by MainTech Appliance Repairs",
+  image: service.image,
+  imageAlt: service.imageAlt,
 })
 
-export default function EmergencyCalloutPage() {
-  return (
-    <ServicePageTemplate
-      path="/emergency-callout-service"
-      title="Emergency Callout Service"
-      description="When a fridge, freezer, cold room, or air conditioner fails, every hour counts. MainTech Appliance Repairs provides a fast emergency callout service across Gauteng for refrigeration, air conditioning, and appliance breakdowns. We respond quickly to protect your stock, restore cooling, and get your home or business running again."
-      icon={Clock}
-      heroImage="/emergency-callout-technician.png"
-      priceRange="Free quotes"
-      responseTime="Rapid response"
-      features={[
-        "Rapid response refrigeration breakdowns",
-        "Emergency air conditioning repairs",
-        "Cold room and freezer room callouts",
-        "Commercial fridge and freezer breakdowns",
-        "Appliance breakdown callouts",
-        "On site diagnosis and repair",
-        "Temporary solutions to protect stock",
-        "Gas leak detection and refills",
-        "Compressor and electrical fault repairs",
-        "Priority response for maintenance clients",
-        "Honest quotes before work begins",
-        "Serving homes and businesses",
-      ]}
-      benefits={[
-        {
-          title: "Fast Response",
-          description:
-            "We prioritise emergencies and move quickly to reach you, because a breakdown cannot wait.",
-          icon: Clock,
-        },
-        {
-          title: "Protect Your Stock",
-          description:
-            "For businesses, a cooling failure can mean thousands in losses. We act fast to keep temperatures safe.",
-          icon: ShieldCheck,
-        },
-        {
-          title: "Cooling and appliance repairs",
-          description:
-            "Technicians equipped to diagnose and repair on the first visit where possible.",
-          icon: Award,
-        },
-        {
-          title: "Homes and Businesses",
-          description:
-            "Whether it is your kitchen fridge or a commercial cold room, we respond to both residential and commercial emergencies.",
-          icon: Refrigerator,
-        },
-        {
-          title: "Honest Pricing",
-          description:
-            "Even in an emergency, you get a clear quote before we start, with no inflated callout surprises.",
-          icon: Wrench,
-        },
-        {
-          title: "Prepared Technicians",
-          description:
-            "Our teams carry common spares so many emergency repairs can be completed on the spot.",
-          icon: Snowflake,
-        },
-      ]}
-      process={[
-        {
-          step: 1,
-          title: "Call Us",
-          description:
-            "Phone our team, describe the fault, and we will dispatch a technician as quickly as possible.",
-        },
-        {
-          step: 2,
-          title: "Rapid Diagnosis",
-          description:
-            "Our technician arrives, diagnoses the breakdown on site, and explains what needs to be done.",
-        },
-        {
-          step: 3,
-          title: "On Site Repair",
-          description:
-            "We repair on the spot where possible, or take temporary measures to protect your stock and cooling.",
-        },
-        {
-          step: 4,
-          title: "Back Up and Running",
-          description:
-            "We confirm the system is working correctly and advise on any follow up needed.",
-        },
-      ]}
-      relatedServices={[
-        { title: "Refrigeration Repairs", href: "/refrigeration-repairs", icon: Refrigerator },
-        { title: "Air Conditioning Services", href: "/air-conditioning-services", icon: Snowflake },
-        { title: "Appliance Repairs", href: "/appliance-repairs", icon: Wrench },
-        { title: "Electrical Services", href: "/electrical-services", icon: Zap },
-      ]}
-      serviceAreas={[
-        "Pretoria",
-        "Johannesburg",
-        "Midrand",
-        "Sandton",
-        "Centurion",
-        "Fourways",
-        "Randburg",
-        "Rosebank",
-        "Bedfordview",
-        "Roodepoort",
-      ]}
-    >
-      <section className="py-16 lg:py-24 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold">Fast Help When Cooling Fails</h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                A sudden breakdown can put your food, medication, or business stock at risk. <strong>MainTech Appliance Repairs</strong> offers a fast emergency callout service for refrigeration, air conditioning, and appliance failures across <strong>Pretoria, Johannesburg, Midrand</strong>, and the wider Gauteng region. Call us and we will get a technician to you as soon as possible.
-              </p>
-              <div className="rounded-xl bg-card border border-border p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-                  <Phone className="h-6 w-6 text-secondary" aria-hidden="true" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-secondary">Emergency? Call MainTech Appliance Repairs</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Reach us on{" "}
-                    <a href="tel:+27656508504" className="font-semibold text-foreground underline">
-                      065 650 8504
-                    </a>{" "}
-                    for a rapid response across Gauteng.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </ServicePageTemplate>
-  )
+export default function EmergencyCalloutServicePage() {
+  return <ServiceTemplate service={service} />
 }

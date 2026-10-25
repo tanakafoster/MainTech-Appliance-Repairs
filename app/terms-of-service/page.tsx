@@ -7,7 +7,7 @@ import { Scale, FileText, CheckCircle, AlertTriangle, Mail, Phone, MapPin, Shiel
 
 export const metadata = pageMetadata({
   title: "Terms of Service",
-  description: "Terms of Service for MainTech Appliance Repairs. Read the terms and conditions governing our website, quotations, and air conditioning, refrigeration, and appliance repair services.",
+  description: "Read the MainTech terms for quotations and appliance, refrigeration and aircon work on this website. Ask us if you are unsure. Call 065 650 8504.",
   path: "/terms-of-service",
 })
 

@@ -5,9 +5,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import "./globals.css"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { WhatsAppButton } from "@/components/whatsapp-button"
+import { Header } from "@/components/site/header"
+import { Footer } from "@/components/site/footer"
+import { MobileContactBar } from "@/components/site/call-actions"
 import { site } from "@/lib/site"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -15,11 +15,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Appliance Repairs in Gauteng`,
-    template: `%s | ${site.name}`,
+    default: "Page not found | MainTech",
+    template: "%s | MainTech",
   },
   description:
-    "MainTech Appliance Repairs repairs fridges, freezers, washing machines, tumble dryers, dishwashers, ovens, cold rooms and air conditioners across Gauteng.",
+    "That page is not on the MainTech website. Return to appliance repairs in Gauteng, or call and describe the fault right now. Call 065 650 8504.",
   keywords:
     "appliance repairs Gauteng, fridge repairs Johannesburg, washing machine repairs Pretoria, tumble dryer repairs, dishwasher repairs, oven repairs, commercial refrigeration, cold room repairs, air conditioner repairs",
   authors: [{ name: site.name, url: site.url }],
@@ -134,25 +134,12 @@ export default function RootLayout({
               logo: `${site.url}${site.logo}`,
               telephone: site.phoneSchema,
               email: site.email,
-              priceRange: "$$",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Johannesburg",
-                addressRegion: "Gauteng",
+                addressRegion: site.areaServed,
                 addressCountry: "ZA",
               },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: -26.1076,
-                longitude: 28.0567,
-              },
-              areaServed: ["Gauteng", ...site.areas],
-              openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                opens: "08:00",
-                closes: "17:00",
-              },
+              areaServed: site.areaServed,
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: site.phoneSchema,
@@ -166,12 +153,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`}>
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-background focus:px-4 focus:py-2">
+          Skip to content
+        </a>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main id="main" className="flex-grow pb-24 md:pb-0">{children}</main>
           <Footer />
         </div>
-        <WhatsAppButton />
+        <MobileContactBar />
         <Analytics />
         <SpeedInsights />
       </body>

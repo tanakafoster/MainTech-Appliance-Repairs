@@ -7,7 +7,7 @@ import { Shield, Lock, Eye, FileText, Mail, Phone, MapPin } from "lucide-react"
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "Privacy Policy for MainTech Appliance Repairs. Learn how we collect, use, and protect your personal information in compliance with POPIA (Protection of Personal Information Act, 2013).",
+  description: "Read how MainTech handles personal information under POPIA, including what we collect and how to reach us in Gauteng today. Call 065 650 8504.",
   path: "/privacy-policy",
 })
 

@@ -21,7 +21,7 @@ export function pageMetadata({
   absolute = false,
 }: PageMetadataInput): Metadata {
   const canonical = absoluteUrl(path)
-  const socialTitle = absolute ? title : `${title} | ${site.name}`
+  const socialTitle = absolute || title.endsWith("| MainTech") ? title : `${title} | MainTech`
   const alt = imageAlt || `${title} | ${site.name}`
 
   return {
