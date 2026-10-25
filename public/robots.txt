@@ -1,0 +1,85 @@
+# robots.txt for MainTech Appliance Repairs
+# https://www.coldfix.co.za/robots.txt
+
+# Allow all bots to crawl everything
+User-agent: *
+Allow: /
+
+# Crawl-delay for good SEO performance
+Crawl-delay: 0
+
+# Sitemap locations
+Sitemap: https://www.coldfix.co.za/sitemap.xml
+
+# Host preference (helps with canonicalization)
+Host: https://www.coldfix.co.za
+
+# ===== Bot-Specific Rules =====
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu Bot
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+
+# Claude AI & Anthropic
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+# Other AI Crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Block bad bots / scrapers
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# ===== Additional Instructions =====
+
+# Note: This site uses clean URLs without a /services/ prefix
+# Example: /air-conditioning-services instead of /services/air-conditioning-services
