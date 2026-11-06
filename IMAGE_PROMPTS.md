@@ -43,7 +43,7 @@ These are drawn illustrations today. You can keep them, or replace them with pho
 
 ## Real job photos (keep if they are your own work)
 
-`washing-machine-job.webp`, `oven-repair-job.webp` and `laundry-repair-job.webp` come from photos that were already on the old site. Real photos from your own jobs build the most trust, so these are good slots for new pictures of your team at work.
+`oven-repair-job.webp` and `laundry-repair-job.webp` come from photos that were already on the old site. Real photos from your own jobs build the most trust, so these are good slots for new pictures of your team at work.
 
 ## Area maps
 

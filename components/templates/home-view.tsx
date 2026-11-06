@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Camera, CheckCircle2, ClipboardCheck, Home, MessageCircle, Search, Wrench } from "lucide-react"
 import { CallActions } from "@/components/site/call-actions"
 import {
@@ -13,7 +14,7 @@ import {
   faqJsonLd,
 } from "@/components/site/blocks"
 import { areas } from "@/content/areas"
-import { gautengMap, photos } from "@/content/media"
+import { gautengMap, photos, recentJobs } from "@/content/media"
 import { homeServices, moreServices } from "@/content/services"
 import { site } from "@/lib/site"
 
@@ -182,6 +183,33 @@ export function HomeView() {
       <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
           <SectionHeading
+            eyebrow="Recent work"
+            title="From our latest call outs"
+            intro="Photos from fridges we have repaired in Gauteng homes."
+          />
+          <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+            {recentJobs.map((job) => (
+              <li key={job.src}>
+                <figure>
+                  <Image
+                    src={job.src}
+                    alt={job.alt}
+                    width={job.width}
+                    height={job.height}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="aspect-square h-auto w-full rounded-2xl object-cover shadow-[var(--shadow-card)]"
+                  />
+                  <figcaption className="mt-3 text-sm leading-6 text-slate">{job.caption}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+          <SectionHeading
             eyebrow="Common problems"
             title="Sound familiar?"
             intro="A few of the faults people call us about. Tap one to read what usually causes it and what the repair involves."
@@ -209,7 +237,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-surface">
+      <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
           <SectionHeading
             eyebrow="Also from MainTech"
@@ -224,7 +252,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-ice-tint">
+      <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-section md:grid-cols-2">
           <div>
             <SectionHeading
@@ -249,7 +277,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-surface">
+      <section className="bg-ice-tint">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-section lg:grid-cols-[1fr_1.4fr]">
           <SectionHeading eyebrow="Questions" title="Before you book" intro={`Still unsure? Call ${site.phoneDisplay} and describe the fault in your own words.`} />
           <FaqList faqs={faqs} />
