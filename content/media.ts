@@ -30,6 +30,8 @@ export const photos = {
   callout_sm: photoSm("callout-technician", "MainTech technician arriving at a home with his tool bags"),
   team: photo("maintech-team", "Four MainTech technicians in navy uniforms standing in front of the MainTech van"),
   team_sm: photoSm("maintech-team", "The MainTech team in front of the MainTech van"),
+  fridgeCoils: photo("fridge-coil-check", "Technician in blue overalls checking the condenser coils on the back of a fridge in a home kitchen"),
+  fridgeHome: photo("fridge-repair-home", "Technician kneeling beside an open fridge freezer with his toolbox, adjusting the freezer door"),
   aircon: photo("aircon-repair", "MainTech technician working on an indoor split aircon unit"),
 }
 
@@ -42,6 +44,10 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   "refrigeration-repairs": {
     hero: photos.fridgeTechnician,
     card: artSm("fridge", "Illustration of a two door fridge with a thermometer and snowflake"),
+    photo: {
+      ...photoSm("fridge-repair-home", "Technician kneeling beside an open fridge freezer with his toolbox, adjusting the freezer door"),
+      caption: "Fixing a fridge freezer on a home visit, tools laid out beside it.",
+    },
   },
   "washing-machine-repairs": {
     hero: art("washing-machine", "Illustration of a front loader washing machine with water in the drum"),
