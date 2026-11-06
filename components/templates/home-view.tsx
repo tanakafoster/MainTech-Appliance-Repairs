@@ -112,7 +112,7 @@ export function HomeView() {
             </ul>
           </div>
           <div className="relative">
-            <Framed picture={photos.fridgeTechnician} priority className="ring-white/10" />
+            <Framed picture={photos.homeAppliances} priority className="ring-white/10" />
             <div className="absolute -bottom-5 left-4 right-4 flex items-center gap-3 rounded-2xl bg-surface p-4 text-ink shadow-[var(--shadow-lift)] sm:left-auto sm:right-6 sm:max-w-xs">
               <CheckCircle2 className="h-8 w-8 shrink-0 text-success" aria-hidden="true" />
               <p className="text-sm leading-5">
@@ -161,7 +161,7 @@ export function HomeView() {
 
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-section md:grid-cols-2">
-          <Framed picture={photos.callout} />
+          <Framed picture={photos.fridgeTechnician} />
           <div>
             <SectionHeading eyebrow="On site repairs" title="We bring the workshop to your kitchen" />
             <ul className="mt-6 space-y-4">

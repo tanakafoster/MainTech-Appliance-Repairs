@@ -25,7 +25,7 @@ function artSm(name: string, alt: string): Picture {
 }
 
 export const photos = {
-  fridgeTechnician: photo("fridge-repair-technician", "MainTech technician testing a fridge compressor with a multimeter in a home kitchen"),
+  fridgeTechnician: photo("fridge-repair-technician", "MainTech technician in a branded navy uniform testing a fridge compressor with a multimeter in a home kitchen"),
   callout: photo("callout-technician", "MainTech technician walking up to a house with his tool bags, the MainTech van parked in the driveway"),
   callout_sm: photoSm("callout-technician", "MainTech technician arriving at a home with his tool bags"),
   team: photo("maintech-team", "Four MainTech technicians in navy uniforms standing in front of the MainTech van"),

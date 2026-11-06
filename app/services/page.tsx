@@ -1,7 +1,7 @@
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { CallActions } from "@/components/site/call-actions"
 import { CtaBand, Eyebrow, Framed, SectionHeading, ServiceCard } from "@/components/site/blocks"
-import { photos } from "@/content/media"
+import { illustrations, photos } from "@/content/media"
 import { homeServices, moreServices } from "@/content/services"
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
@@ -10,10 +10,10 @@ export const metadata = pageMetadata({
   title: "Appliance Repair Services in Gauteng",
   description: "Fridge, washing machine, tumble dryer, dishwasher and oven repairs at your home in Gauteng, plus commercial fridges and aircons. Call 065 650 8504.",
   path: "/services",
-  image: photos.homeAppliances.src,
-  imageAlt: photos.homeAppliances.alt,
-  imageWidth: photos.homeAppliances.width,
-  imageHeight: photos.homeAppliances.height,
+  image: illustrations.appliances.src,
+  imageAlt: illustrations.appliances.alt,
+  imageWidth: illustrations.appliances.width,
+  imageHeight: illustrations.appliances.height,
 })
 
 export default function ServicesPage() {
@@ -31,7 +31,7 @@ export default function ServicesPage() {
             </p>
             <CallActions className="mt-8" onDark />
           </div>
-          <Framed picture={photos.homeAppliances} priority className="ring-white/10" />
+          <Framed picture={illustrations.appliances} priority className="ring-white/10" />
         </div>
       </header>
 

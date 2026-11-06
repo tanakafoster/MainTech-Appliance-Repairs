@@ -7,10 +7,10 @@ export const metadata = pageMetadata({
   description: "Fridge not cooling or washing machine not draining? MainTech repairs home appliances across Gauteng and explains the fault first. Call 065 650 8504.",
   path: "/",
   absolute: true,
-  image: photos.fridgeTechnician.src,
-  imageAlt: photos.fridgeTechnician.alt,
-  imageWidth: photos.fridgeTechnician.width,
-  imageHeight: photos.fridgeTechnician.height,
+  image: photos.homeAppliances.src,
+  imageAlt: photos.homeAppliances.alt,
+  imageWidth: photos.homeAppliances.width,
+  imageHeight: photos.homeAppliances.height,
 })
 
 export default function HomePage() {

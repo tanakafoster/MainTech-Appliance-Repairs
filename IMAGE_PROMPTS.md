@@ -16,7 +16,7 @@ Every picture on the site has a fixed file name in `public/images/`. To use a ne
 
 | File | Used on | Prompt |
 |---|---|---|
-| `fridge-repair-technician.webp` | Home hero, fridge page, About | A friendly appliance technician kneeling in a sunny South African kitchen, testing the back of a silver two door fridge with a multimeter. The fridge's bottom panel is off, showing the compressor. Toolbox open on the tiled floor. |
+| `fridge-repair-technician.webp` | Home page "We bring the workshop" section | A friendly appliance technician kneeling in a sunny South African kitchen, testing the back of a silver two door fridge with a multimeter. The fridge's bottom panel is off, showing the compressor. Toolbox open on the tiled floor. |
 | `callout-technician.webp` | Urgent breakdowns, home page, Contact | A technician walking up the paved path to a face brick house carrying two tool bags, a plain white panel van parked in the driveway behind him, late afternoon light, jacaranda tree in the street. |
 | `maintech-team.webp` | About, call to action panels | Four smiling appliance technicians (two women, two men, mixed ethnicities) standing with arms folded in front of a plain white panel van on a suburban Gauteng street. |
 | `commercial-fridge-repair.webp` | Commercial fridges | A technician kneeling beside a row of glass door display fridges in a small supermarket, working on the refrigeration unit with pressure gauges connected. |
