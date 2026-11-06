@@ -44,7 +44,7 @@ export const illustrations = {
 export const serviceMedia: Record<string, ServiceMedia> = {
   "refrigeration-repairs": {
     hero: photo("fridge-freezer-repair", "Technician kneeling at a stainless steel fridge freezer, fixing the runners on the freezer drawer"),
-    card: artSm("fridge", "Illustration of a two door fridge with a thermometer and snowflake"),
+    card: photoSm("fridge-repair-technician", "MainTech technician testing a fridge compressor with a multimeter"),
     photo: {
       ...photoSm("fridge-repair-home", "Technician kneeling beside an open fridge freezer with his toolbox, adjusting the freezer door"),
       caption: "Fixing a fridge freezer on a home visit, tools laid out beside it.",
@@ -52,7 +52,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "washing-machine-repairs": {
     hero: photo("washing-machine-technician", "MainTech technician in a branded navy uniform repairing the motor behind the lower panel of a front loader washing machine"),
-    card: artSm("washing-machine", "Illustration of a front loader washing machine"),
+    card: photoSm("washing-machine-technician", "MainTech technician repairing a front loader washing machine"),
     photo: {
       src: "/images/washing-machine-tools.webp",
       alt: "Front loader washing machine with the door open and a toolbox of spanners and screwdrivers in front of it",
@@ -63,7 +63,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "tumble-dryer-repairs": {
     hero: art("tumble-dryer", "Illustration of a tumble dryer with warm air rising and folded towels beside it"),
-    card: artSm("tumble-dryer", "Illustration of a tumble dryer"),
+    card: { src: "/images/laundry-repair-job.webp", alt: "Technician kneeling beside laundry machines with their panels off", width: 432, height: 324 },
   },
   "dishwasher-repairs": {
     hero: art("dishwasher", "Illustration of an open dishwasher with cups on the top rack and plates below"),
@@ -71,7 +71,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "oven-repairs": {
     hero: art("oven", "Illustration of an electric stove with hot plates and a glowing oven"),
-    card: artSm("oven", "Illustration of an electric stove and oven"),
+    card: { src: "/images/oven-repair-job.webp", alt: "Stove with the oven door off and the elements laid out during a repair", width: 400, height: 300 },
     photo: {
       src: "/images/oven-repair-job.webp",
       alt: "Stove with the oven door off and the elements laid out on the floor during a repair",
@@ -82,7 +82,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "appliance-repairs": {
     hero: illustrations.appliances,
-    card: illustrations.appliances_sm,
+    card: photoSm("home-appliances", "A fridge, washing machine and small kitchen appliances grouped together"),
     photo: {
       src: "/images/laundry-repair-job.webp",
       alt: "Technician kneeling beside a washing machine with its panels off",
