@@ -51,7 +51,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
     },
   },
   "washing-machine-repairs": {
-    hero: photo("washing-machine-technician", "Technician in blue overalls kneeling beside a front loader washing machine with a spanner and toolbox"),
+    hero: photo("washing-machine-technician", "MainTech technician in a branded navy uniform repairing the motor behind the lower panel of a front loader washing machine"),
     card: artSm("washing-machine", "Illustration of a front loader washing machine"),
     photo: {
       src: "/images/washing-machine-tools.webp",
