@@ -25,11 +25,14 @@ function artSm(name: string, alt: string): Picture {
 }
 
 export const photos = {
-  fridgeTechnician: photo("fridge-repair-technician", "MainTech technician testing a fridge compressor with a multimeter in a home kitchen"),
+  fridgeTechnician: photo("fridge-repair-technician", "MainTech technician in a branded navy uniform testing a fridge compressor with a multimeter in a home kitchen"),
   callout: photo("callout-technician", "MainTech technician walking up to a house with his tool bags, the MainTech van parked in the driveway"),
   callout_sm: photoSm("callout-technician", "MainTech technician arriving at a home with his tool bags"),
   team: photo("maintech-team", "Four MainTech technicians in navy uniforms standing in front of the MainTech van"),
   team_sm: photoSm("maintech-team", "The MainTech team in front of the MainTech van"),
+  fridgeCoils: photo("fridge-coil-check", "Technician in blue overalls checking the condenser coils on the back of a fridge in a home kitchen"),
+  fridgeHome: photo("fridge-repair-home", "Technician kneeling beside an open fridge freezer with his toolbox, adjusting the freezer door"),
+  homeAppliances: photo("home-appliances", "A fridge, washing machine, dishwasher, microwave, vacuum cleaner and small kitchen appliances grouped together"),
   aircon: photo("aircon-repair", "MainTech technician working on an indoor split aircon unit"),
 }
 
@@ -40,23 +43,27 @@ export const illustrations = {
 
 export const serviceMedia: Record<string, ServiceMedia> = {
   "refrigeration-repairs": {
-    hero: photos.fridgeTechnician,
-    card: artSm("fridge", "Illustration of a two door fridge with a thermometer and snowflake"),
+    hero: photo("fridge-freezer-repair", "Technician kneeling at a stainless steel fridge freezer, fixing the runners on the freezer drawer"),
+    card: photoSm("fridge-repair-technician", "MainTech technician testing a fridge compressor with a multimeter"),
+    photo: {
+      ...photoSm("fridge-repair-home", "Technician kneeling beside an open fridge freezer with his toolbox, adjusting the freezer door"),
+      caption: "Fixing a fridge freezer on a home visit, tools laid out beside it.",
+    },
   },
   "washing-machine-repairs": {
-    hero: art("washing-machine", "Illustration of a front loader washing machine with water in the drum"),
-    card: artSm("washing-machine", "Illustration of a front loader washing machine"),
+    hero: photo("washing-machine-technician", "MainTech technician in a branded navy uniform repairing the motor behind the lower panel of a front loader washing machine"),
+    card: photoSm("washing-machine-technician", "MainTech technician repairing a front loader washing machine"),
     photo: {
-      src: "/images/washing-machine-job.webp",
-      alt: "Silver front loader washing machine in a kitchen, waiting for a repair",
-      width: 432,
-      height: 324,
-      caption: "A front loader on a MainTech repair visit.",
+      src: "/images/washing-machine-tools.webp",
+      alt: "Front loader washing machine with the door open and a toolbox of spanners and screwdrivers in front of it",
+      width: 640,
+      height: 480,
+      caption: "A front loader with the toolbox ready for the repair.",
     },
   },
   "tumble-dryer-repairs": {
     hero: art("tumble-dryer", "Illustration of a tumble dryer with warm air rising and folded towels beside it"),
-    card: artSm("tumble-dryer", "Illustration of a tumble dryer"),
+    card: { src: "/images/laundry-repair-job.webp", alt: "Technician kneeling beside laundry machines with their panels off", width: 432, height: 324 },
   },
   "dishwasher-repairs": {
     hero: art("dishwasher", "Illustration of an open dishwasher with cups on the top rack and plates below"),
@@ -64,7 +71,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "oven-repairs": {
     hero: art("oven", "Illustration of an electric stove with hot plates and a glowing oven"),
-    card: artSm("oven", "Illustration of an electric stove and oven"),
+    card: { src: "/images/oven-repair-job.webp", alt: "Stove with the oven door off and the elements laid out during a repair", width: 400, height: 300 },
     photo: {
       src: "/images/oven-repair-job.webp",
       alt: "Stove with the oven door off and the elements laid out on the floor during a repair",
@@ -75,7 +82,7 @@ export const serviceMedia: Record<string, ServiceMedia> = {
   },
   "appliance-repairs": {
     hero: illustrations.appliances,
-    card: illustrations.appliances_sm,
+    card: photoSm("home-appliances", "A fridge, washing machine and small kitchen appliances grouped together"),
     photo: {
       src: "/images/laundry-repair-job.webp",
       alt: "Technician kneeling beside a washing machine with its panels off",
@@ -124,6 +131,24 @@ export const serviceMedia: Record<string, ServiceMedia> = {
     card: photoSm("appliance-electrical", "Technician checking wiring"),
   },
 }
+
+/* Photos from real MainTech jobs, shown in the "Recent work" section on the home page. */
+export const recentJobs: (Picture & { caption: string })[] = [
+  {
+    src: "/images/jobs/side-by-side-fridge-regas.webp",
+    alt: "Stainless steel side by side fridge pulled out from the wall, with a gas torch and toolbox on the floor beside it",
+    width: 800,
+    height: 800,
+    caption: "Side by side fridge pulled out for a gas and sealed system repair.",
+  },
+  {
+    src: "/images/jobs/fridge-repair-on-site.webp",
+    alt: "Side by side fridge with both doors open and the shelves emptied while a technician works on it",
+    width: 800,
+    height: 800,
+    caption: "Fridge emptied and opened up for testing on a home visit.",
+  },
+]
 
 export function getServiceMedia(slug: string) {
   const media = serviceMedia[slug]

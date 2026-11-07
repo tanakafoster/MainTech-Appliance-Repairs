@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Camera, CheckCircle2, ClipboardCheck, Home, MessageCircle, Search, Wrench } from "lucide-react"
 import { CallActions } from "@/components/site/call-actions"
 import {
@@ -13,7 +14,7 @@ import {
   faqJsonLd,
 } from "@/components/site/blocks"
 import { areas } from "@/content/areas"
-import { gautengMap, photos } from "@/content/media"
+import { gautengMap, photos, recentJobs } from "@/content/media"
 import { homeServices, moreServices } from "@/content/services"
 import { site } from "@/lib/site"
 
@@ -111,7 +112,7 @@ export function HomeView() {
             </ul>
           </div>
           <div className="relative">
-            <Framed picture={photos.fridgeTechnician} priority className="ring-white/10" />
+            <Framed picture={photos.homeAppliances} priority className="ring-white/10" />
             <div className="absolute -bottom-5 left-4 right-4 flex items-center gap-3 rounded-2xl bg-surface p-4 text-ink shadow-[var(--shadow-lift)] sm:left-auto sm:right-6 sm:max-w-xs">
               <CheckCircle2 className="h-8 w-8 shrink-0 text-success" aria-hidden="true" />
               <p className="text-sm leading-5">
@@ -160,7 +161,7 @@ export function HomeView() {
 
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-section md:grid-cols-2">
-          <Framed picture={photos.callout} />
+          <Framed picture={photos.fridgeTechnician} />
           <div>
             <SectionHeading eyebrow="On site repairs" title="We bring the workshop to your kitchen" />
             <ul className="mt-6 space-y-4">
@@ -180,6 +181,33 @@ export function HomeView() {
       </section>
 
       <section className="bg-ice-tint">
+        <div className="mx-auto max-w-6xl px-4 py-section">
+          <SectionHeading
+            eyebrow="Recent work"
+            title="From our latest call outs"
+            intro="Photos from fridges we have repaired in Gauteng homes."
+          />
+          <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+            {recentJobs.map((job) => (
+              <li key={job.src}>
+                <figure>
+                  <Image
+                    src={job.src}
+                    alt={job.alt}
+                    width={job.width}
+                    height={job.height}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="aspect-square h-auto w-full rounded-2xl object-cover shadow-[var(--shadow-card)]"
+                  />
+                  <figcaption className="mt-3 text-sm leading-6 text-slate">{job.caption}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-section">
           <SectionHeading
             eyebrow="Common problems"
@@ -209,7 +237,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-surface">
+      <section className="bg-ice-tint">
         <div className="mx-auto max-w-6xl px-4 py-section">
           <SectionHeading
             eyebrow="Also from MainTech"
@@ -224,7 +252,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-ice-tint">
+      <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-section md:grid-cols-2">
           <div>
             <SectionHeading
@@ -249,7 +277,7 @@ export function HomeView() {
         </div>
       </section>
 
-      <section className="bg-surface">
+      <section className="bg-ice-tint">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-section lg:grid-cols-[1fr_1.4fr]">
           <SectionHeading eyebrow="Questions" title="Before you book" intro={`Still unsure? Call ${site.phoneDisplay} and describe the fault in your own words.`} />
           <FaqList faqs={faqs} />

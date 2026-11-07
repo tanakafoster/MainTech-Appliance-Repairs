@@ -124,7 +124,7 @@ export default function AboutPage() {
       <CtaBand
         title="Talk to the team"
         text={`Call ${site.phoneDisplay}, WhatsApp the same number, or email ${site.email}. Tell us the appliance and what it is doing.`}
-        picture={photos.fridgeTechnician}
+        picture={photos.fridgeCoils}
       />
     </article>
   )
